@@ -1,0 +1,2163 @@
+Memory free: 24209408 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+Memory free: 24209152 bytes.
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 04 04 0A 2A EC 36 46 90 44 0C 42 5A 01            ...*.6F.D.BZ.   
+bse_stack - GAP Internal callback, Event index 0056!
+
+bse_le_scan:    - ----->le_scan_device_info_updated
+bse_le_scan:    - scan_complete, cap:BREDR.
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - GAP Internal callback, Event index 0003!
+
+bse_gap - remote device[2A:EC:36:46:90:44],COD[0x005A420C] request connection.
+bse_hfp - hlp_hf_get_status, you get 2
+bse_gap - hlp_gap_conn_req_cbk conn_req->link_type = 0001 hlp_hf_get_status() = 2
+bse_stack - [HCI][*Send]: 11
+bse_stack - 0000: 01 09 04 07 2A EC 36 46 90 44 00                  ....*.6F.D.     
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0F 04 00 01 09 04                              .......         
+bse_stack - [HCI][*Recv]: 11
+bse_stack - 0000: 04 12 08 00 2A EC 36 46 90 44 00                  ....*.6F.D.     
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 04 03 0B 00 01 00 2A EC 36 46 90 44 01 00         ......*.6F.D..  
+bse_stack - GAP Internal callback, Event index 0056!
+
+bse_le_scan:    - ----->le_scan_device_info_updated
+bse_le_scan:    - scan_complete, cap:BREDR.
+bse_stack - [HCI][*Send]: 6
+bse_stack - 0000: 01 1B 04 02 01 00                                 ......          
+bse_stack - [HCI][*Recv]: 15
+bse_stack - 0000: 02 01 20 0A 00 06 00 01 00 0A 02 02 00 02 00      .. ............ 
+bse_stack - [HCI][*Recv]: 38
+bse_stack - 0000: 02 01 20 21 00 1D 00 01 00 08 03 19 00 3F 05 01   .. !.........?..
+bse_stack - 0010: 01 01 00 02 03 04 00 5A 81 00 00 04 01 00 01 05   .......Z........
+bse_stack - 0020: 02 00 01 05 2B 82                                 ....+.          
+bse_stack - [HCI][*Recv]: 6
+bse_stack - 0000: 04 1B 03 01 00 05                                 ......          
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0F 04 00 01 1B 04                              .......         
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 04 0B 0B 00 01 00 FF FE 8F FE D8 3F 5B 87         ...........?[.  
+bse_stack - [HCI][*Send]: 7
+bse_stack - 0000: 01 1C 04 03 01 00 01                              .......         
+bse_stack - [HCI][*Recv]: 9
+bse_stack - 0000: 04 17 06 2A EC 36 46 90 44                        ...*.6F.D       
+bse_stack - GAP Internal callback, Event index 0060!
+
+bse_mgr - hlp_mgr_gap_cbk, event = 11, pointer of param = 0x216e9370
+
+bse_stack - [HCI][*Recv]: 7
+bse_mgr - hlp_mgr_gap_cbk, event = 21, pointer of param = 0x216e9390
+
+bse_stack - 0000: 04 0F 04 00 01 1C 04                              .......         
+at_event - bt_event_indicate(264)512.
+hlp_manager - hlp_manager_get_romete_name_ex  
+bse_stack - [HCI][*Recv]: 16
+at_event - event_len:[34]event_buffer:+PAIRED=0 44904636EC2A XR-00B7
+
+bse_stack - 0000: 04 
+BT AT RX:23 0D 00 01 00 01 01 0B  +PAIRED=0 00 00 00 00 00 00 00   44904636EC2A.#..............
+ XR-00B7
+ 32
+bse_stack - GAP Internal callback, Event index 0056!
+
+bse_le_scan:    - ----->le_scan_device_info_updated
+bse_le_scan:    - scan_complete, cap:BREDR.
+bse_stack - GAP Internal callback, Event index 0052!
+
+auto_gatt - gatt_connection_cbk
+bse_gap - hlp_gap_conn_event_cbk:1,2,00
+bse_hfp - hlp_hf_set_status, you set 4
+bse_hfp - not event hfp stat 4
+bse_mgr - bt_hf_cbk, event = 3, pointer of param = 0x216e958e
+
+at_event - bt_event_indicate(515)512.
+at_event - event_len:[14]event_buffer:+HFPSTAT=2
+
+
+BT AT RX: +HFPSTAT=2
+ 12
+bse_mgr - bt_hf_cbk, event = 3, pointer of param = 0x216e958e Exit
+
+bse_gap - hlp_gap_write_connection_timeout: hdl=0x01, timeout=8
+bse_stack - [HCI][*Send]: 15
+bse_stack - 0000: 02 01 00 0A 00 06 00 01 00 0A 01 02 00 02 00      ............... 
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 0B 02 08 00 02 00 00   ................
+bse_stack - 0010: 00 FC 01 00 00                                    .....           
+bse_stack - 0010: 00 FC 01 00 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 38
+bse_stack - [HCI][*Send]: 38
+bse_stack - 0000: 02 01 00 21 00 1D 00 01 00 09 03 19 00 3F 05 01   ...!.........?..
+bse_stack - [HCI: 01 01 00 02
+bse_stack - 0010: 01 01 00 02 00 0C 00 01 00 0B 01 08 00 02 00 00   .. .............
+bse_stack - 0000: 02 01 01 05 2B 82                                 ....+.          
+bse_stack - 0020: 02 00 01 05 00                                    .....           
+bse_stack - 0010: 00 B8 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 01 19 04 0A 2A EC 36 46 90 44 02 00 00 00         ....*.6F.D....  
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI][*Send]: 15
+bse_stack - [HCI][*Recv]: 15
+bse_stack - [HCI][*R 01 00 0A
+bse_stack - 0000: 02 01 20 0A 00 06 00 01 00 0A 04 02 00 03 00      .. ............ 
+bse_stack - 0000: 02 01 20 0A 00 06 00 01 00 0A 04 02 00 03 00      .. ............ 
+bse_stack - [HCI][*Send]: 25
+bse_stack - 0000: 02 01 00 1 00 10 00 01 00 0B 04 0C 00 03 00 00   ................
+bse_stack - [HCI][*Recv 00 0
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - ---->[Timer_Exp][219bfb08][Num:3][L2CAPC-InfoD][ms:100]
+
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0F 04 00 01 19 04                              .......         
+bse_stack - [HCI][*Send]: 8
+bse_stack - [HCI][*Recv]: 25
+bse_stack - [HCI][*Recv]: 25
+bse_stack - 0000: 02 01 20 14 00 10 00 01 00 0B 02 0C 00 03 00 00   .. .............
+bse_stack - 0010: 00 82 00 00 00 00 00 00 00                        .........       
+bse_stack - [HCI][*Recv]: 258
+bse_stack - [HCI][*ernal call
+bse_stack - GAP Interna 20 0C 00 08 00 01 00 02 05 04 
+bse_stack - 0000: 02 01 20te callback, Event index 0006!
+ 00 42   .. ............B
+bse_stack - Command                                       
+bse_stack - 0010: 00                                                .               
+bse_mgr - hlp_mgr_gap_cbk, event = 8, pointer of param = 0x219c0100
+
+hlp_manager - hlp_manager_insert_device_name-[XR-00B7]
+hlp_manager - p_device_info_ex->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+bse_stack - [HCI][*Recv]: 8
+hlp_manager - p_device_info->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+hlp_manager - Do not Need to Change Database
+at_event - bt_event_indicate(523)512.
+bse_mgr - hlp_mgr_gap_cbk, event = 15, pointer of param = 0x216eaac8
+
+bse_stack - [HCI][*Recv]: 8
+hlp_manager - hlp_manager_insert_device_name-[XR-00B7]
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+hlp_manager - p_device_info_ex->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+bse_stack - [HCI][*Recv]: 9
+hlp_manager - p_device_info->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+bse_stack - 0000: 04 0E 06 01 37 0C 00 01 00                        ....7....       
+hlp_manager - Do not Need to Change Database
+at_event - bt_event_indicate(258)512.
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 05 08 00 42 00 42   .............B.B
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 03 08 00 42 00 00   .............B..
+bse_stack - [HCI][*Recv]: 80
+bse_stack - 0010: 00 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 k, Event index 0062!
+         ........        
+bse_stack - Command complete callback, Event index 0062!
+
+bse_stack - [HCI][*Send]: 26
+bse_stack - 0000: 01 cv]: 8
+ 2A EC 36 46 90 44 9D AE B8 A3 18 4D   ....*.6F.D.....M
+bse_stack - [HC0: A4 0F 7A B
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 21
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 06 08 00 42 00 00   .. ..........B..
+bse_stack - 0010: 00 01 02 00 04                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 06 0A 00 42 00 00   .............B..
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0010: 04 0E 0A 01 0B 04 00 2A EC 36 46 90 44            .......*.6F.D   
+bse_stack - 0000: 04 0E 0A 01 0B 04 00 2A EC 36 46 90 44            .......*.6F.D   
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 03 06 00 42 00 00   .. ..........B..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 08 04 00 01 00 01                              .......         
+bse_stack - GAP Internal cal
+ack, Event index 0007!
+
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 07 04 00 11 00 41   .. ............A
+bse_stack - 0010: 00                                                .               
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack -    ->[ConnectRsp][Control][CID:0x0043]
+
+bse_stack -    -> 04 13 05 01 01 00 01 00          
+bse_stack - 0000: 04tion][Mask:0x00][Hint:0x00]
+                  ........        
+bse_stack -    ->[Option][Mask:0x00][Hint:0x00]
+
+bse_stack - [HCI][*Recv]: 36
+bse_stack - ---->[HI 01 20 1F 00 1B 00 42 00 06 00 00 00 16 3
+bse_stack - 0000>[ConnectRsp][SUCCESS][Control][CID:0x0043]
+5 03   .. ....B......5.
+bse_stack -    ->[Con11 1E 03 F0 35 0C 09 00 01 09 00 04 09 
+bse_stack - 0010: 19 11 1E 03k:0x01][Hint:0x00][mtu:672]
+ 00 09   .....5..........
+bse_stack -    ->[Option11 00                             
+bse_stack - [HCI][*Send]: 21
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 07 08 00 43 00 41   .............C.A
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 04 08 00 41 00 00   .............A..
+bse_stack - 0010: 00 01 02 A0 02                                    .....           
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 68
+bse_stack - 0000: 02 01 00 3F 00 3B 00 42 00 07 00 00 00 36 00 33   ...?.;.B.....6.3
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI: 00 04 35 0
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 05 08 35 06 19 11 1E 09 01 06 09 03 11   ...5.5..........
+bse_stack - 0030: 09 00 09 35 08 35 06 19 11 1E 09 01 06 09 03 11   ...5.5..........
+bse_stack - [HCI][09 00 1F 00
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 08 08 00 43 00 00   .. ..........C..
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 08 08 00 43 00 00   .. ..........C..
+bse_stack - 0010: 00 01 02 80 02                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 0v]: 19
+00 0E 00 01 00 05 08 0A 00 41 00 00   .............A..
+bse_stack - [HCI][00 00 00 01
+bse_stack - 0010: 00 01 20 0E 00 0A 00 01 00 05 04 06 00 43 00 00   .. ..........C..
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 04 06 00 43 00 00   .. ..........C..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01lete][SUCCESS][Control][CID:0x0043][Side:Response]
+  
+bse_stack -    ->[ConnectComplete][SUCCESS][Control][CID:0x0043][Side:Response]
+
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 06 09 04 00 42 00 42   .. ..........B.B
+bse_stack - 0010: 00                                                .               
+bse_stack - [HCI][*Send]: 1
+bse_stack - [HCI][*R 01 00 0
+bse_stack - 0000: 02 01 00 01 01 00 01 00                           ........        
+bse_stack - 0000: 04                                                .               
+bse_stack - 0010: 00                                                .               
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 0A 04 00 13 00 43   .. ............C
+bse_stack - 0010: 00                                                .               
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI][*Rtion][Ma
+bse_stack -    ->[Option][ 01 01 00 01 00        
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack -    ->[ConnectRsp][SUCCESS][Interrupt][CID:0x0044]
+
+bse_stack -    ->[Option][Mask:0x01][Hint:0x00][mtu:672]
+
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 0A 08 00 44 00 43   .............D.C
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 05 08 00 43 00 00   .............C..
+bse_stack - 0010: 00 01 02 A0 02                                    .....           
+bse_stack - [warning]Gv]: 8
+ast over 500 ms, [Delta: 739 ms]
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 0B 04 00 03 00 44   .. ............D
+bse_stack - 0010: 00                                                .               
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 21
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI] 00 00 00 0
+bse_stack - 0010: 00 03 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Secv]: 21
+bse_stack - [000: 02 01 00 10
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 0C 08 00 44 00 00   .. ..........D..
+bse_stack - 0010: 00 01 02 40 06                                    ...@.           
+bse_stack - 0010: 00 01 02 80 02                                    .....           
+bse_stack - 0010: 00 01 02 80 02                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 0C 0A 00 43 00 00   .............C..
+bse_stack - [H10: 00 00 00 01
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 05 06 00 44 00 00   .. ..........D..
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 05 06 00 44 00 00   .. ..........D..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_stack - ---->[HID][BREDR][2a,ec,36,46,90,44 LE BREDR,Pu]
+
+bse_stack - ---->[HID]3 05 01 01 00 01 00                    
+bse_stack - 0000: 04 13 05 01lete][SUCCESS][Interrupt][CID:0x0044][Side:Response]
+
+bse_stack -    ->[ConnectComplete][SUCCESS][Interrupt][CID:0x0044][Side:Response]
+
+bse_stack - [HCI][*Recv]: 21
+bse_hid - hlp_hid_server_cbk event=14
+
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 0D 08 00 45 00 00   .. ..........E..
+bse_hid - hlp_hid_cbk_connect_complete, ret=0
+
+bse_stack - 0010: 00 01 02 9B 06                                    .....           
+bse_hid - hlp_hid_set_status = 4
+
+bse_mgr - hlp_mgr_hid_cbk event=0
+
+at_event - bt_event_indicate(1536)512.
+bse_stack - [HCI][*Recv]: 8
+at_event - event_len:[14]event_buffer:+HIDSTAT=3
+
+bse_stack -
+BT AT RX: +HIDSTAT=3
+ 12
+ 0000:[*Send]: 23
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 0D 0A 00 44 00 00   .............D..
+bse_stack - [HCI][*R 00 00 01
+bse_stack - 0010: 00 00 00 0E 00 0A 00 01 00 05 06 06 00 45 00 00   .. ..........E..
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 06 06 00 45 00 00   .. ..........E..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 02 01 20 08 00 04 00 45 00 03 3F 01 1C            .. ....E..?..   
+bse_stack - ---->[RFCOMM][Recv][3f,SABM][DLCI:0][A:03,C,][EALen:0]
+
+bse_stack - ---->[RFCOMM][Send][73,UA][DLCI:0][A:03,C,][EALen:0]
+
+bse_stack - ---->[RFCOMM][DataInd][CID:0x45][Len:4][03,3f,01...]
+
+bse_stack -    ->[FCS:Packet:0x1c,Calc:0x1c][Len:4][Ctrl:0x3f]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 44 00 03 73 01 D7            .......D..s..   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 23
+bse_stack - 0000: 02 01 20 12 00 0E 00 45 00 03 EF 15 83 11 02 F0   .. ....E........
+bse_stack - 0010: 00 00 00 01 00 07 70                              ......p         
+bse_stack - ---->[RFCOMM][Recv][UIH][DLCI:0][A:03,C,][Len:15,L10][0x80,PN-Command]
+
+bse_stack - -------~>[TargetDLCI:2(1,D0)][CL:0xf][MFS:256,$:7]
+
+bse_stack - ---->[RFCOMM][Init][DLCMem][DLCI:2(1,D0)][MFS:256(0x100)][$:7,7][RFCOMM_DLCX_W4_SABM_IND][AutoCredits]
+
+bse_stack - ---->[RFCOMM][Send][UIH][DLCI:0][A:01,R,][Len:15,L10][0x80,PN-Response]
+
+bse_stack - -------~>[TargetDLCI:2(1,D0)][CL:0xe][MFS:256,$:7]
+
+bse_stack - ---->[RFCOMM][DataInd][CID:0x45][Len:14][03,ef,15...]
+
+bse_stack -    ->[FCS:Packet:0x70,Calc:0x70][Len:14][Ctrl:0xef]
+
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 44 00 01 EF 15 81 11 02 E0   .......D........
+bse_stack - 0010: 00 00 00 01 00 07 AA                              .......         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 02 01 20 08 00 04 00 45 00 0B 3F 01 59            .. ....E..?.Y   
+bse_stack - ---->[RFCOMM][Recv][3f,SABM][DLCI:2(1,D0)][A:0b,C,][EALen:0]
+
+bse_stack - ---->[RFCOMM][DataInd][CID:0x45][Len:4][0b,3f,01...]
+
+bse_stack -    ->[FCS:Packet:0x59,Calc:0x59][Len:4][Ctrl:0x3f]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=64
+bse_hfp - 
+HFP_EV_CONNECT_IND
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=64 Exit
+
+bse_stack - ---->[RFCOMM][Send][73,UA][DLCI:2(1,D0)][A:0b,C,][EALen:0]
+
+bse_stack - ---->[RFCOMM][Send][UIH][DLCI:0][A:01,R,][Len:09,L4][0xe0,MSC-Command]
+
+bse_stack - -------~>[TargetDLCI:2(1,D0)][v24:0x8d,fc:0,rtc:1,rtr:1,ic:0,dv:1]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 44 00 0B 73 01 92            .......D..s..   
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 44 00 01 EF 09 E3 05 0B 8D   .......D........
+bse_stack - 0010: *Recv]: 8
+                                       .               
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 45 00 03 EF 09 E3 05 0B 8D   .. ....E........
+bse_stack - 0010: 70                                                p               
+bse_stack - ---->[RFCOMM][Recv][UIH][DLCI:0][A:03,C,][Len:09,L4][0xe0,MSC-Command]
+
+bse_stack - [HCI][*Recv]: etD
+bse_stack - 0000: 02 01 20 0C 00 08 00 45 00 03 EF 09 E1 05 0B 8D   .. ....E........
+bse_stack - 0000: 02 0MM][Send][UIH][DLCI:0][A:01,R,][Len:09,L4][0xe0,MSC-Response]
+
+bse_stack - ----> 70                                                p               
+bse_stack - -------~>[TargetDLCI:2(1,D0)][v24:0x8d,fc:0,rtc:1,rtr:1,ic:0,dv:1]
+
+bse_stack - -------~>[TargetDLCI:2(1,D0)][v24:0x8d,fc:0,rtc:1,rtr:1,ic:0,dv:1]
+
+bse_stack - ---->[RFCOMM][DataInd][CID:0x45][Len:8][03,ef,09...]
+
+bse_stack -    ->[FCS:Packet:0x70,Calc:0x70][Len:8][Ctrl:0xef]
+
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 44 00 01 EF 09 E1 05 0B 8D   .......D........
+bse_stack - 0010: AA                                                .               
+bse_stack - ---->[RFCOMM][Recv][UIH][DLCI:0][A:03,C,][Len:09,L4][0xe0,MSC-Response]
+
+bse_stack - -------~>[TargetDLCI:2(1,D0)][v24:0x8d,fc:0,rtc:1,rtr:1,ic:0,dv:1]
+
+bse_stack - ---->[RFCOMM][DataInd][CID:0x45][Len:8][03,ef,09...]
+
+bse_stack - ---->[R4 13 05 01 01 00 01 00                         
+bse_stack -    ->[FCS:Packet:0x70,Calc:0x70][Len:8][Ctrl:0xef]
+   ........        
+bse_stack -    ->[FCS:Packet:0x70,Calc:0x70][Len:8][Ctrl:0xef]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=55
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=55 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:19,L12][$:7,6][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 25
+bse_stack - 0000: 02 01 20 14 00 10 00 44 00 09 EF 19 41 54 2B 42   .. ....D....AT+B
+bse_stack - 0010: 52 53 46 3D 31 32 37 0D 40                        RSF=127.@       
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 02 01 20 09 00 05 00 45 00 0B FF 01 04 86         .. ....E......  
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:01,L0][$+4][$:7,6]
+
+bse_stack - [HCI][*Recv]: 27
+bse_stack - 0000: 02 01 20 16 00 12 00 45 00 0B EF 1D 0D 0A 2B 42   .. ....E......+B
+bse_stack - 0010: 52 53 46 3A 20 38 37 39 0D 0A 9A                  RSF: 879...     
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:1d,L14][$:7,10][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:6,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x801c, 255
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:15,L10][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 20 12 00 0E 00 44 00 09 EF 15 41 54 2B 43   .. ....D....AT+C
+bse_stack - 0010: 49 4E 44 3D 3F 0D 40                              IND=?.@         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 147
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:08,01,L132][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x800e, 255
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:13,L9][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 20 12 00 0E 00 44 00 09 FF 13 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 49 4E 44 3F 0D 5C                              CIND?.\         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 38
+bse_stack - 0000: 02 01 20 21 00 1D 00 45 00 0B FF 31 01 0D 0A 2B   .. !...E...1...+
+bse_stack - 0010: 43 49 4E 44 3A 20 30 2C 30 2C 30 2C 30 2C 30 2C   CIND: 0,0,0,0,0,
+bse_stack - 0020: 31 2C 30 0D 0A 86                                 1,0...          
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:31,L24][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 19
+bse_hfp - hlp_hf_get_status, you get 4
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_hfp - hlp_hf_get_status, you get 4
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_hfp - hlp_hf_event_cbk state=4, event=17
+bse_mgr - bt_hf_cbk, event = 30, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(543)512.
+at_event - event_len:[14]event_buffer:+HFPROAM=0
+
+
+BT AT RX: +HFPROAM=0
+ 12
+bse_mgr - bt_hf_cbk, event = 30, pointer of param = 0x00000000 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=17 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59
+bse_hfp - HFP_EV_TRANSPARENT_SUBMITCIEV_IND, indicator= 0a
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59
+bse_hfp - HFP_EV_TRANSPARENT_SUBMITCIEV_IND, indicator= 14
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59
+bse_hfp - HFP_EV_TRANSPARENT_SUBMITCIEV_IND, indicator= 1e
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=59 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=20
+bse_hfp - Remote phone signal strength = 0
+
+bse_mgr - bt_hf_cbk, event = 21, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(533)512.
+at_event - event_len:[13]event_buffer:+HFPSIG=0
+
+
+BT AT RX: +HFPSIG=0
+ 11
+bse_mgr - bt_hf_cbk, event = 21, pointer of param = 0x00000000 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=20 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=18
+bse_mgr - bt_hf_cbk, event = 29, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(542)512.
+bse_mgr - bt_hf_cbk, event = 29, pointer of param = 0x00000000 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=18 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=21
+bse_hfp - Remote phone battery charge = 1
+
+bse_mgr - bt_hf_cbk, event = 22, pointer of param = 0x00000001
+
+at_event - bt_event_indicate(534)512.
+at_event - event_len:[14]event_buffer:+HFPBATT=1
+
+
+BT AT RX: +HFPBATT=1
+ 12
+bse_mgr - bt_hf_cbk, event = 22, pointer of param = 0x00000001 Exit
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=21 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x880e, 255
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:21,L16][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 30
+bse_stack - 0000: 02 01 20 19 00 15 00 44 00 09 FF 21 02 41 54 2B   .. ....D...!.AT+
+bse_stack - 0010: 43 4D 45 52 3D 33 2C 30 2C 30 2C 31 0D 5C         CMER=3,0,0,1.\  
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 20
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+bse_stack - 0010: 4B 0D 0A 86                                       K...            
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8814, 255
+
+bse_hfp - hlp_hf_get_status, you get 4
+bse_hfp - hlp_hf_event_cbk state=4, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:15,L10][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 24
+bse_stack - 0000: 02 01 20 13 00 0F 00 44 00 09 FF 15 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 48 4C 44 3D 3F 0D 5C                           CHLD=?.\        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 34
+bse_stack - 0000: 02 01 20 1D 00 19 00 45 00 0B FF 29 01 0D 0A 2B   .. ....E...)...+
+bse_stack - 0010: 43 48 4C 44 3A 20 28 30 2C 31 2C 32 2C 33 29 0D   CHLD: (0,1,2,3).
+bse_stack - 0020: 0A 86                                             ..              
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:29,L20][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a,4f...]
+
+bse_stack - [HCI][*Recv]: 17
+bse_hfp - hlp_hf_get_status, you get 4
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 0E 04 00 01 00 45   .. ............E
+bse_hfp - hlp_hf_get_status, you get 4
+bse_stack - 0010: 00                                                .               
+bse_hfp - hlp_hf_event_cbk state=4, event=1
+bse_hfp - [WBS]SCL Conn codec_default(1) 1-cvsd 2-wbs
+
+bse_hfp - HFP_EV_SLC_ESTABLISHED_IND... 
+
+bse_stack - [HCI][*Recv]: 27
+bse_mgr - bt_hf_cbk, event = 23, pointer of param = 0x2050b45c
+
+bse_stack - 0000: 02 01 20 16 00 12 00 45 00 0B EF 1D 0D 0A 2B 43   .. ....E......+C
+at_event - bt_event_indicate(535)512.
+bse_stack - 0010: 49 45 56 3A 20 33 2C 31 0D 0A 9A                  IEV: 3,1...     
+at_event - event_len:[20]event_buffer:+HFPNUM=00000000
+
+
+BT AT RX: +HFPNUM=00000000
+ 18
+bse_stack - [HCI][*Recv]: 27
+bse_mgr - bt_hf_cbk, event = 23, pointer of param = 0x2050b45c Exit
+
+bse_stack - 0000: 02 01 20 16 00 12 00 45 00 0B EF 1D 0D 0A 2B 43   .. ....E......+C
+bse_hfp - hlp_hf_slc_established->1098, hlp_hf_get_current_calls was called
+bse_stack - 0010: 49 45 56 3A 20 34 2C 35 0D 0A 9A                  IEV: 4,5...     
+bse_hfp - 
+HFP_EV_CONNECT_IND
+
+bse_hfp - hlp_hf_set_status, you set 5
+bse_hfp - not event hfp stat 5
+bse_mgr - bt_hf_cbk, event = 5, pointer of param = 0x219cc980
+
+bse_mgr - connected_info->outgoing:0
+at_event - bt_event_indicate(517)512.
+at_event - event_len:[14]event_buffer:+HFPSTAT=3
+
+
+BT AT RX: +HFPSTAT=3
+ 12
+HFP connected, phonebook download requested
+BT AT TX(20): AT+PBDOWN=1,0,3000
+brlinkd - brtbt_send_at_command length:20
+hlp_manager - Do not Need to Change Database
+bse_mgr - bt_hf_cbk, event = 5, pointer of param = 0x219cc980 Exit
+
+bse_mgr - bt_hf_cbk, event = 19, pointer of param = 0x216e94f0
+
+bse_mgr - BT_EV_HF_RINGTONE:1
+at_event - bt_event_indicate(531)512.
+bse_mgr - bt_hf_cbk, event = 19, pointer of param = 0x216e94f0 Exit
+
+bse_hfp - HF Connection Incoming.
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=1 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=5
+bse_hfp - -->Call Terminated!
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=5 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8c0c, 255
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 20 11 00 0D 00 44 00 09 FF 11 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 47 4D 49 0D 5C                                 CGMI.\          
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 21
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI] 00 00 00 0
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 0101 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 07 08 00 45 00 00   .............E..
+bse_stack - 0010: 00 01]: 8
+ 04                                    .....           
+bse_stack - [HCI][*Recv]: 8
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:1d,L14][$:5,9][0d,0a,2b...]
+
+bse_stack - ---->[RFCOMM][UIH][Recv][DLCI:2(1,D0)][A:0b,C,][Len:1d,L14][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 30
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 19 00 15 00 45 00 0B FF 21 01 0D 0A 2B   .. ....E...!...+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0010: 43 47 4D 49 3A 20 48 4F 4E 4F 52 0D 0A 86         CGMI: HONOR...  
+bse_hfp - hlp_hf_event_cbk state=5, event=16
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=16 Exit
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:1d,L14][$:4,9][0d,0a,2b...]
+
+bse_stack - ---0: 0D 0A 9A                                          ...             
+2b...]
+
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_event_cbk state=5, event=20
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - Remote phone signal strength = 5
+
+bse_mgr - bt_hf_cbk, event = 21, pointer of param = 0x00000005
+
+at_event - bt_event_indicate(533)512.
+bse_stack - [HCI][*Recv]: 21
+at_event - event_len:[13]event_buffer:+HFPSIG=5
+
+bse_stack
+BT AT RX: - 0000: 02 01 20 10 00 +HFPSIG=5
+ 0C 00 01 0 11
+0 04 0F 08 00 46 00 00   .. ..........F..
+bse_mgr - bt_hf_cbk, event = 21, pointer of param = 0x00000005 Exit
+
+bse_stack - 0010: 00 01 02 00 04                                    .....           
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=20 Exit
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 07 06 00 46 00 00   .. ..........F..
+bse_stack - 0000: 02 01 04 0A 2A EC 36 46 90 44 02 00 00 00         ....*.6F.D....  
+bse_stack - 0000: 00 00 00                                          ...             
+bse_stack - 0010: 00 00 00          ][DLCI:2(1,D0)][A:0b,C,][Len:21,L16][$+1][$:3,9][
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:21,L16][$+1][$:3,9][0d,0a,2b...]
+
+bse_stack - ---->[RFecv]: 7
+x][Send][DLCI:2(1,D0)][A:09,R,][Len:01,L0][$+3][$:5,10]
+
+bse_stack - [Htack][hfp]CGMI
+bse_stack - 0000: 04 0F 04 00 01 19 04                              .......         
+bse_stack - 0000: 04 0F 04 00 01 19 04                              .......         
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=56
+bse_stack - [HCI][*Recv]: 258
+bse_mgr - bt_hf_cbk, event = 12, pointer of param = 0x219ccc80
+
+at_event - bt_event_indicate(524)512.
+bse_mgr - bt_hf_cbk, event = 12, pointer of param = 0x219ccc80 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=56 Exit
+
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 20 09 00 05 00 44 00 09 FF 01 03 5C         .. ....D.....\  
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:5,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8027, 255
+
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:19,L12][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 26
+bse_stack - 0000: 02 01 20 15 00 11 00 44 00 09 FF 19 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 4F 50 53 3D 33 2C 30 0D 5C                     COPS=3,0.\      
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 0F 0A 00 45 00 00   .............E..
+bse_stack - [H10: 00 00 00 0
+bse_stack - 0010: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 1A 0C 01 00                                    .....           
+bse_stack - GAP Internal callback, Event index 0006!
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - Command complete callback, Event index 0006!
+
+bse_stack - CommandRecv]: 20
+allback, Event index 0006!
+
+bse_stack - [HCI][*Recv]: 20
+bse_mgr - hlp_mgr_gap_cbk, event = 8, pointer of param = 0x219cd0c0
+
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+hlp_manager - hlp_manager_insert_device_name-[XR-00B7]
+bse_stack - 0010: 4B 0D 0A 86                                       K...            
+hlp_manager - p_device_info_ex->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+hlp_manager - p_device_info->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+bse_stack - [HCI][*Recv]: 7
+hlp_manager - Do not Need to Change Database
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+at_event - bt_event_indicate(523)512.
+bse_mgr - hlp_mgr_gap_cbk, event = 15, pointer of param = 0x216eaac8
+
+hlp_manager - hlp_manager_insert_device_name-[XR-00B7]
+hlp_manager - p_device_info_ex->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+hlp_manager - p_device_info->bd: 2a ec 36 46 90 44p_device_info_ex-name = XR-00B7
+hlp_manager - Do not Need to Change Database
+at_event - bt_event_indicate(258)512.
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8010, 255
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:13,L9][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 20 12 00 0E 00 44 00 09 FF 13 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 4F 50 53 3F 0D 5C                              COPS?.\         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - FSM:Write scan enable OK: 0
+
+at_command - g_bt_opened= [1], [AT]   AT+[PBDOWN=1,0,3000]
+at_command - cmd = DOWN=1,0,3000 len = 13
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 33
+bse_stack - 0000: 02 01 20 1C 00 18 00 46 00 06 00 00 00 13 35 03   .. ....F......5.
+bse_stack - 0010: 19 11 0B 03 F0 35 09 09 00 01 09 00 04 09 00 09   .....5..........
+bse_stack - 0020: 00                                                .               
+bse_stack - [HCI][*Send]: 63
+bse_stack - 0000: 02 01 00 3A 00 36 00 45 00 07 00 00 00 31 00 2E   ...:.6.E.....1..
+bse_stack - 0010: 35 2C 35 2A 09 00 01 35 03 19 11 0B 09 00 04 35   5,5*...5.......5
+bse_stack - 0020: 10 35 06 19 01 00 09 00 19 35 06 19 00 19 09 01   .5.......5......
+bse_stack - 0030: 02 09 00 09 35 08 35 06 19 11 0D 09 01 02 00      ....5.5........ 
+cmd = DOWN=1,0,3000 len = 13
+at_command - AT+=
+
+bse_pbap - PBAP_STATE is 2
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 31
+bse_stack - 0000: 02 01 20 1A 00 16 00 45 00 0B FF 23 01 0D 0A 2B   .. ....E...#...+
+bse_stack - 0010: 43 4F 50 53 3A 20 30 2C 30 2C 22 22 0D 0A 86      COPS: 0,0,""... 
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:23,L17][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 19
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_hfp - hlp_hf_event_cbk state=5, event=29
+bse_mgr - bt_hf_cbk, event = 20, pointer of param = 0x216e9524
+
+bse_stack - [HCI][*Recv]: 17
+at_event - bt_event_indicate(532)512.
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 06 10 04 00 46 00 45   .. ..........F.E
+at_event - event_len:[13]event_buffer:+HFPNET=0
+
+bse_stack - 0010: 
+BT AT RX: 00                     +HFPNET=0
+                        11
+    .               
+bse_mgr - bt_hf_cbk, event = 20, pointer of param = 0x216e9524 Exit
+
+bse_mgr - bt_hf_cbk, event = 34, pointer of param = 0x216ea840
+
+at_event - bt_event_indicate(4130)512.
+at_event - event_len:[32]event_buffer:+HFPDEV=44904636EC2A XR-00B7
+
+
+BT AT RX: +HFPDEV=44904636EC2A XR-00B7
+ 30
+bse_mgr - bt_hf_cbk, event = 34, pointer of param = 0x216ea840 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=29 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8810, 255
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:15,L10][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 24
+bse_stack - 0000: 02 01 20 13 00 0F 00 44 00 09 FF 15 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 4D 45 45 3D 31 0D 5C                           CMEE=1.\        
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 07 10 04 00 46 00 45   .............F.E
+bse_stack - 0010: 00                                                .               
+at_command - p_offset = 0 p_max_items = 3000 p_type = 1
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_pbap - PBAP_STATE is 2
+bse_pbap - PBAP get phonebook request state=2 bd=44:90:46:36:ec:2a type=1 offset=0 count=0
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_pbap - PBAP_STATE is 2
+bse_pbap - PBAP_STATE is 2
+bse_pbap - PBAP ready, connect for phonebook download.
+bse_pbap - *********hlp_pbap_set_status 3.
+
+bse_pbap - 
+ pb_stat2 = 3 PBAP_STATE = 2
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000002
+
+at_event - bt_event_indicate(1292)512.
+at_event - event_len:[13]event_buffer:+PBSTAT=2
+
+
+BT AT RX: +PBSTAT=2
+ 11
+PBAP state=2
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000002 Exit
+
+bse_pbap - ****PBAP_ClientStartReq:44:90:46:36:ec:2a.
+bse_pbap - PBAP_STATE is 3
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=2.
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=2. Exit
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 02 08 04 00 01 00 47   ...............G
+bse_stack - 0010: 00                                                .               
+bse_stack - [warning]GetTimePast over 500 ms, [Delta: 1473 ms]
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 20
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+bse_stack - 0010: 4B 0D 0A 86                                       K...            
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_stack - [HCI][*Recv]: 17
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 11 04 00 19 00 46   .. ............F
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0010: 00                                                .               
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8011, 255
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - [HCI][*Recv]: 21
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:13,L9][$+1][$:5,9][41,54,2b...]
+
+bse_stack - ---->[RFCOM 00 00 00                                    .....           
+,54,2b...]
+
+bse_stack - 0010: 00 00 00 3
+00                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 20 12 00 0E 00 44 00 09 FF 13 01 41 54 2B   .. ....D.....AT+
+bse_stack - [HCI][*Re54 52 48
+bse_stack - 0010: 42 54 52 10 00 0C 00 01 00 04 12 08 00 47 00 00   .. ..........G..
+bse_stack - 0000: 02 01 20 10 00k, Event index 0052!
+0 47 00 00   .. ..........G..
+bse_stack - GAP0: 00 01 02 00 04                      
+bse_stack - 0010: 00 01 0221
+04                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 11 08 00 48 00 46   .............H.F
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 09 08 00 46 00 00   .............F..
+bse_stack - 0010: 00 01 02 A0 02                                    .....           
+bse_stack - ---->[Timer_Exp][219cc888][Num:7][NULL-][ms:500]
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 0A 08 00 47 00 00   .............G..
+bse_stack - [HCI] 00 01 02 0
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 20 1A 00 16 00 45 00 0B FF 23 01 0D 0A 2B   .. ....E...#...+
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 12 0A 00 47 00 00   .............G..
+bse_stack - 0000: 43 4D 45 20 45 52 52 4F 52 3A 20 34 0D 0A 86      CME ERROR: 4... 
+bse_stack - 0010: 43 4D 45 20 02 00 04                              .......         
+bse_stack - 0010: 00 00 00 01 02 00 04                              .......         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00    1,D0)][A:0b,C,][Len:23,L17][$+1][$:5,9][
+bse_stack - ---->[*Recv]: 21
+][Recv][DLCI:2(1,D0)][A:0b,C,][Len:23,L17][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 21
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 13 08 00 48 00 00   .. ..........H..
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0010: 00 01 02 00 04                                    .....           
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8c21, 201
+
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFecv]: 19
+][Send][DLCI:2(1,D0)][A:09,R,][Len:15,L10][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Recv]: 24
+bse_stack - [HCI] 02 01 20 0E
+bse_stack - 0000: 02 01 20 13 00 0F 00 44 00 09 FF 15 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0000: 02 01 20                                          ...             
+bse_stack - 0010: 00 0C 49 50 3D 31 0D 5C                           CLIP=1.\        
+bse_stack - 0010: 43 4C 49 50 3D 31 0D 5C                           CLIP=1.\        
+bse_stack - [HCI][*Recv]: 23
+bse_stack - [HCI][*Send]: 231
+bse_stack - 0000: 04 13 05 01 00 0E 00 01 00 05 13 0A 00 46 00 00   .............F..
+bse_stack - 0000: 02 01 : 19
+00 0E 00 01 00 05 13 0A 00 46 00 00   .............F..
+bse_stack - [HCI][00 00 00 01
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 0A 06 00 47 00 00   .. ..........G..
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 0A 06 00 47 00 00   .. ..........G..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01]: 8
+ 00 0D 00 47 00 02 00 00 00 08 35 03   .......G......5.
+bse_stack - [HCI] 19 11 2F 0
+bse_stack - 0010: 14 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 20
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+bse_stack - 0010: 4B 0D 0A 86                                       K...            
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_stack - [HCI][*Recv]: 11
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8013, 255
+
+bse_stack - 0000: 02 01 20 06 00 02 00 48 00 00 01                  .. ....H...     
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RRecv]: 8
+x][Send][DLCI:2(1,D0)][A:09,R,][Len:15,L10][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Recd]: 24
+bse_stack - [HCI: 04 13 05 01
+bse_stack - 0000: 04 01 20 13 00 0F 00 44 00 09 FF 15 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0000: 02 01 20 3
+00 0F 00 44 00 09 FF 15 01 41 54 2B   .. ....D.....AT+
+bse_stack - [HCI][*Rec3 57 41
+bse_stack - 0010: 43 43 57 12 00 0E 00 47 00 03 00 00 00 09 00 01   .. ....G........
+bse_stack - 0000: 02 01 20 12 00 0E 00 47 00 03 00 00 00 09 00 01   .. ....G........
+bse_stack - [HCI: 00 01 00 01
+bse_stack - 0000: 02 01 00 08 00 04 00 46 00 02 01 04 08            .......F.....   
+bse_stack - 0000: 02 01 00 08 00 04 00 46 00 02 01 04 08            .......F.....   
+bse_stack - [HCI][*Send]: 28
+bse_stack - 0000: 02 01 00 17 00 13 00 47 00 04 00 01 00 0E 00 01   .......G........
+bse_stack - 0010: 00 0F 03 E8 35 05 0A 00 00 FF FF 00               ....5.......    
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - start hlp_hf_get_current_calls
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+[INFO] heartbeat_task_proc:857 - ey ==>bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 20
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+bse_stack - 0010: 4B 0D 0A 86                                       K...            
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_stack - [HCI][*Recv]: 12
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 07 00 03 00 48 00 10 02 04               .. ....H....    
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x800b, 255
+
+bse_stack - [HCI][*Recv]: 131
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+1][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 20 11 00 0D 00 44 00 09 FF 11 01 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 47 4D 4D 0D 5C                                 CGMM.\          
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 46 00 12 02 01 00 07 06 00   .......F........
+bse_stack - 0010: 00 3F FF 02 20                                    .?..            
+bse_pbap - PBAP_STATE is 3
+bse_stack - [HCI][*Recv]: 8
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=3.
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_mgr - hlp_mgr_pbap_cbk, event = 9, pointer of param = 0x00000009
+
+bse_stack - [HCI][*Recv]: 33
+at_event - bt_event_indicate(1291)512.
+bse_stack - 0000: 02 01 20 1C 00 18 00 45 00 0B FF 27 01 0D 0A 2B   .. ....E...'...+
+bse_mgr - hlp_mgr_pbap_cbk, event = 9, pointer of param = 0x00000009 Exit
+
+bse_stack - 0010: 43 47 4D 4D 3A 20 4D 41 47 2D 41 4E 30 30 0D 0A   CGMM: MAG-AN00..
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=3. Exit
+bse_stack - 0020: 86         viceInfoCbk, psm = 4133               .               
+bse_stack - [stack]PCE_GetServiceInfoCbk, psm = 4133
+bse_stack - [stack]OBEX_TL_L2CAP enable
+bse_stack - [HCI][*Rrnal cal
+bse_stack - GAP Internal 5 01 01 00 01 00             
+bse_stack - 0000: 04 13 05 0
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 19
+bse_stack - [HCI][*Recv]: 10C
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_stack - 0000: 00                                                .               
+bse_stack - 0010: 00                                                ...             
+bse_stack - 0010: 0D 0A 9A         v][DLCI:2(1,D0)][A:0b,C,][Len:27,L19][$+1][$:5,9][
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:27,L19][$+1][$:5,9][0d,0a,2b...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=57
+bse_hfp - hlp_hf_get_module_name, p_name=MAG-AN00
+
+bse_mgr - bt_hf_cbk, event = 13, pointer of param = 0x219cdb00
+
+at_event - bt_event_indicate(525)512.
+bse_mgr - bt_hf_cbk, event = 13, pointer of param = 0x219cdb00 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=57 Exit
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HC0: 02 01 00 0
+bse_stack - 0000: 02 01 00 0C 01 00 01 00                           ........        
+bse_stack - 0000: 04 13                                             .               
+bse_stack - 0010: 00                                                .               
+bse_stack - [HCI][*Recv]: 23
+bse_stack - 0000:[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a
+bse_stack - ---->[RFCOM 00 21 15 02 20                              ...!..          
+4f...]
+
+bse_stack - 0010: 06 00 00 21 15 02 20                              ...!..          
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_stack - [HCI][*Recv]: 21
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8026, 255
+
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 03 0B 08 00 48 00 49   .. ..........H.I
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - [HCI] 02 01 20 1B
+bse_stack - 0000: 02 01 20 11 00 0D 00 44 00 09 FF 11 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0000: 00 01 02 97 1F 04 09 03 0A 14 00 00 00 00 F2 03   ................
+bse_stack - 0010: 00 01 4D 52 0D 5C                                 CGMR.\          
+bse_stack - 0010: 43 47 4D 52 0D 5C                                 CGMR.\          
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_a2dp - hlp_a2dp_cbk event = 14
+
+bse_a2dp - hlp_a2dp_cbk event = 14 Exit
+
+bse_a2dp - hlp_a2dp_cbk event = 3
+
+bse_mgr - hlp_mgr_a2dp_cbk, event = 7, pointer of param = 0x00000000
+
+bse_stack - [HCI][*Recv]: 17
+at_event - bt_event_indicate(775)512.
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 07 0C 04 00 47 00 47   .. ..........G.G
+bse_mgr - porting_a2dp_event_cbk:7 ++++
+bse_stack - 0010: 00                                                .               
+bse_mgr - porting_a2dp_event_cbk:7----
+bse_mgr - hlp_mgr_a2dp_cbk, event = 10, pointer of param = 0x0000ac44
+
+at_event - bt_event_indicate(4134)512.
+bse_stack - [HCI][*Recv]: 8
+at_event - event_len:[17]event_buffer:+A2DPSR=44100
+
+bse_stack - 0000:
+BT AT RX:  04 13 05 01 01 00+A2DP 01 00                 SR          ........   =44100
+ 15
+     
+
+bse_mgr - porting_a2dp_event_cbk:10 ++++
+bse_mgr - porting_a2dp_event_cbk:10----
+bse_mgr - hlp_mgr_a2dp_cbk, event = 5, pointer of param = 0x0000ac44
+
+bse_mgr - porting_a2dp_event_cbk:5 ++++
+bse_mgr - porting_a2dp_event_cbk:5----
+bse_a2dp - hlp_a2dp_cbk event = 3 Exit
+
+bse_stack - [HCI][*Send]: 11
+bse_stack - 0000: 02 01 00 06 00 02 00 46 00 22 03                  .......F.".     
+bse_stack - [HCI][*Send]: 35
+bse_stack - 0000: 02 01 00 1E 00 1A 00 01 00 04 0D 16 00 48 00 00   .............H..
+bse_stack - 0010: 00 01 02 80 25 04 09 03 1F 32 00 00 00 00 BA 0F   ....%....2......
+bse_stack - 0020: 05 01 01                                          ...             
+bse_stack - [HCI][*Send]: 34
+bse_stack - 0000: 02 01 00 1D 00 19 00 01 00 05 14 15 00 48 00 00   .............H..
+bse_stack - 0010: 00 00 00 01 02 97 1F 04 09 03 0A 14 D0 07 E0 2E   ................
+bse_stack - 0020: F2 03                                             ..              
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 60
+bse_stack - 0000: 02 01 20 37 00 33 00 45 00 0B FF 5D 01 0D 0A 2B   .. 7.3.E...]...+
+bse_stack - 0010: 43 47 4D 52 3A 20 4D 41 47 2D 41 4E 30 30 20 31   CGMR: MAG-AN00 1
+bse_stack - 0020: 30 2E 30 2E 30 2E 31 36 30 28 53 50 31 43 30 30   0.0.0.160(SP1C00
+bse_stack - 0030: 45 31 36 30 52 38 50 31 29 0D 0A 86               E160R8P1)...    
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:5d,L46][$+1][$:5,9][0d,0a,2b...]
+
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=68
+bse_stack - [HCI][*Recv]: 19
+bse_hfp - hlp_hf_gte_os_version, p_dest=MAG-AN00 10.0.0.160(SP1C00E160R8P1)
+
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_mgr - bt_hf_cbk, event = 14, pointer of param = 0x219cc800
+
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_mgr - bt_hf_cbk, event = 14, pointer of param = 0x219cc800 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - [HCI][*Recv]: 8
+bse_hfp - hlp_hf_event_cbk state=5, event=68 Exit
+
+bse_stack - 0000: 04 13 05UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a
+bse_stack - [HCI][*Recv]: 12
+bse_stack - [HCI][*Recv]: 12
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 07 00 03 00 48 00 30 06 04               .. ....H.0..    
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8028, 255
+
+bse_stack - [HCI][*Recv]: 30
+bse_hfp - hlp_hf_get_status, you get 5
+bse_stack - 0000: 02 01 20 19 00 15 00 01 00 05 0D 11 00 49 00 00   .. ..........I..
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - 0010: 00 00 00 04x][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+2][$:5,9][4
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 20 11 00 0D 00 44 00 09 FF 11 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 4E 55 4D 0D 5C                                 CNUM.\          
+bse_stack - [HCI][*Send]: 11
+bse_stack - 0000: 02 01 00 06 00 02 00 46 00 32 06                  .......F.2.     
+bse_stack - [HCI][*Send]: 48
+bse_stack - 0000: 02 01 00 2B 00 27 00 48 00 00 00 80 00 23 10 00   ...+.'.H.....#..
+bse_stack - 0010: 10 00 46 00 13 79 61 35 F0 F0 C5 11 D8 09 66 08   ..F..ya5......f.
+bse_stack - 0020: 00 20 0C 9A 66 4C 00 09 10 04 00 00 00 03 85 CC   . ..fL..........
+bse_stack - [warning]GetT 8
+ast over 500 ms, [Delta: 1514 ms]
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - ---->[Timer_Exp][219ccb88][Num:4][L2CAP-T_RTX][ms:100]
+
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 15 04 00 19 00 49   .. ............I
+bse_stack - 0010: 00                                                .               
+bse_stack - GAP Internal calback, Event index 0052!
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI][*Send]: 21
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 15 08 00 4A 00 49   .............J.I
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0010: 00 00 00 00 01 00 01 00                           ........        
+bse_stack - 0000:[*Send]: 21
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 0E 08 00 49 00 00   .............I..
+bse_stack - [H10: 00 01 02 0
+bse_stack - 0010: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 44
+bse_stack - 0000: 02 01 20 27 00 23 00 49 00 00 01 A0 00 1F 10 00   .. '.#.I........
+bse_stack - 0010: 0F FB CB 00 00 00 01 4A 00 13 79 61 35 F0 F0 C5   .......J..ya5...
+bse_stack - 0020: 11 D8 09 66 08 00 20 0C 9A 66 4F 2F               ...f.. ..fO/    
+bse_pbap - PBAP_STATE is 3
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=0.
+bse_pbap - PBAP_EVT_CONNECT_COMPLETE success handle = 219c0c08
+bse_stack - [HCI][*Recv]: 8
+bse_pbap - *********hlp_pbap_set_status 4.
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_pbap - 
+ pb_stat2 = 4 PBAP_STATE = 3
+
+bse_stack - [HCI][*Recv]: 49
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000003
+
+bse_stack - 0000: 02 01 20 2C 00 28 00 45 00 0B FF 47 01 0D 0A 2B   .. ,.(.E...G...+
+at_event - bt_event_indicate(1292)512.
+bse_stack - 0010: 43 4E 55 4D 3A 20 2C 22 2B 38 36 31 35 38 38 39   CNUM: ,"+8615889
+at_event - event_len:[13]event_buffer:+PBSTAT=3
+
+bse_stack - 00
+BT20: 36 37 35 37 39  AT RX: +PBS30 22 2C 31TAT=3
+ 11
+ 34 35 2C 2C 34 0D 0A  PBAP state= 675790",145,,4..
+bse_3
+stack - 0030: 86                                                .               
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000003 Exit
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 0, pointer of param = 0x216e96a0
+
+bse_stack - [HCI][*Recv]: 19
+at_event - bt_event_indicate(1280)512.
+bse_stack - 0000: 02 01 20 0E 00 0A 00 45 00 0B EF 0D 0D 0A 4F 4B   .. ....E......OK
+bse_mgr - hlp_mgr_pbap_cbk, event = 0, pointer of param = 0x216e96a0 Exit
+
+bse_stack - 0010: 0D 0A 9A                                          ...             
+bse_hfp - hlp_hf_get_status, you get 5
+bse_pbap - *********hlp_pbap_set_status 5.
+
+bse_pbap - 
+ pb_stat2 = 5 PBAP_STATE = 4
+
+bse_stack - [HCI][*Recv]: 21
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000004
+
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 16 08 00 4A 00 00   .. ..........J..
+at_event - bt_event_indicate(1292)512.
+bse_stack - 0010: 00 01 02 00 04                                    .....           
+at_event - event_len:[13]event_buffer:+PBSTAT=4
+
+
+BT AT RX: +PBSTAT=4
+ 11
+PBAP state=4
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000004 Exit
+
+bse_stack - [HCI][*Recv]: 19
+bse_pbap - PBAP pull request storage=1 flag=0xb8 offset=0 count=0
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 0E 06 00 4A 00 00   .. ..........J..
+vcf_parser - app_vcfparse_start, parser name: PBAP
+bse_stack - 0010: 00 00 00                                          ...             
+bse_pbap - ****PBAP_PullPhoneBookReq TEL
+bse_pbap - hlp_pbap_get_handle PBAP pb_handle is 219c0c08
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=0. Exit
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:47,L35][$+1][$:5,9][0d,0a,2b...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=30
+bse_hfp - Remote phone number
+
+bse_hfp - phone info number is +8615889675790, len is 14
+
+bse_mgr - bt_hf_cbk, event = 23, pointer of param = 0x219c0e03
+
+at_event - bt_event_indicate(535)512.
+at_event - event_len:[26]event_buffer:+HFPNUM=+8615889675790
+
+
+BT AT RX: +HFPNUM=+8615889675790
+ 24
+bse_mgr - bt_hf_cbk, event = 23, pointer of param = 0x219c0e03 Exit
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=30 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$:4,10][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x8017, 255
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - ---->[RFCOMM][UIHx][Send][DLCI:2(1,D0)][A:09,R,][Len:11,L8][$+2][$:5,9][41,54,2b...]
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 20 11 00 0D 00 44 00 09 FF 11 02 41 54 2B   .. ....D.....AT+
+bse_stack - 0010: 43 4C 43 43 0D 5C                                 CLCC.\          
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 16 0A 00 49 00 00   .............I..
+bse_stack - 0010: 00 00 008
+ 02 00 04                              .......         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_a2dp - hlp_a2dp_cbk event = 15
+
+bse_a2dp - hlp_a2dp_cbk event = 15 Exit
+
+bse_a2dp - hlp_a2dp_cbk event = 5
+
+bse_a2dp - hlp_a2dp_set_status(4)
+
+bse_stack - [HCI][*Recv]: 8
+bse_a2dp - hlp_a2dp_set_status even_status = (3)
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_mgr - hlp_mgr_a2dp_cbk, event = 8, pointer of param = 0x00000003
+
+bse_stack - [HCI][*Recv]: 20
+at_event - bt_event_indicate(4124)512.
+bse_stack - 0000: 02 01 20 0F 00 0B 00 45 00 0B FF 0D 01 0D 0A 4F   .. ....E.......O
+at_event - event_len:[15]event_buffer:+A2DPSTAT=3
+
+bse_stack - 0010: 4B 0D 
+BT AT RX0A 86        : +A2DPSTAT                       =3
+ 13
+        K...            
+bse_mgr - porting_a2dp_event_cbk:8 ++++
+bse_mgr - porting_a2dp_event_cbk:8----
+bse_mgr - hlp_mgr_a2dp_cbk, event = 0, pointer of param = 0x216e4e00
+
+bse_avrcp - hlp_avrcp_set_status 3
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 14, pointer of param = 0x00000002
+
+at_event - bt_event_indicate(4125)512.
+at_event - event_len:[16]event_buffer:+AVRCPSTAT=2
+
+
+BT AT RX: +AVRCPSTAT=2
+ 14
+bse_mgr - hlp_mgr_avrcp_cbk, event = 14, pointer of param = 0x00000002 Exit
+
+at_event - bt_event_indicate(768)512.
+bse_mgr - porting_a2dp_event_cbk:0 ++++
+bt_audio_hw - bt_porting_audio_open type = 1
+bse_mgr - porting_a2dp_event_cbk:0----
+bse_a2dp - hlp_a2dp_cbk event = 5 Exit
+
+bse_stack - 
+------->[OBEX][Get_ActiveReq][OPCODE:131]
+
+bse_stack - [HCI][*Send]: 93
+bse_stack - ---->[RFCOMM][UIHx][Recv][DLCI:2(1,D0)][A:0b,C,][Len:0d,L6][$+1][$:5,9][0d,0a,4f...]
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26
+bse_hfp - HFP_EV_ATCMD_RESULT_IND, 0x800f, 255
+
+bse_hfp - hlp_hf_3_way_call_check_mark
+
+bse_hfp - hlp_hf_3_way_call_check_mark 2
+
+bse_hfp - hlp_hf_get_status, you get 5
+bse_hfp - hlp_hf_event_cbk state=5, event=26 Exit
+
+bse_stack - [AP Internal cal
+bse_stack - GAP In04 13 05 01 01 00 01 00             
+bse_stack - 0000: 04 nd]: 17
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 02 0F 04 00 17 00 4B   ...............K
+bse_stack - [HCI][*Recv]:    
+bse_stack - 0010: 02 01 20 17 00 13 00 49 00 02 02 A0 00 0F CB 00   .. ....I........
+bse_stack - 0000: 02 01 20 17 00 13 00 49 00 02 02 A0 00 0F CB 00   .. ....I........
+bse_stack - 0010: 00 00 01 4C 00 07 08 02 00 34 C2 A3               ...L.....4..    
+bse_pbap - PBAP_STATE is 5
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=8.
+bse_pbap - PBAP_STATE is 5
+bse_pbap - *********hlp_pbap_set_status 4.
+
+bse_stack - [HCI][*Recv]: 8
+bse_pbap - 
+ pb_stat2 = 4 PBAP_STATE = 5
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000003
+
+at_event - bt_event_indicate(1292)512.
+at_event - event_len:[13]event_buffer:+PBSTAT=3
+
+bse_s
+BT AT RX: tack - [HCI][*Recv]: 21+PBSTAT=3
+
+bse_stack - 0000: 02  11
+PBAP st01 20 10 00ate=3
+ 0C 00 01 00 03 0F 08 00 4A 00 4B   .. ..........J.K
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000003 Exit
+
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_pbap - PBAP pull complete result=0x00 flag=0x0080 pb_size=52 storage=1 offset=0 count=0 c_pb_type=0
+bse_mgr - hlp_mgr_pbap_cbk, event = 7, pointer of param = 0x00010034
+
+bse_stack - [HCI][*Recv]: 21
+at_event - bt_event_indicate(1287)512.
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 17 08 00 4B 00 00   .. ..........K..
+at_event - PBAP paging start type=1 total=52 first_offset=0 first_count=50 remaining=2 pb_count=52
+
+bse_stack - 0010: 00 01 02 00 02                                    .....           
+at_event - event_len:[13]event_buffer:+PBCNT=52
+
+
+BT AT RX: +PBCNT=52
+ 11
+Phonebook expected count=52
+at_event - PBAP schedule download type=1 offset=0 count=50
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 7, pointer of param = 0x00010034 Exit
+
+bse_pbap - hlp_pbap_pull_phonebook_complete  end
+
+bse_pbap - ****hlp_get_phonebook_cfm_cbk, event=8. Exit
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 10 08 00 4A 00 00   .............J..
+bse_stack - 0010: 00 01 02 A0 02                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 17 0A 00 4A 00 00   .............J..
+bse_stack - 0010: 00 00 00 01 02 00 02                              .......         
+bse_stack - 0010: 00 00 00 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+ process:[2 2] frbse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 20 0E 00 0A 00 01 00 05 10 06 00 4B 00 00   .. ..........K..
+bse_stack - 0010: 00 00 00                                          ...             
+bse_avrcp - hlp_avrcp_cbk 2,1
+
+bse_avrcp - hlp_avrcp_group_conntion, event=0x00000201
+
+bse_stack - [HCI][*Recv]: 17
+bse_avrcp - hlp_avrcp_set_status 4
+
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 18 04 00 01 00 4B   .. ............K
+bse_mgr - hlp_mgr_avrcp_cbk, event = 14, pointer of param = 0x00000003
+
+bse_stack - 0010: 00                                                .               
+at_event - bt_event_indicate(4125)512.
+at_event - event_len:[16]event_buffer:+AVRCPSTAT=3
+
+
+BT AT RX: +AVRCPSTAT=3
+ 14
+bse_mgr - hlp_mgr_avrcp_cbk, event = 14, pointer of param = 0x00000003 Exit
+
+bse_avrcp - [Req] Get Capabilities <EVENTS_SUPPORTED>
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 0, pointer of param = 0x216e5242
+
+bse_mgr - avrcp connected.
+at_event - bt_event_indicate(1024)512.
+bse_hfp - hlp_hf_get_status, you get 5
+bse_mgr - hlp_mgr_avrcp_cbk, event = 0, pointer of param = 0x216e5242 Exit
+
+bse_avrcp - hlp_avrcp_cbk 2,1 Exit
+
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 02 11 04 00 1B 00 4C   ...............L
+bse_stack - 0010: 00                                                .               
+bse_stack - GAP Internal callback, Event index 0052!
+
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 03 18 08 00 4D 00 4B   .............M.K
+bse_stack - [HCI: 00 00 00 0
+bse_stack - 0010: 00 03 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 0
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 12 08 00 4B 00 00   .............K..
+bse_stack - [HCI][*0 01 02 0
+bse_stack - 0010: 00 01 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 0ck, Event index 0052!
+             ........        
+bse_stack - GACI][*Recv]: 21
+ack, Event index 0052!
+
+bse_stack - [HCI][*Send]: 17
+bse_stack - [HCI][*Sen1 20 10
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 02 13 04 00 01 00 4E   ...............N
+bse_stack - 0000: 02 00 00 00 00                                    .....           
+bse_stack - 0010: 00 00 00                                          .               
+bse_stack - 0010: 00                                                .               
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 4A 00 10 11 0E 01 48 00 00   .......J.....H..
+bse_stack - 0000:[*Recv]: 32
+00 0E 00 4A 00 10 11 0E 01 48 00 00   .......J.....H..
+bse_stack - [HCI][*Recv]: 32
+bse_stack - 0010: 19 58 10 00 00 17 00 01 00 04 19 13 00 4C 00 00   .. ..........L..
+bse_stack - 0000: 02 01 20 1B 00 17 00 01 00 04 19 13 00 4C 00 00   .. ..........L..
+bse_stack - [HCI][00 01 02 F0
+bse_stack - 0000: 02 01 00 1B 00 17 00 01 00 04 14 13 00 4C 00 00   .............L..
+bse_stack - 0000: 02 01 00 1B 00 17 00 01 00 04 14 13 00 4C 00 00   .............L..
+bse_stack - [HCI][*Recv]: 8
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 21
+bse_stack - [HCI][02 01 00 1D
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 1A 08 00 4D 00 00   .. ..........M..
+bse_stack - 0000: 00 00 00 01 02 F0 03 04 09 03 0A 14 D0 07 E0 2E   ................
+bse_stack - 0010: 00 00 02 00 04                                    .....           
+bse_stack - 0010: F2 03                                             ..              
+bse_stack - 0020: F2 03                                             ..              
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 23
+bse_stack - [HCI] 02 01 20 0E
+bse_stack - 0000: 02 01 20 0E 00 0E 00 01 00 05 1A 0A 00 4B 00 00   .............K..
+bse_stack - 0000: 02 01 00                                          ...             
+bse_stack - 0010: 00 00 00    02 00 04                              .......         
+bse_stack - 0010: 00 00 00 01 02 00 04                              .......         
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 21
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 03 13 08 00 4D 00 4E   .. ..........M.N
+bse_stack - 0010: 00 00 00 00 00                                    .....           
+bse_stack - [HCI][*Send]: 21
+bse_stack - 0000: 02 01 00 10 00 0C 00 01 00 04 15 08 00 4D 00 00   .............M..
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 21
+bse_stack - 0000: 02 01 20 10 00 0C 00 01 00 04 1B 08 00 4E 00 00   .. ..........N..
+bse_stack - 0010: 00 01 02 00 04                                    .....           
+bse_stack - [HCI][*Send]: 23
+bse_stack - 0000: 02 01 00 12 00 0E 00 01 00 05 1B 0A 00 4D 00 00   .............M..
+bse_stack - [HC0: 00 00 00 0
+bse_stack - 0010: 00 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 32
+bse_stack - 0000: 02 01 20 1B 00 17 00 4B 00 12 11 0E 0C 48 00 00   .. ....K.....H..
+bse_stack - 0010: 19 58 10 00 00 0A 03 08 01 02 05 08 09 0A 0B 0C   .X..............
+bse_avrcp - hlp_avrcp_cbk 1,10
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=c, pduid=0x10
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_get_caps_cfm, rsp_type = 0C
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - [AVRCP] id=03, count=8
+
+bse_avrcp - [Cfm] Get Capabilities <EVENTS_SUPPORTED> 0x01 0x02 0x05 0x08 0x09 0x0A 0x0B 0x0C
+
+bse_stack - [HCI][*Recv]: 30
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:1
+bse_stack - 0000: 02 01 20 19 00 15 00 01 00 05 14 11 00 4C 00 00   .. ..........L..
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:2
+bse_stack - 0010: 00 00 00 04 09 03 0A 00 88 13 E0 2E E8 03         ..............  
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:5
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:8
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:9
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_register_noification_req,event_id:10
+bse_stack - [HCI][*Recv]: 33
+bse_mgr - hlp_mgr_avrcp_cbk, event = 13, pointer of param = 0x00000001
+
+bse_stack - 0000: 02 01 20 1C 00 18 00 4D 00 06 00 00 00 13 35 03   .. ....M......5.
+bse_mgr - hlp_mgr_avrcp_cbk, event = 13, pointer of param = 0x00000001 Exit
+
+bse_stack - 0010: 19 11 0E 03 F0 35 09 09 00 01 09 00 09 09 03 11   .....5..........
+bse_avrcp - hlp_avrcp_cbk 1,10 Exit
+
+bse_stack - 00CI][*Send]: 27
+                                      .               
+bse_stack - [HCI][*Send]: 27
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 10 11 0E 03 48 00 00   .......J.....H..
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0010: 12 01 20 0E 00 0A 00 01 00 05 15 06 00 4E 00 00   .. ..........N..
+bse_stack - 0000: 02 01 2 27
+00 0A 00 01 00 05 15 06 00 4E 00 00   .. ..........N..
+bse_stack - [HCI][*0 00 00   
+bse_stack - 0010: 00 01 00 16 00 12 00 4A 00 20 11 0E 03 48 00 00   .......J. ...H..
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 20 11 0E 03 48 00 00   .......J. ...H..
+bse_stack - 0010: 19 58 31 00 00 05 02 00 00 00 00                  .X1........     
+bse_avrcp - hlp_avrcp_cbk 2,1
+
+bse_avrcp - hlp_avrcp_group_conntion, event=0x00000201
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 2,1 Exit
+
+bse_stack - 0000: 04 13 0527
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 27
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 30 11 0E 03 48 00 00   .......J.0...H..
+bse_stack - 0010: 19 58 31 00 00 05 05 00 00 00 01                  .X1........     
+bse_stack - 0010: 19 58 31 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 24
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 40 11 0E 03 48 00 00   .......J.@...H..
+bse_stack - 0000: 02 01 00 13 00 0F 00 4B 00 12 11 0E 0F 48 00 00   .. ....K.....H..
+bse_stack - 0000: 02 58 31 00 00 05 08 00 00 00 00                  .X1........     
+bse_stack - 0010: 19 58 31 00 00 02 01 02                           .X1.....        
+bse_stack - 0010: 19 58 31 00 00 02 01 02                           .X1.....        
+bse_stack - [HCI][*Send]: 80
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_stack - [HCI][*Recv]: 24
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x01, rsp_type: 0x0F
+
+bse_stack - 0000: 02 01 20 13 00 0F 00 4B 00 12 11 0E 0D 48 00 00   .. ....K.....H..
+bse_avrcp - play_status is 0x2
+bse_stack - 0010: 19 58 31 00 00 02 01 02                           .X1.....        
+bse_avrcp - hlp_avrcp_set_status 7
+
+bse_stack - [HCI][*Recv]: 8
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+at_event - bt_event_indicate(4136)512.
+at_event - event_len:[15]event_buffer:+PLAYSTAT=2
+
+
+BT AT RX: +PLAYSTAT=2
+ 13
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002 Exit
+
+bse_stack - [HCI][*Recv]: 31
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002
+
+bse_stack - 0000: 02 01 20 1A 00 16 00 4B 00 22 11 0E 0F 48 00 00   .. ....K."...H..
+at_event - bt_event_indicate(1032)512.
+bse_stack - 0010: 19 58 31 00 00 09 02 00 00 00 00 00 00 00 00      .X1............ 
+bse_mgr - bt_manager_notify_status timer end
+
+bse_stack - [HCI][*Recv]: 8
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002 Exit
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=d, pduid=0x31
+
+bse_stack - [HCI][*Recv]: 27
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x01, rsp_type: 0x0D
+
+bse_stack - 0000: 02 01 20 16 00 12 00 4B 00 32 11 0E 0F 48 00 00   .. ....K.2...H..
+bse_avrcp - play_status is 0x2
+bse_stack - 0010: 19 58 31 00 00 05 05 00 00 00 00                  .X1........     
+bse_avrcp - hlp_avrcp_set_status 7
+
+bse_stack - [HCI][*Recv]: 8
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+at_event - bt_event_indicate(4136)512.
+at_event - event_len:[15]event_buffer:+PLAYSTAT=2
+
+
+BT AT RX: +PLAYSTAT=2
+ 13
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002 Exit
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002
+
+at_event - bt_event_indicate(1032)512.
+bse_mgr - bt_manager_notify_status timer end
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002 Exit
+
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - [HCI][*Send]: 27
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 50 11 0E 03 48 00 00   .......J.P...H..
+bse_stack - 0010: 19 58 31 00 00 05 09 00 00 00 00                  .X1........     
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x02, rsp_type: 0x0F
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - [HCI][*Send]: 22
+bse_stack - [HCI][*Send]: 32
+bse_stack - [HC0: 02 01 00 11
+bse_stack - 0000: 02 01 20 1B 00 17 00 4B 00 42 11 0E 0F 48 00 00   .. ....K.B...H..
+bse_stack - 0000: 09 11 0C 00 08 00                                 ......          
+bse_stack - 0010: 19 58 31 00 00 0A 08 04 01 01 02 01 03 01 04 01   .X1.............
+bse_stack - 0010: 19 58 31 00 00 0A 08 04 01 01 02 01 03 01 04 01   .X1.............
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_stack - [HCI][*Recv]: 33
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x05, rsp_type: 0x0F
+
+bse_stack - 0000: 02 01 20 1C 00 18 00 4D 00 06 00 00 00 13 35 03   .. ....M......5.
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - 0010: 19end]: 27
+F0 35 09 09 00 01 09 00 09 09 03 11   .....5..........
+bse_stack - [HCI][*Send]: 2  
+bse_stack - 0020: 00          00 12 00 4A 00 60 11 0E 03 48 00 00   .......J.`...H..
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 60 11 0E 03 48 00 00   .......J.`...H..
+bse_stack - [HCI][*R 58 31 0
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 00 1
+00 0D 00 4A 00 70 11 0E 01 48 00 00   .......J.p...H..
+bse_stack - [HCI][*9 58 30 00
+bse_stack - 0000: 02 01 20 16 00 12 00 4B 00 00 11 0E 03 48 00 00   .. ....K.....H..
+bse_stack - 0000: 02 01 20 16 00 12 00 4B 00 00 11 0E 03 48 00 00   .. ....K.....H..
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_stack - 0010: 19 58 31 00 00 05 0D 00 00 00 00                  .X1........     
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x08, rsp_type: 0x0F
+
+bse_stack - [HCI][*Recv]: 23
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - 0000: *Send]: 27
+00 0E 00 4B 00 52 11 0E 0F 48 00 00   .. ....K.R...H..
+bse_stack - [010: 19 58 31 00
+bse_stack - 0010: 02 01 00 16 00 12 00 4A 00 10 11 0E 03 48 00 00   .......J.....H..
+bse_stack - 0000: 02 01 00 16 00 12 00 4A 00 10 11 0E 03 48 00 00   .......J.....H..
+bse_stack - [HCI][19 58 31 0
+bse_stack - 0010: 19 58 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_cbk 0,31
+
+bse_avrcp - hlp_avrcp_reg_notification_ind :d
+bse_stack - [HCI][*Recv]: 23
+bse_avrcp - ----> Register Volume Change Notification.
+bse_stack - 0000: 02 01 20 12 00 0E 00 4E 00 03 00 00 00 09 00 01   .. ....N........
+bse_avrcp - hlp_avrcp_reg_notification_ind :0
+bse_stack - 0010: 00 01 00 01 00 07 00                              .......         
+bse_avrcp - hlp_avrcp_cbk 0,31 Exit
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x09, rsp_type: 0x0F
+
+bse_stack - [HCI][*Recv]: 23
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - 00CI][*Send]: 48
+00 0E 00 4B 00 62 11 0E 0F 48 00 00   .. ....K.b...H..
+bse_stack - [HCI][*S 58 31 00
+bse_stack - 0000: 02 01 00 2B 00 27 00 4B 00 07 00 00 00 22 00 1F   ...+.'.K....."..
+bse_stack - 0000: 02 01 00 2B 00 27 00 4B 00 07 00 00 00 22 00 1F   ...+.'.K....."..
+bse_stack - [H10: 35 1D 35 1
+bse_stack - 0010: 35 13 05 01 01 00 01 00                           ........        
+bse_stack - 0000: 04 13 05 19 11 0D 09 01 02 09 03 11 09 00 01 00   .5..............
+bse_stack - 0020: 08 35 06 19 11 0D 09 01 02 09 03 11 09 00 01 00   .5..............
+bse_stack - [HCI][*Recv]: 32
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 20 1A 00 0D 00 4A 00 80 11 0E 01 48 00 00   .......J.....H..
+bse_stack - 0010: 19 58 30 00 00 09 00 00 00 00 00 00 00 00 02      .X0............ 
+bse_stack - 0010: 19 58 30 00 00 00                                 .X0...          
+bse_stack - 0010: 19 58 30 00 00 00                                 .X0...          
+bse_stack - [HCI][*Recv]: 24
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_stack - 0000: 02 01 20 13 00 0F 00 4B 00 12 11 0E 0F 48 00 00   .. ....K.....H..
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_stack - 0010: 19 58 31 00 00 02 01 02                           .X1.....        
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x0A, rsp_type: 0x0F
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - 0000: 04 1d]: 24
+01 00 01 00                           ........        
+bse_stack - [HCI][*Send]: 24
+bse_stack - 0000: 02 01 00 13 00 0F 00 4A 00 90 11 0E 03 48 00 00   .......J.....H..
+bse_stack - 0010][*Recv]: 17
+00 02 0D 00                           .X1.....        
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 06 1C 04 00 4D 00 4B   .. ..........M.K
+bse_avrcp - hlp_avrcp_cbk 1,30
+
+bse_stack - 0010: 00                                                .               
+bse_avrcp - hlp_avrcp_group_response, rsp_type=c, pduid=0x30
+
+bse_stack - [HCI][*Recv]: 8
+bse_mgr - hlp_mgr_avrcp_cbk, event = 4, pointer of param = 0x219d0c80
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+at_event - bt_event_indicate(1028)512.
+at_event - event_len:[20]event_buffer:+TRACKSTAT=2,0,0
+
+bse_stack 
+BT AT - [HCI][*ReRX: +TRACKSTcv]: 31
+bse_stack - 00AT=2,0,0
+ 00: 02 01 20 1A 00 16 018
+0 4B 00 82 11 0E 0C 48 00 00   .. ....K.....H..
+bse_mgr - hlp_mgr_avrcp_cbk, event = 4, pointer of param = 0x219d0c80 Exit
+
+bse_stack - 0010: 19 58 30 00 00 09 00 00 00 00 00 00 00 00 02      .X0............ 
+bse_avrcp - hlp_avrcp_cbk 1,30 Exit
+
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_group_response, rsp_type=f, pduid=0x31
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x01, rsp_type: 0x0F
+
+bse_avrcp - play_status is 0x2
+bse_avrcp - hlp_avrcp_set_status 7
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002
+
+at_event - bt_event_indicate(4136)512.
+at_event - event_len:[15]event_buffer:+PLAYSTAT=2
+
+
+BT AT RX: +PLAYSTAT=2
+ 13
+bse_mgr - hlp_mgr_avrcp_cbk, event = 15, pointer of param = 0x00000002 Exit
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002
+
+at_event - bt_event_indicate(1032)512.
+bse_mgr - bt_manager_notify_status timer end
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 8, pointer of param = 0x00000002 Exit
+
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - [HCI][*Send]: 28
+bse_stack - 0000: 02 01 00 17 00 13 00 4D 00 04 00 01 00 0E 00 01   .......M........
+bse_stack - 0010: 00 07 03 E8 35 05 0A 00 00 FF FF 00               ....5.......    
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 07 1C 04 00 4D 00 4B   .............M.K
+bse_stack - 0010: 00                                                .               
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 1,30
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_group_response, rsp_type=c, pduid=0x30
+
+bse_stack - [HCI][*Recv]: 23
+bse_mgr - hlp_mgr_avrcp_cbk, event = 4, pointer of param = 0x219cc000
+
+bse_stack - 0000: 02 01 20 12 00 0E 00 4B 00 92 11 0E 0A 48 00 00   .. ....K.....H..
+at_event - bt_event_indicate(1028)512.
+bse_stack - 0010: 19 58 31 00 00 01 01                              .X1....         
+at_event - event_len:[20]event_buffer:+TRACKSTAT=2,0,0
+
+
+BT AT RX: +TRACKSTAT=2,0,0
+ 18
+bse_mgr - hlp_mgr_avrcp_cbk, event = 4, pointer of param = 0x219cc000 Exit
+
+bse_stack - [HCI][*Recv]: 8
+bse_avrcp - hlp_avrcp_cbk 1,30 Exit
+
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_avrcp - hlp_avrcp_cbk 1,31
+
+bse_avrcp - hlp_avrcp_group_response, rsp_type=a, pduid=0x31
+
+bse_avrcp - hlp_avrcp_register_noification_cfm, event: 0x0D, rsp_type: 0x0A
+
+bse_avrcp - hlp_avrcp_cbk 1,31 Exit
+
+bse_stack - [warning]GetTimePast over 500 ms, [Delta: 2687 ms]
+bse_stack - ---->[Timer_Exp][219cc988][Num:5][NULL-][ms:13]
+
+bse_stack - ---->[Timer_Exp][219cc108][Num:4][L2CAP-T_ACK][ms:1250]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 01 02 96 75            .......H....u   
+bse_stack - ---->[Timer_Exp][219c0188][Num:3][NULL-pbdown][ms:1000]
+
+at_event - PBAP deferred download type=1 offset=0 count=50
+
+bse_pbap - PBAP_STATE is 4
+bse_pbap - PBAP get phonebook request state=4 bd=44:90:46:36:ec:2a type=1 offset=0 count=50
+bse_pbap - PBAP_STATE is 4
+bse_pbap - PBAP_STATE is 4
+bse_pbap - PBAP_STATE is 4
+bse_stack - [HCI][*Recv]: 8
+bse_pbap - PBAP_STATE is 4
+bse_pbap - PBAP_STATE is 4
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_pbap - PBAP connected, start phonebook download directly.
+bse_stack - [HCI][*Recv]: 142
+bse_hfp - hlp_hf_get_status, you get 5
+bse_pbap - *********hlp_pbap_set_status 5.
+
+bse_pbap - 
+ pb_stat2 = 5 PBAP_STATE = 4
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000004
+
+at_event - bt_event_indicate(1292)512.
+at_event - event_len:[13]event_buffer:+PBSTAT=4
+
+
+BT AT RX: +PBSTAT=4
+ 11
+PBAP state=4
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000004 Exit
+
+bse_pbap - PBAP pull request storage=1 flag=0xb8 offset=0 count=50
+vcf_parser - app_vcfparse_start, parser name: PBAP
+bse_pbap - ****PBAP_PullPhoneBookReq TEL
+bse_pbap - hlp_pbap_get_handle PBAP pb_handle is 219c0c08
+at_event - PBAP page timeout start token=1 timeout=20000
+
+bse_avrcp - get_rcfeature, sdx_info->sup_cg=0xc1, sdx-info->psm=0
+bse_stack - 
+------->[OBEX][Get_ActiveReq][OPCODE:131]
+
+bse_stack - [HCI][*Send]: 93
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 00 0C 00 08 00 01 00 06 16 04 00 4D 00 4E   .............M.N
+bse_stack - 0010: 00                                                .               
+ame rate:0f/s  CRC Show:false
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - ---->[Timer_Exp][219d01c8][Num:5][L2CAP-T_RTX][ms:100]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 11 02 9B B5            .......H.....   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 02 01 20 0C 00 08 00 01 00 07 16 04 00 4D 00 4E   .. ..........M.N
+bse_stack - 0010: 00                                                .               
+Memory free: 24171008 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+Memory free: 24171008 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+bse_stack - ---->[Timer_Exp][219cff88][Num:4][L2CAP-T_MON][ms:52]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 11 02 9B B5            .......H.....   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+bse_stack - ---->[Timer_Exp][219c0b08][Num:4][NULL-pbto][ms:1]
+
+at_event - PBAP page timeout type=1 offset=0 count=50 remaining=2 retry=0/1 token=1
+
+at_event - PBAP page timeout disconnect PBAP
+
+at_event - bt_event_indicate(1286)512.
+at_event - PBAP phonebook fail err=0xEE
+
+at_event - event_len:[16]event_buffer:+PBDATA=E,EE
+
+
+BT AT RX: +PBDATA=E,EE
+ 14
+Phonebook download complete
+Memory free: 24162368 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+bse_stack - ---->[Timer_Exp][219ce288][Num:4][L2CAP-T_MON][ms:54]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 11 02 9B B5            .......H.....   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+Memory free: 24162240 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+bse_stack - ---->[Timer_Exp][219cf308][Num:4][L2CAP-T_MON][ms:13]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 11 02 9B B5            .......H.....   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+Memory free: 24162176 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false
+bse_stack - ---->[Timer_Exp][219cf288][Num:4][L2CAP-T_MON][ms:54]
+
+bse_stack - [HCI][*Send]: 13
+bse_stack - 0000: 02 01 00 08 00 04 00 48 00 11 02 9B B5            .......H.....   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 00 01 00                           ........        
+Memory free: 24162176 bytes.
+[INFO] heartbeat_task_proc:857 - ey ==> process:[2 2] frame rate:0f/s  CRC Show:false

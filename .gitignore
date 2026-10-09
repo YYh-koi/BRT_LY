@@ -1,0 +1,33 @@
+# ==================== IAR 编译产物 ====================
+# IAR 各工程的中间/输出目录
+Obj/
+Exe/
+List/
+Browse/
+settings/
+
+# 明确的 IAR Debug 构建输出目录（精确路径，避免误伤源码中名为 debug 的目录）
+amt630hv100-freertos_bc4661/proj/Debug/
+atbm_rtos_wifi6/Debug/
+
+# IAR 中间文件类型
+*.pbi
+*.pbd
+*.pbf
+*.lst
+*.o
+*.obj
+*.out
+*.map
+*.crf
+*.dep
+*.i
+*.sim
+*.sni
+
+# ==================== 其它临时文件 ====================
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+*~

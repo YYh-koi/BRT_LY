@@ -1,0 +1,1436 @@
+
+[16:03:08.367]收←◆Memory free: 24618368 bytes.
+
+[16:03:18.378]收←◆Memory free: 24618368 bytes.
+
+[16:03:41.671]收←◆-I- MMU enabled.
+-I- D 
+[16:03:41.713]收←◆cache enabled.
+-I- I cache is already enabled.
+sys_pll=396000000
+cpu_pll=546000000
+vpu_pll=240000000
+ddr_pll=600000000
+cpu_clk=546000000
+ddr_clk=600000000
+ahb_clk=396000000
+apb_clk=198000000
+mmc_clk=24000000
+mfc_clk=240000000
+-I- VDEC controller at 0x1897922560, irq = 1
+Product ID: 0x6731 (revision 2.57.8)
+ark_lcd_clk_init, set clk:49500000
+
+[16:03:41.746]收←◆-I- Using PIO mode.
+
+[16:03:41.807]收←◆awtk thread start.
+spi max_freq 136500000, current freq 34125000, qspi_freq 34125000.
+[SFUD]Find a GigaDevice flash chip. Size is 33554432 -E- Unable to clear enable on channel 0
+-E- Unable to clear enable on channel 1
+-E- Unable to clear enable on channel 2
+-E- Unable to clear enable on channel 3
+hub_set_address:4294
+hub_set_address:4297
+
+[16:03:41.843]收←◆bytes.
+[SFUD]spi0 flash device is initialize suERROR: ark_mmc_get_response, response error or response crc error, RINTSTS: 0x46
+
+[16:03:41.939]收←◆sdio_init_
+[16:03:42.127]收←◆card wifi_sdio_func:21673080
+ccess.
+fractional divisor:0
+------ TestECTiny begin ------
+detect sdio device
+brlinkd - brtbt_register_event_cb start
+start init stack.
+[BT_UART] brlinkd_stack_init hw_cfg: reset_io=94 uartport=1 module=3
+[BT_UART] brlinkd_stack_init sw_cfg: debug_mode=0 schedule_loop_priority=20
+sw_bip_coverart_register_cb
+start init stack. at_init start, debug_mode:0 schedule_loop_priority = 20
+DEV_INFO_LEN;3614, BT_FLASH_USE_SIZE:4096
+brt Flash detected: W25Q128, Size: 33554432 bytes
+BT_FLASH_OFFSET:0x1fff000
+start init stack. end
+brlinkd_stack_run start
+[atbm_log]:atbm_sdio_module_init
+[atbm_log]:atbm_init_firmware
+[atbm_log]:[Wifi] Enter atbm_sdio_module_init 
+[atbm_log]:SVN_VER=4690,DPLL_CLOCK=24,BUILD_TIME=[===SDIO-ATHENAB==
+[atbm_log]:BRT SVN_VER=4690_brt_r33069
+[atbm_log]:atbm_sdio_register_init
+[atbm_log]:atbmwifi sdio id not match 7a 6011
+[atbm_log]:atbmwifi sdio id not match 7a 8893
+[atbm_log]:atbm: Atbmwifi_halEntry() <===
+++WORK_TASK =25 WORK_TASK_PRIO
+[atbm_log]:Thread atbm_work 10000 start
+++ELOOP_TASK =26ELOOP_TASK_PRIO
+[atbm_log]:Thread atbm_timer 0 start
+[atbm_log]:atbm_init_chip_priv : chip_id = 31 
+[atbm_log]:atbm_register_bh
+[atbm_log]:atbm_urb_queue_init ==>
+++TX_BH_TASK_ =29TX_BH_TASK_PRIO
+[atbm_log]:Thread Atbm_TX 0 start
+++BH_TASK =28BH_TASK_PRIO
+[atbm_log]:Thread Atbm_RX 100000 start
+[atbm_log]:atbm_urb_queue_init <==
+++BH_TASK =28BH_TASK_PRIO
+[atbm_log]:Thread atbm_bh 100000 start
+[atbm_log]:delay 2000ms before loading bt firmware
+------ TestECTiny end ------
+FreeRTOS command server.
+Type Help to view a list of registered commands.
+
+>add mem block 2075c11c 6291456
+app_root=./
+ratio=1.000000 800 480
+ratio=1.000000 800 480
+ratio=1.000000 800 480
+Build at: Oct  9 2026 16:02:13
+!!!Asset [name=home_page/home_page type=ui] not exist!!!
+ui_loader_load_widget_with_parent:46 condition(ui != NULL) failed!
+widget_set_style_str:4417 condition(widget != NULL && state_and_name != NULL && value != NULL) failed!
+
+[16:03:44.093]收←◆[atbm_log]:atbm_load_bt_firmware++
+[atbm_log]:start load bt fw 491520
+[atbm_log]:bt load itcm start P:2010000, l:78000
+[atbm_log]:atbm_load_firmware_generic: addr 2010000: len 78000
+
+[16:03:44.276]收←◆[atbm_log]:bt load dtcm start P:2800000, l:18000
+[atbm_log]:atbm_load_firmware_generic: addr 2800000: len 18000
+
+[16:03:44.370]收←◆[atbm_log]:BT TEST FW
+[atbm_log]:atbm_before_load_firmware++
+[atbm_log]:atbm_before_load_firmware:read 0x16101004,3cdc2240
+[atbm_log]:atbm_before_load_firmware:read 0x16100074,1
+[atbm_log]:atbm_before_load_firmware:read 0xa900000 0
+[atbm_log]:atbm_before_load_firmware:0xa900000 [0]
+[atbm_log]:atbm_start_load_firmware++
+[atbm_log]:atbm_start_load_firmware: START DOWNLOAD ICCM=========
+[atbm_log]:atbm_load_firmware_generic: addr 1060000: len 20000
+
+[16:03:44.402]收←◆[atbm_log]:atbm_start
+[16:03:44.453]收←◆_load_firmware: START DOWNLOAD DCCM=========
+[atbm_log]:atbm_load_firmware_generic: addr 1800000: len 8000
+[atbm_log]:START DOWNLOAD BLE SRAM=========
+[atbm_log]:atbm_load_firmware_generic: addr c00000: len fa0
+[atbm_log]:atbm_start_load_firmware: FIRMWARE DOWNLOAD SUCCESS
+[atbm_log]:atbm_after_load_firmware++
+
+[16:03:44.662]收←◆animation end.
+
+[16:03:44.981]收←◆[atbm_log]:firmwareCap f1c9
+[atbm_log]:firmwareCap2 1204
+[atbm_log]:wsm_startup_indication : resv[2342] 
+[atbm_log]:wsm_caps.firmwareCap 1204f1c9 
+[atbm_log]:apollo wifi WSM init done.
+   Input buffers: 18 x 1632 bytes
+   Hardware: 7.21
+   WSM firmware [=MODEM=DPLL40M-NoBle-plat=1020251205118e2f8bc 2GHZ Dec 11 2025 20:45:51 Rx:7 (1) Tx:18 4]
+[atbm_log]:LmacVersion: 63676, build: 7936, api: 1060, cap: 0x1204F1C9 Config[31010]  expection c0a6b8, ep0 cmd addr c0a724 NumOfHwXmitedAddr[12634660]
+[atbm_log]:CAPABILITIES_ATBM_PRIVATE_IE   [0]
+[atbm_log]:CAPABILITIES_IPC 		[0]
+[atbm_log]:CAPABILITIES_NO_CONFIRM 		   [1]
+[atbm_log]:CAPABILITIES_WOW 		   [0]
+[atbm_log]:CAPABILITIES_NO_BACKOFF 		   [0]
+[atbm_log]:CAPABILITIES_CFO 		[1]
+[atbm_log]:CAPABILITIES_CHIP_FLAG 		[1]
+[atbm_log]:CAPABILITIES_TXCAL 		[1]
+[atbm_log]:CAPABILITIES_LMAC_BAB_SETUP 		[0]
+[atbm_log]:CAPABILITIES_FORCE_PM_ACTIVE 		[0]
+[atbm_log]:CAPABILITIES_SMARTCONFIG	[0]
+[atbm_log]:CAPABILITIES_ETF			[1]
+[atbm_log]:CAPABILITIES_BLE	[1]
+[atbm_log]:CAPABILITIES_40M		[1]
+[atbm_log]:CAPABILITIES_LDPC		[1]
+[atbm_log]:CAPABILITIES_NAV_ENABLE		[0]
+[atbm_log]:CAPABILITIES_USB_RECOVERY_BUG	 [0]
+[atbm_log]:CAPABILITIES_USE_IPC				[0]
+[atbm_log]:CAPABILITIES_OUTER_PA 			[0]
+[atbm_log]:CAPABILITIES_WFA	[0]
+[atbm_log]:CAPABILITIES_EAP_GROUP_REKEY	[0]
+[atbm_log]:CAPABILITIES_RTS_LONG_DURATION	[0]
+[atbm_log]:CAPABILITIES_TX_CFO_PPM_CORRECTION[0]
+[atbm_log]:CAPABILITIES_RXCAL	   [1]
+[atbm_log]:CAPABILITIES_HW_CHECKSUM			[0]
+[atbm_log]:CAPABILITIES_80211_TO_8023 [0]
+[atbm_log]:CAPABILITIES_NEW_CHIPER	[1]
+[atbm_log]:atbm fw_ready: cfg ret=0 val=0x4031200
+[atbm_log]:atbm fw_ready: fn1_reset ret=0 val=0x0
+[atbm_log]:atbm fw_ready: 0x1610102c ret=0 val=0x6300b
+[atbm_log]:atbm fw_ready: 0x161000c0 ret=0 val=0x10107
+[atbm_log]:atbm fw_ready: 0x161000ac ret=0 val=0x0
+[atbm_log]:tx_channel_num 64, rx_channel_num 32
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:MAC Addr[0]:[54:14:e9:85:c3:bd]
+[atbm_log]:efuse data is [0x3,0x32,0x3f,0x3f,0x3d,0x26,0x0,0x0,0x54:0x14:0xe9:0x85:0xc3:0xbd]
+[atbm_log]:atbmwifi_netstack_init
+[atbm_log]:__wpa_event_init
+++HIF_TASK =27HIF_TASK_PRIO
+[atbm_log]:Thread atbm_hif 100000 start
+[atbm_log]:atbmwifi_netstack_init   END
+[atbm_log]:atbm_alloc_netdev,netdev(21983700),nif(2198e940),priv(21983714)
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4105
+[atbm_log]:atbm_wifi_netif_init ucIPAddress: 192.168.13.1
+if[0] MAC addr :54:14:e9:85:c3:bd
+[atbm_log]:atbm_alloc_netdev,netdev(21991b80),nif(2199cdc0),priv(21991b94)
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4105
+[atbm_log]:atbm_wifi_netif_init ucIPAddress: 192.168.13.1
+if[1] MAC addr :56:14:e9:85:c3:bd
+[atbm_log]:atbmwifi sdio id match 7a 8895
+
+[16:03:45.169]收←◆[CARLINK-BT] AT: OK
+
+[BT_UART] bt_enable_bluetooth: state=0
+[CARLINK-BT] AT: OK
+
+[BT_UART] bt_enable_bluetooth: request enabling
+[BT_UART] state change request: BT_STATE_NONE -> BT_STATE_ENABLING
+[BT_UART] state change check: changed=1
+[BT_UART] state action: BT_STATE_ENABLING
+[BT_UART] bt_action_on_bluetooth_enabling: app_tl_init
+[BT_UART] app_tl_init: enter tl=0
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+[BT_UART] app_tl_init: transport_new tl=218d4000
+[BT_UART] app_tl_init: call transport init
+hw_get_bt_module: 3
+hw_get_uartport: 1
+[BT_UART] open_port: enter module=3 uartport=1 sem_init=0
+[BT_UART] open_port: GT baud=921600
+hw_get_uartport: 1
+hw_get_bt_module: 3
+[BT_UART] open start: port=1 baud=921600 flags=0x0 module=3
+[BT_UART] open success: port=1 handle=219a8240
+fractional divisor:10
+[BT_UART] init done: port=1 baud=921600 flags=0x0
+[BT_UART] open_port: result handle=219a8240
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+[BT_UART] app_tl_init: init done handle=202e4ebc
+porting_read_configure:BT_FLASH_OFFSET + offset:33550336, len:3614
+[CARLINK-BT] AT: +BIPSTAT=0
+
+[CARLINK-BT] AT: +PBSTAT=1
+
+hw_get_bt_module: 3
+upio_set_bluetooth_power 0
+hw_get_bt_en_pin: 94
+
+[16:03:45.205]收←◆upio_set_bluetooth_power 1
+hw_get_bt_en_pin: 94
+hw_get_bt_module: 3
+[CARLINK-BT] AT: +PBSTAT=1
+
+[BT_UART] bt_action_on_bluetooth_enabling: bt_init done
+
+[16:03:46.291]收←◆porting_read_configure:BT_FLASH_OFFSET +
+[16:03:46.425]收←◆ offset:33550336, len:3614
+[CARLINK-BT] AT: OK
+
+[CARLINK-BT] AT: +NAME=AP630_LUYUAN_NEW888_C3BE
+
+[CARLINK-BT] AT: OK
+
+[CARLINK-BT] AT: +ADDR=5414E985C3BE
+
+ADDR:5414E985C3BE
+
+0xdd, 0x30, 0x00, 0xa0, 0x40, 0x00, 0x00, 0x02, 0x00, 0x22, 0x02, 0x09, 0x61, 0x72, 0x6b, 0x6d, 0x69, 0x63, 0x72, 0x6f, 0x00, 0x03, 0x06, 0x4c, 0x69, 0x6e, 0x75, 0x78, 0x00, 0x04, 0x03, 0x01, 0x02, 0x03, 0x06, 0x06, 0x54, 0x14, 0xe9, 0x85, 0xc3, 0xbe, 0x07, 0x06, 0x66, 0xfa, 0xdd, 0xe2, 0x50, 0xc0, 
+[CARLINK-BT] AT: OK
+
+ssp_mode_x = 1
+sw_get_ble_connection_type: 0
+sw_get_ble_connection_type: 0
+sw_get_ble_connection_type: 0
+[BT_UART] state change request: BT_STATE_ENABLING -> BT_STATE_ENABLED
+[BT_UART] state change check: changed=1
+[BT_UART] state action: BT_STATE_ENABLED
+[BT_UART] bt_action_on_bluetooth_enabled: report power/version/profile
+[CARLINK-BT] AT: +PWRSTAT=1
+
+[CARLINK-BT] AT: +VER=BRT_BSE_AUD3_RTOS_20260428_r33287
+
+[CARLINK-BT] AT: +PROFILE=65535
+
+[CARLINK-BT] AT: +DEVSTAT=1
+
+[CARLINK-BT] AT: +DEVSTAT=3
+
+[CARLINK-BT] AT: +LEADDR=5414E985C3BE
+
+[CARLINK-BT] AT: OK
+
+len > 0
+p_name = AP630_LUYUAN_NEW888_C3BE
+porting_write_configure:BT_FLASH_OFFSET + offset:33550336, len:3614
+
+[16:03:46.515]收←◆[CARLINK-BT] AT: OK
+
+sw_get_ble_connection_type: 0
+
+lename_p:AP630_LUYUAN_NE[CARLINK-BT] AT: +NAME=AP630_LUYUAN_NEW888_C3BE
+
+[CARLINK-BT] AT: OK
+
+W888_C3BE
+
+local_name:AP630_LUYUAN_NEW888_C3BE, name_len:24
+[CARLINK-BT] AT: OK
+
+[CARLINK-BT] AT: +ADDR=5414E985C3BE
+
+ADDR:5414E985C3BE
+
+0xdd, 0x30, 0x00, 0xa0, 0x40, 0x00, 0x00, 0x02, 0x00, 0x22, 0x02, 0x09, 0x61, 0x72, 0x6b, 0x6d, 0x69, 0x63, 0x72, 0x6f, 0x00, 0x03, 0x06, 0x4c, 0x69, 0x6e, 0x75, 0x78, 0x00, 0x04, 0x03, 0x01, 0x02, 0x03, 0x06, 0x06, 0x54, 0x14, 0xe9, 0x85, 0xc3, 0xbe, 0x07, 0x06, 0x66, 0xfa, 0xdd, 0xe2, 0x50, 0xc0, 
+[CARLINK-BT] AT: OK
+
+[CARLINK-BT] AT: +LEADDR=5414E985C3BE
+
+[CARLINK-BT] AT: OK
+
+len > 0
+p_name = AP630_LUYUAN_NEW888_C3BE
+porting_write_configure:BT_FLASH_OFFSET + offset:33550336, len:3614
+[CARLINK-BT] AT: OK
+
+sw_get_ble_connection_type
+[16:03:46.583]收←◆: 0
+
+lename_p:AP630_LUYU[CARLINK-BT] AT: +NAME=AP630_LUYUAN_NEW888_C3BE
+
+[CARLINK-BT] AT: OK
+
+AN_NEW888_C3BE
+
+local_name:AP630_LUYUAN_NEW888_C3BE, name_len:24
+[CARLINK-BT] AT: +LEADDR=5414E985C3BE
+
+[CARLINK-BT] AT: OK
+
+atbm current mode is not p2p
+start_p2p:dev_name:DIRECT-AP630_LUYUAN_NEW888_p2p_C3BE, (char *)ssid:AP630_LUYUAN_NEW888_C3BE, passwd:88888888
+[atbm_log]:p2p use if_id=1
+F:freertos_createThread ++p2p_main =4 
+[atbm_log]:Thread p2p_main 0 start
+cryptoexp:1 =0ms
+
+[16:03:47.012]收←◆cryptoexp:2 =421ms
+wps_ctx->dev.device_name device_name:DIRECT-AP630_LUYUAN_NEW888_p2p_C3BE
+
+[16:03:48.305]收←◆[CARLINK-BT] AT: OK
+
+
+[16:03:48.657]收←◆[CARLINK-BT] AT: +HFPSTAT=2
+
+
+[16:03:49.065]收←◆wpas_deinit_wps 
+atbm_wifi_event_callback:AP_sta_mode:4, eventid:9
+[atbm_log]:tx drop ret=-2 
+[atbm_log]:atbmwifi_del_key  err (0 1)
+[atbm_log]:atbmwifi_del_key  err (0 0)
+[atbm_log]:atbmwifi_del_key  err (0 2)
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4110
+[atb[CARLINK-BT] AT: +PAIRED=0009CC0C30864iQOO 12
+
+m_log]:wpa_supplicant_event_disassoc 526
+[atbm_log]:wpa_s->wpa_state =0
+[atbm_log]:wpa_deauthen
+atbm_wifi_event_callback:AP_sta_mode:4, eventid:5
+
+ The meter is disconnected from ap 
+[atbm_log]:atbm_reorder_func_reset.
+
+[16:03:49.137]收←◆[CARLINK-BT] AT: +PAIRED=1009CC0C30864iQOO 12
+
+porting_write_configure:BT_FLASH_OFFSET + offset:33550336, len:3614
+[BT_UART] state change request: BT_S
+[16:03:49.183]收←◆TATE_ENABLED -> BT_STATE_DISABLING_A2DP
+[BT_UART] state change check: changed=0
+[CARLINK-BT] AT: +HFPSTAT=1
+
+wps ap ssid:AP630_LUYUAN_NEW888_C3BE,pwd:88888888, channel:36
+
+[atbm_log]:atbmwifi_start_ap++
+[atbm_log]:hostapd key_mgmt(2) wpa(2)
+
+[16:03:49.412]收←◆[atbm_log]:wpa_comm_init_extra_ie len (22),proto(ATBM_WPA_PROTO_RSN)
+[atbm_log]:hostapd_start 2560 ,8 maxstacnt = 8
+[atbm_log]:hostapd(AP630_LUYUAN_NEW888_C3BE)(2 16)(0) start to beacon
+[atbm_log]:[AP] ch: 36(1), bcn: 100(3), brt: 0x540, ssid: AP630_LUYUAN_NEW888_C3BE 1
+[atbm_log]:init_udhcpd
+[atbm_log]:atbm_lwip_enable ucIPAddress: 192.168.13.1
+
+ mark ip 1
+
+ ip_table.ip_range[0] = 0x1
+
+ mark ip 1
+
+ ip_table.ip_range[0] = 0x1
+[atbm_log]:event_OsCallback atbmwifi_event_OsCallback 81
+atbm_wifi_event_callback:AP_sta_mode:5, eventid:8
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4110
+[atbm_log]:atbm_hostapd_init_wps
+[atbm_log]:wps init end
+
+[16:03:49.807]收←◆bt wlan init ok
+bt wlan init is ok
+
+-------- Sample begin----------
+
+1.inti ECTiny config
+carbit  uuid :250002025122400000003
+
+2.register ECTiny callback functions
+
+3.register ECTiny Video player
+
+4.set Mirror config
+
+5.init ECTiny
+[ECSDK][SDK][INFO][0][0:0:7.853][EC_initialize]config=219a0000,listener=219a0500
+[ECSDK][SDK][INFO][0][0:0:7.860][fw_initialize]+++[IN]+++
+[ECSDK][SDK][INFO][0][0:0:7.865][fw_paramConfig]+++[IN]+++
+[ECSDK][SDK][INFO][0][0:0:7.870][fw_paramAuth]+++[IN]+++
+[ECSDK][SDK][INFO][0][0:0:7.875][fw_paramAuth]---[OUT]---
+[ECSDK][SDK][INFO][0][0:0:7.880][fw_paramCarDesc]+++[IN]+++
+[ECSDK][SDK][DEBUG][0][0:0:7.885][fw_paramCarDesc]initCarDesc mesiaOS:, mediaMode:, carBrand:, carModel:, carConfig:, mediaLevel:0, screenType:0, micType:1, supportConnect:8, supportFunction:128 micSupportFeature:0, productType:3, wakeupWord:
+[ECSDK][SDK][INFO][0][0:0:7.906][fw_paramCarDesc]---[OUT]---
+[ECSDK][SDK][INFO][0][0:0:7.911][fw_paramOptions]+++[IN]+++
+[ECSDK][SDK][INFO][0][0:0:7.916][fw_paramOptions]---[OUT]---
+[ECSDK][SDK][INFO][0][0:0:7.922][fw_updateFlavor]+++[IN]+++
+[ECSDK][SDK][DEBUG][0][0:0:7.927][fw_updateFlavor]setLinkPhoneApp type=0
+[ECSDK][SDK][DEBUG][0][0:0:7.933][fw_updateFlavor]opReserve:{
+	"channel":	30507,
+	"flavor":	50,
+	"phoneAppPackage":	"net.easyconn.carman.easyride",
+	"phoneAppMainActivity":	"net.easyconn.carman.MainActivity",
+	"aoaManufacturer":	"Carbit",
+	"aoaModel":	"CarbitDriverMotoFunM",
+	"aoaVersion":	"1.0",
+	"aoaUri":	"http://www.carbit.com.cn/down6/642/643/_ylqx"
+}
+[ECSDK][SDK][INFO][0][0:0:7.964][fw_updateFlavor]---[OUT]---
+[ECSDK][SDK][INFO][0][0:0:7.970][fw_paramConfig]---[OUT]---
+[ECSDK][SDK][INFO][0][0:0:7.975][fw_initialize]---[OUT]---
+
+6.set log info
+[ECSDK][SDK][INFO][0][0:0:7.982][ectiny_imp_setLogInfo]+++,level=4,type=0,logDirectory=,module=17
+
+7.set Mirror config
+
+8.start EC work!
+---[ec_thread_create]thdName=[ecFrame]---
+---[ec_thread_create]thdName=[ecCallback]---
+---[ec_thread_create]thdName=[ecEvtMgr]---
+---[ec_thread_create]thdName=[ecFuncEvt]---
+
+9.bindBtDevice!
+------ initECTiny end ------
+generateQRCodeUrl,url=http://www.carbit.com.cn/down6/642/643/_ylqx?modelid=30507&sn=XeNk&action=9&ssid=AP630_LUYUAN_NEW888_C3BE&pwd=88888888&auth=WPA-PSK&name=DIRECT-AP630_LUYUAN_NEW888_p2p_C3BE&bm=3BE
+++++++++++++++++++++++UrlData:http://www.carbit.com.cn/down6/642/643/_ylqx?modelid=30507&sn=XeNk&action=9&ssid=AP630_LUYUAN_NEW888_C3BE&pwd=88888888&auth=WPA-PSK&name=DIRECT-AP630_LUYUAN_NEW888_p2p_C3BE&bm=3BE+++++++++++++++++++++++++++
+---[ec_thread_create]thdName=[ecMdns]---
+---[ec_thread_create]setSize=2048*8---
+---[ec_thread_create][ecMdns]set thread joinable---
+---[ec_thread_c[atbm_log]:reate]thdNamtx drop ret=e=[ecWifiSe-3 
+r]---
+---[ec_thread_create][ecWifiSer]set thread joinable---
+
+[16:03:50.062]收←◆[atbm_log]:tx drop ret=-3 
+
+[16:03:51.723]收←◆Memory free: 24628480 bytes.
+
+[16:03:58.301]收←◆Time: 1970-01-01 00:00:00.
+
+[16:03:58.365]收←◆[CARLINK-BT] AT: +HFPSTAT=2
+
+
+[16:04:01.627]收←◆porting_write_configure:BT_FLASH_OFFSET + offset:33550336, len:3614
+
+[16:04:01.723]收←◆Memory free: 24623360 bytes.
+
+[16:04:02.154]收←◆[CARLINK-BT] AT: +PAIRED=0009CC0C30864iQOO 12
+
+
+[16:04:03.240]收←◆[CARLINK-BT] AT: +HFPSIG=5
+
+[CARLINK-BT] AT: +HFPBATT=3
+
+
+[16:04:05.960]收←◆[CARLINK-BT] AT: +HFPNUM=00000000
+
+[CARLINK-BT] AT: +HFPSTAT=3
+
+[CARLINK-BT] AT: +SPKVOL=8,7
+
+
+[16:04:05.992]收←◆[CARLINK-BT] AT: +HIDSTAT=3
+
+
+[16:04:06.210]收←◆[CARLINK-BT] AT: +HFPNET=0,涓浗鐢典俊
+
+[CARLINK-BT] AT: +HFPDEV=009CC0C30864iQOO 12
+
+
+[16:04:06.961]收←◆[CARLINK-BT] AT: +AVRCPSTAT=2
+
+
+[16:04:07.247]收←◆[CARLINK-BT] AT: +AVRCPSTAT=3
+
+[CARLINK-BT] AT: +HFPNUM=00000000
+
+
+[16:04:07.360]收←◆[BT_PLAYTRACE] state seq=1 status=2 active=0 suspend=0 start=0 recover=0 car=0
+[CARLINK-BT] AT: +PLAYSTAT=2
+
+[BT_PLAYTRACE] report status=2
+[CARLINK-BT] AT: +BIPSTAT=1
+
+
+[16:04:07.472]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:08.414]收←◆sw_get_avrcp_bip_permission: 1
+[CARLINK-BT] AT: +BIPSTAT=4
+[16:04:08.449]收←◆
+
+[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +BIPSTAT=3
+
+[CARLINK-BT] AT: +COVERART=0.JPEG
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:08.879]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:09.557]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:09.970]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:10.369]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:10.449]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧惓 鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:11.038]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,205,259
+
+
+[16:04:11.436]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,206,259
+
+
+[16:04:11.548]收←◆[CARLINK-BT] AT
+[16:04:11.569]收←◆: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,206,259
+
+
+[16:04:11.729]收←◆Memory free: 24613952 bytes.
+
+[16:04:12.141]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,207,259
+
+
+[16:04:12.492]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,207,259
+
+
+[16:04:12.666]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,207,259
+
+
+[16:04:13.213]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,208,259
+
+
+[16:04:13.549]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,208,259
+
+
+[16:04:13.764]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,208,259
+
+
+[16:04:14.311]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+
+[16:04:14.359]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,209,259
+
+
+[16:04:14.615]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,209,259
+
+
+[16:04:14.817]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,209,259
+
+
+[16:04:15.441]收←◆[CARLINK-B
+[16:04:15.461]收←◆T] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,210,259
+
+
+[16:04:15.685]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,210,259
+
+
+[16:04:15.924]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?
+[16:04:15.949]收←◆鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,210,259
+
+
+[16:04:16.476]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧惓鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,211,259
+
+
+[16:04:16.740]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,211,259
+
+
+[16:04:17.042]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,211,259
+
+
+[16:04:17.592]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,212,259
+
+
+[16:04:17.815]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,212,259
+
+
+[16:04:18.118]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,213,259
+
+
+[16:04:18.670]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,213,259
+
+
+[16:04:18.893]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,213,259
+
+
+[16:04:19.249]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,214,259
+
+
+[16:04:19.768]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,214,259
+
+
+[16:04:19.974]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,214,259
+
+
+[16:04:20.326]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ
+[16:04:20.351]收←◆炵惓 鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,215,259
+
+
+[16:04:20.892]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,215,259
+
+
+[16:04:21.034]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,215,259
+
+
+[16:04:21.440]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,216,259
+
+
+[16:04:21.728]收←◆Memory free: 24610880 bytes.
+
+[16:04:21.999]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,216,259
+
+
+[16:04:22.125]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,217,259
+
+
+[16:04:22.526]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,217,259
+
+
+[16:04:23.091]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,217,259
+
+
+[16:04:23.187]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,218,259
+
+
+[16:04:23.642]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,218,259
+
+
+[16:04:24.195]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,219,259
+
+
+[16:04:24.275]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,219,259
+
+
+[16:04:24.745]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,219,259
+
+
+[16:04:25.318]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,220,259
+
+
+[16:04:25.366]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,220,259
+
+
+[16:04:25.842]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,220,259
+
+
+[16:04:26.441]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,221,259
+
+
+[16:04:26.457]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,221,259
+
+
+[16:04:26.921]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,221,259
+
+
+[16:04:27.494]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,222,259
+
+
+[16:04:27.526]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,222,259
+
+
+[16:04:27.734]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,222,259
+
+
+[16:04:28.021]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,222,259
+
+
+[16:04:28.281]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,223,259
+
+
+[16:04:28.565]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,223,259
+
+
+[16:04:29.124]收←◆[CARLINK-BT] AT: +
+[16:04:29.145]收←◆TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,223,259
+
+
+[16:04:29.673]收←◆[CARLINK-BT] AT:
+[16:04:29.694]收←◆ +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,223,259
+
+[CARLINK-BT] AT: +TRACKSTAT=2,223,259
+
+
+[16:04:30.217]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,224,259
+
+
+[16:04:30.774]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,224,259
+
+[CARLINK-BT] AT: +TRACKSTAT=2,224,259
+
+
+[16:04:30.999]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,224,259
+
+
+[16:04:31.254]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Th
+[16:04:31.270]收←◆ru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,225,259
+
+
+[16:04:31.573]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:04:31.733]收←◆Memory free: 24608064 bytes.
+
+[16:04:31.782]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:04:31.812]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:32.322]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:32.881]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:33.450]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:33.977]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:04:34.030]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:04:34.558]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Mero
+[16:04:34.582]收←◆n RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:04:35.051]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,3,194
+
+
+[16:04:35.099]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,3,194
+
+
+[16:04:35.601]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,3,194
+
+
+[16:04:36.149]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+
+[16:04:36.700]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+
+[16:04:37.252]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,5,194
+
+[CARLINK-BT] AT: +TRACKSTAT=2,5,194
+
+
+[16:04:37.800]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+
+[16:04:37.818]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:04:38.350]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:04:38.397]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:04:38.509]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:04:38.900]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:04:39.093]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:04:39.451]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:04:39.739]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:04:40.001]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:04:40.525]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+
+[16:04:40.572]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+
+[16:04:40.781]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+
+[16:04:41.075]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+
+[16:04:41.298]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:41.586]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:41.618]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:04:41.734]收←◆Memory free: 24605632 bytes.
+
+[16:04:42.159]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:04:42.702]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,259
+
+
+[16:04:42.744]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,259
+
+
+[16:04:43.191]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,259
+
+
+[16:04:43.223]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉涓炵惓 鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,259
+
+
+[16:04:43.423]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,259
+
+
+[16:04:43.790]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,2,259
+
+
+[16:04:44.157]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:04:44.269]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron
+[16:04:44.295]收←◆ RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:44.485]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:44.821]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:45.117]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:45.335]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:04:45.686]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:45.925]收←◆[CARLINK-BT] AT: 
+[16:04:45.946]收←◆+TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:46.388]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:47.042]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:47.515]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:48.037]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+
+[16:04:48.180]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:48.660]收←◆[CARLIN
+[16:04:48.681]收←◆K-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:49.144]收←◆[CARLINK-BT] AT: +
+[16:04:49.164]收←◆TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:49.716]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:50.451]收←◆[CARLINK-BT] AT: +TR
+[16:04:50.475]收←◆ACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:50.817]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:04:50.930]收←◆[BT_UART] state change request: BT_STATE_ENABLED -> BT_STATE_DISABLING_A2DP
+[BT_UART] state change check: changed=0
+[CARLINK-BT] AT: +HFPSTAT=1
+
+
+[16:04:50.958]收←◆[CARLINK-BT] AT: +HIDSTAT=1
+
+[CARLINK-BT] AT: +AVRCPSTAT=2
+
+[BT_UART] state change request: BT_STATE_ENABLED -> BT_STATE_DISABLING_PBAP
+[BT_UART] state change check: changed=0
+
+[16:04:51.741]收←◆Memory free: 24614848 bytes.
+
+[16:05:01.687]收←◆[CARLINK-BT] AT: +HFPSTAT=2
+
+[CARLINK-BT] AT: +PAIRED=0009CC0C30864iQOO 12
+
+
+[16:05:01.747]收←◆Memory free: 24608256 bytes.
+
+[16:05:01.831]收←◆[CARLINK-BT] AT: +HIDSTAT=3
+
+
+[16:05:01.991]收←◆[CARLINK-BT] AT: +HFPSIG=5
+
+[CARLINK-BT] AT: +HFPBATT=3
+
+
+[16:05:02.067]收←◆[CARLINK-BT] AT: +HFPNUM=00000000
+
+[CARLINK-BT] AT: +HFPSTAT=3
+
+
+[16:05:02.142]收←◆[CARLINK-BT] AT: +HFPNET=0,涓浗鐢典俊
+
+[CARLINK-BT] AT: +HFPDEV=009CC0C30864iQOO 12
+
+
+[16:05:02.288]收←◆[CARLINK-BT] AT: +HFPNUM=00000000
+
+
+[16:05:03.084]收←◆[CARLINK-BT] AT: +AVRCPSTAT=2
+
+
+[16:05:03.133]收←◆[CARLINK-BT] AT: +AVRCPSTAT=3
+
+
+[16:05:03.207]收←◆[BT_PLAYTRACE] state seq=2 status=2 active=0 suspend=0 start=0 recover=0 car=0
+[CARLINK-BT] AT: +PLAYSTAT=2
+
+[BT_PLAYTRACE] report status=2
+
+[16:05:03.287]收←◆[CARLINK-BT] AT: +BIPSTAT=1
+
+
+[16:05:03.382]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:05:04.163]收←◆sw_get_avrcp_bip_permission: 1
+[CARLINK-BT] AT: +BIPSTAT=4
+
+[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +BIPSTAT=3
+
+[CARLINK-BT] AT: +COVERART=0.JPEG
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:05:04.547]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:05:04.654]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:05:05.180]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,1,194
+
+
+[16:05:05.612]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:05:05.880]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:05:06.308]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireV
+[16:05:06.334]收←◆icetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,2,194
+
+
+[16:05:06.669]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,3,194
+
+
+[16:05:06.851]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,3,194
+
+
+[16:05:07.421]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+
+[16:05:07.744]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+
+[16:05:07.949]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,4,194
+
+
+[16:05:08.508]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,5,194
+
+
+[16:05:08.820]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,5,194
+
+
+[16:05:09.199]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,5,194
+
+
+[16:05:09.652]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:05:09.895]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:05:10.128]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,6,194
+
+
+[16:05:10.701]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:05:10.973]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:05:11.132]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,7,194
+
+
+[16:05:11.712]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+Memory free: 24600960 bytes.
+
+[16:05:12.056]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+
+[16:05:12.259]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,8,194
+
+
+[16:05:12.737]收←◆[CARLINK-BT] AT: +TRACK
+[16:05:12.755]收←◆INFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,9,194
+
+
+[16:05:13.107]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,9,194
+
+
+[16:05:13.314]收←◆[CARLINK-BT] AT: +TRACKINFO=Wal
+[16:05:13.339]收←◆k Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,9,194
+
+
+[16:05:13.854]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,10,194
+
+
+[16:05:14.205]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,10,194
+
+
+[16:05:14.411]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,11,194
+
+
+[16:05:14.979]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,11,194
+
+
+[16:05:15.297]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,11,194
+
+
+[16:05:15.479]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,12,194
+
+
+[16:05:16.042]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,12,194
+
+
+[16:05:16.377]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,13,194
+
+
+[16:05:16.578]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,13,194
+
+
+[16:05:17.133]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,13,194
+
+
+[16:05:17.467]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,14,194
+
+
+[16:05:17.760]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,14,194
+
+
+[16:05:18.186]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,14,194
+
+
+[16:05:18.553]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,15,194
+
+
+[16:05:18.745]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,15,194
+
+
+[16:05:19.261]收←◆[CARLINK-BT] AT: +TRAC
+[16:05:19.288]收←◆KINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,15,194
+
+
+[16:05:19.667]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,16,194
+
+
+[16:05:19.808]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,16,194
+
+
+[16:05:20.406]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,17,194
+
+
+[16:05:20.757]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,17,194
+
+
+[16:05:20.931]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,17,194
+
+
+[16:05:21.484]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,18,194
+
+
+[16:05:21.756]收←◆Memory free: 24598592 bytes.
+
+[16:05:21.836]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,18,194
+
+
+[16:05:22.044]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Mero
+[16:05:22.067]收←◆n RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,18,194
+
+[CARLINK-BT] AT: +TRACKSTAT=2,18,194
+
+
+[16:05:22.512]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:22.569]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧鐞?鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:22.747]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:23.111]收←◆[CARLINK-BT] AT: +TRACKINFO=闆ㄧ埍鏉ㄤ笧
+[16:05:23.138]收←◆惓鏉ㄤ笧鐞?鍐嶈 闈掓槬 鏋佺簿閫?
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:05:23.331]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,259
+
+
+[16:05:23.727]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:23.938]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:24.049]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:24.233]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:24.745]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:25.335]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:25.877]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:26.428]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:26.989]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:27.487]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:28.549]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+
+[16:05:28.717]收←◆[CARLINK-BT] AT: +TRACKINFO=Walk Thru FireVicetone/Meron RyanWalk Thru Fire
+
+
+[16:05:28.787]收←◆[CARLINK-BT] AT: +TRACKSTAT=2,0,194
+
+[BT_UART] state change request: BT_STATE_ENABLED -> BT_STATE_DISABLING_A2DP
+[BT_UART] state change check: changed=0
+[CARLINK-BT] AT: +HFPSTAT=1
+
+
+[16:05:28.821]收←◆[CARLINK-BT] AT: +HIDSTAT=1
+
+[CARLINK-BT] AT: +AVRCPSTAT=2
+
+[BT_UART] state change request: BT_STATE_ENABLED -> BT_STATE_DISABLING_PBAP
+[BT_UART] state change check: changed=0

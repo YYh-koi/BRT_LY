@@ -1,0 +1,120 @@
+#ifndef __VOICE_UART_H__
+#define __VOICE_UART_H__
+
+
+int wanson_uart_init();
+int wanson_uart_deinit();
+int wanson_uart_send_data(unsigned char *data, unsigned short len);
+
+//
+
+int wanson_uart2_init();
+int wanson_uart2_deinit();
+int wanson_uart2_send_data(unsigned char *data, unsigned short len);
+int wanson_uart2_send_command(unsigned char command);
+void wanson_uart2_flush(void);
+int wanson_uart2_handle_get(void);
+void tone_event_uart_send(unsigned int tone_index);
+
+enum voice_uart_command {
+	VOICE_UART_CMD_WAKEUP = 0x00,
+	VOICE_UART_CMD_BYEBYE = 0x01,
+	VOICE_UART_CMD_STOP_REPORT = 0x02,
+	VOICE_UART_CMD_PREV = 0x03,
+	VOICE_UART_CMD_NEXT = 0x04,
+	VOICE_UART_CMD_PAUSE = 0x05,
+	VOICE_UART_CMD_PLAY = 0x06,
+	VOICE_UART_CMD_VOL_UP = 0x22,
+	VOICE_UART_CMD_VOL_DOWN = 0x23,
+	VOICE_UART_CMD_MAX = 0x5E,
+};
+
+
+
+
+enum {
+    UART_SEND_NONE = 0,
+    UART_SEND_VOL_UP,
+    UART_SEND_VOL_DOWN,
+    UART_SEND_VOL_MAX,
+    UART_SEND_VOL_MID,
+    UART_SEND_VOL_MIN,
+    UART_SEND_ASR_ON,
+    UART_SEND_ASR_OFF,
+    UART_SEND_PLAY_ON,
+    UART_SEND_PLAY_OFF,
+    UART_SEND_WELCOME,
+    UART_SEND_WAKEUP,
+    UART_SEND_BYEBYE,
+    UART_SEND_SIRI,
+
+    UART_SEND_PRE,
+    UART_SEND_NEXT,
+    UART_SEND_PLAY,
+    UART_SEND_STOP,
+
+    UART_SEND_WAKEDOWN,
+    ///
+    UART_SEND_INEX_01,
+    UART_SEND_INEX_02,
+    UART_SEND_INEX_03,
+    UART_SEND_INEX_04,
+    UART_SEND_INEX_05,
+    UART_SEND_INEX_06,
+    UART_SEND_INEX_07,
+    UART_SEND_INEX_08,
+    UART_SEND_INEX_09,
+    UART_SEND_INEX_10,
+    UART_SEND_INEX_11,
+    UART_SEND_INEX_12,
+    UART_SEND_INEX_13,
+    UART_SEND_INEX_14,
+    UART_SEND_INEX_15,
+    UART_SEND_INEX_16,
+    UART_SEND_INEX_17,
+    UART_SEND_INEX_18,
+    UART_SEND_INEX_19,
+    UART_SEND_INEX_20,
+    UART_SEND_INEX_21,
+    UART_SEND_INEX_22,
+    UART_SEND_INEX_23,
+    UART_SEND_INEX_24,
+    UART_SEND_INEX_25,
+    UART_SEND_INEX_26,
+    UART_SEND_INEX_27,
+    UART_SEND_INEX_28,
+    UART_SEND_INEX_29,
+    UART_SEND_INEX_30,
+    UART_SEND_INEX_31,
+    UART_SEND_INEX_32,
+    UART_SEND_INEX_33,
+    UART_SEND_INEX_34,
+    UART_SEND_INEX_35,
+    UART_SEND_INEX_36,
+    UART_SEND_INEX_37,
+    UART_SEND_INEX_38,
+    UART_SEND_INEX_39,
+    UART_SEND_INEX_40,
+    UART_SEND_INEX_41,
+    UART_SEND_INEX_42,
+    UART_SEND_INEX_43,
+    UART_SEND_INEX_44,
+    UART_SEND_INEX_45,
+    UART_SEND_INEX_46,
+    UART_SEND_INEX_47,
+    UART_SEND_INEX_48,
+    UART_SEND_INEX_49,
+    UART_SEND_INEX_50,
+    UART_SEND_INEX_51,
+    UART_SEND_INEX_52,
+    UART_SEND_INEX_53,
+    UART_SEND_INEX_54,
+    UART_SEND_INEX_55,
+    UART_SEND_INEX_56,
+    UART_SEND_INEX_57,
+    UART_SEND_INEX_58,
+    UART_SEND_INEX_59,
+};
+
+
+#endif

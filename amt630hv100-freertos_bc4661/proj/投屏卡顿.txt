@@ -1,0 +1,2086 @@
+
+[14:43:48.200]收←◆Memory free: 25818944 bytes.
+
+[14:44:19.791]收←◆-I- MMU enabled.
+-I- D cache enabled.
+-I- I cache is already enabled.
+sys_pll=396000000
+cpu_pll=546000000
+vpu_pll=240000000
+ddr_pll=600000000
+cpu_clk=546000000
+ddr_clk=600000000
+ahb_clk=396000000
+apb_clk=198000000
+mmc_clk=24000000
+mfc_clk=240000000
+-I- VDEC controller at 0x1897922560, irq = 1
+Product ID: 0x6731 (revision 2.57.8)
+ark_lcd_clk_init, set clk:49500000
+
+[14:44:19.823]收←◆-I- Using PIO mode.
+
+[14:44:19.886]收←◆awtk thread start.
+spi max_freq 136500000, current freq 34125000, qspi_freq 34125000.
+[SFUD]Find a Winbond flash chip. Size is 16777216 byt-E- Unable to clear enable on channel 0
+-E- Unable to clear enable on channel 1
+-E- Unable to clear enable on channel 2
+-E- Unable to clear enable on channel 3
+hub_set_address:4294
+hub_set_address:4297
+Time: 2020-01-01 00:26:17.
+es.
+[SFUD]spi0 flash device is i
+[14:44:20.014]收←◆sdio_init_card wifi_sdio_func:21672fc0
+
+[14:44:20.189]收←◆nitialize success.
+fractional divisor:0
+clcast: ------ init start ------
+clcast: common_init ret=1
+detect sdio device
+brlinkd - brtbt_register_event_cb start
+[DEBUG-clcast-ble] stack init type=2 debug=1
+start init stack.
+[BT_UART] brlinkd_stack_init hw_cfg: reset_io=94 uartport=1 module=3
+[BT_UART] brlinkd_stack_init sw_cfg: debug_mode=1 schedule_loop_priority=20
+sw_bip_coverart_register_cb
+start init stack. at_init start, debug_mode:1 schedule_loop_priority = 20
+DEV_INFO_LEN;3614, BT_FLASH_USE_SIZE:4096
+brt Flash detected: W25Q128, Size: 16777216 bytes
+BT_FLASH_OFFSET:0xfff000
+start init stack. end
+[DEBUG-clcast-ble] stack init ret=0
+brlinkd_stack_run start
+[atbm_log]:atbm_sdio_module_init
+[atbm_log]:atbm_init_firmware
+[atbm_log]:[Wifi] Enter atbm_sdio_module_init 
+[atbm_log]:SVN_VER=4690,DPLL_CLOCK=24,BUILD_TIME=[===SDIO-ATHENAB==
+[atbm_log]:BRT SVN_VER=4690_brt_r33069
+[atbm_log]:atbm_sdio_register_init
+[atbm_log]:atbmwifi sdio id not match 7a 6011
+[atbm_log]:atbmwifi sdio id not match 7a 8893
+[atbm_log]:atbm: Atbmwifi_halEntry() <===
+++WORK_TASK =25 WORK_TASK_PRIO
+[atbm_log]:Thread atbm_work 10000 start
+++ELOOP_TASK =26ELOOP_TASK_PRIO
+[atbm_log]:Thread atbm_timer 0 start
+[atbm_log]:atbm_init_chip_priv : chip_id = 31 
+[atbm_log]:atbm_register_bh
+[atbm_log]:atbm_urb_queue_init ==>
+++TX_BH_TASK_ =29TX_BH_TASK_PRIO
+[atbm_log]:Thread Atbm_TX 0 start
+++BH_TASK =28BH_TASK_PRIO
+[atbm_log]:Thread Atbm_RX 100000 start
+[atbm_log]:atbm_urb_queue_init <==
+++BH_TASK =28BH_TASK_PRIO
+[atbm_log]:Thread atbm_bh 100000 start
+[atbm_log]:delay 2000ms before loading bt firmware
+clcast: ------ init dispatched ------
+FreeRTOS command server.
+Type Help to view a list of registered commands.
+
+>add mem block 207589c0 6291456
+app_root=./
+ratio=1.000000 800 480
+ratio=1.000000 800 480
+ratio=1.000000 800 480
+Build at: Aug 20 2026 15:39:22
+window home_page open
+
+[14:44:22.072]收←◆animation end.
+
+[14:44:22.182]收←◆[atbm_log]:atbm_load_bt_firmware++
+[atbm_log]:start load bt fw 491520
+[atbm_log]:bt load itcm start P:2010000, l:78000
+[atbm_log]:atbm_load_firmware_generic: addr 2010000: len 78000
+
+[14:44:22.973]收←◆[atbm_log]:bt load dtcm start P:2800000, l:18000
+[atbm_log]:atbm_load_firmware_generic: addr 2800000: len 18000
+
+[14:44:23.117]收←◆[atbm_log]:BT TEST FW
+[atbm_log]:atbm_before_load_firmware++
+[atbm_log]:atbm_before_load_firmware:read 0x16101004,1cdc2240
+
+[14:44:23.213]收←◆[atbm_log]:atbm_before_load_firmware:read 0x16100074,0
+[atbm_log]:atbm_before_load_firmware:read 0xa900000 0
+[atbm_log]:atbm_before_load_firmware:0xa900000 [0]
+[atbm_log]:atbm_start_load_firmware++
+[atbm_log]:atbm_start_load_firmware: START DOWNLOAD ICCM=========
+[atbm_log]:atbm_load_firmware_generic: addr 1060000: len 20000
+
+[14:44:23.424]收←◆[atbm_log]:atbm_start_load_firmware: START DOWNLOAD DCCM=========
+[atbm_log]:atbm_load_firmware_generic: addr 1800000: len 8000
+
+[14:44:23.479]收←◆[atbm_log]:START DOWNLOAD BLE SRAM=========
+[atbm_log]:atbm_load_firmware_generic: addr c00000: len fa0
+[atbm_
+[14:44:23.500]收←◆log]:atbm_start_load_firmware: FIRMWARE DOWNLOAD SUCCESS
+[atbm_log]:atbm_after_load_firmware++
+
+[14:44:23.788]收←◆[atbm_log]:firmwareCap f1c9
+[atbm_log]:firmwareCap2 1204
+[at
+[14:44:23.932]收←◆bm_log]:wsm_startup_indication : resv[46449] 
+[atbm_log]:wsm_caps.firmwareCap 1204f1c9 
+[atbm_log]:apollo wifi WSM init done.
+   Input buffers: 18 x 1632 bytes
+   Hardware: 7.21
+   WSM firmware [=MODEM=DPLL40M-NoBle-plat=1020251205118e2f8bc 2GHZ Dec 11 2025 20:45:51 Rx:7 (1) Tx:18 4]
+[atbm_log]:LmacVersion: 63676, build: 7936, api: 1060, cap: 0x1204F1C9 Config[31010]  expection c0a6b8, ep0 cmd addr c0a724 NumOfHwXmitedAddr[12634660]
+[atbm_log]:CAPABILITIES_ATBM_PRIVATE_IE   [0]
+[atbm_log]:CAPABILITIES_IPC 		[0]
+[atbm_log]:CAPABILITIES_NO_CONFIRM 		   [1]
+[atbm_log]:CAPABILITIES_WOW 		   [0]
+[atbm_log]:CAPABILITIES_NO_BACKOFF 		   [0]
+[atbm_log]:CAPABILITIES_CFO 		[1]
+[atbm_log]:CAPABILITIES_CHIP_FLAG 		[1]
+[atbm_log]:CAPABILITIES_TXCAL 		[1]
+[atbm_log]:CAPABILITIES_LMAC_BAB_SETUP 		[0]
+[atbm_log]:CAPABILITIES_FORCE_PM_ACTIVE 		[0]
+[atbm_log]:CAPABILITIES_SMARTCONFIG	[0]
+[atbm_log]:CAPABILITIES_ETF			[1]
+[atbm_log]:CAPABILITIES_BLE	[1]
+[atbm_log]:CAPABILITIES_40M		[1]
+[atbm_log]:CAPABILITIES_LDPC		[1]
+[atbm_log]:CAPABILITIES_NAV_ENABLE		[0]
+[atbm_log]:CAPABILITIES_USB_RECOVERY_BUG	 [0]
+[atbm_log]:CAPABILITIES_USE_IPC				[0]
+[atbm_log]:CAPABILITIES_OUTER_PA 			[0]
+[atbm_log]:CAPABILITIES_WFA	[0]
+[atbm_log]:CAPABILITIES_EAP_GROUP_REKEY	[0]
+[atbm_log]:CAPABILITIES_RTS_LONG_DURATION	[0]
+[atbm_log]:CAPABILITIES_TX_CFO_PPM_CORRECTION[0]
+[atbm_log]:CAPABILITIES_RXCAL	   [1]
+[atbm_log]:CAPABILITIES_HW_CHECKSUM			[0]
+[atbm_log]:CAPABILITIES_80211_TO_8023 [0]
+[atbm_log]:CAPABILITIES_NEW_CHIPER	[1]
+[atbm_log]:atbm fw_ready: cfg ret=0 val=0x4031200
+[atbm_log]:atbm fw_ready: fn1_reset ret=0 val=0x0
+[atbm_log]:atbm fw_ready: 0x1610102c re
+[14:44:24.168]收←◆t=0 val=0x6300b
+[atbm_log]:atbm fw_ready: 0x161000c0 ret=0 val=0x10107
+[atbm_log]:atbm fw_ready: 0x161000ac ret=0 val=0x0
+[atbm_log]:tx_channel_num 64, rx_channel_num 32
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:atbmwifi_queue_init,cap(64)
+[atbm_log]:MAC Addr[0]:[2c:cc:7a:74:42:7b]
+[atbm_log]:efuse data is [0x3,0x32,0x0,0x0,0x3e,0x27,0x0,0x0,0x2c:0xcc:0x7a:0x74:0x42:0x7b]
+[atbm_log]:atbmwifi_netstack_init
+[atbm_log]:__wpa_event_init
+++HIF_TASK =27HIF_TASK_PRIO
+[atbm_log]:Thread atbm_hif 100000 start
+[atbm_log]:atbmwifi_netstack_init   END
+[atbm_log]:atbm_alloc_netdev,netdev(2186f940),nif(2186c3c0),priv(2186f954)
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4105
+[atbm_log]:atbm_wifi_netif_init ucIPAddress: 192.168.13.1
+if[0] MAC addr :2c:cc:7a:74:42:7b
+[atbm_log]:atbm_alloc_netdev,netdev(2187ab80),nif(2186f600),priv(2187ab94)
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4105
+[atbm_log]:atbm_wifi_netif_init ucIPAddress: 192.168.13.1
+if[1] MAC addr :2e:cc:7a:74:42:7b
+[atbm_log]:atbmwifi sdio id match 7a 8895
+
+[14:44:24.216]收←◆brlinkd - brtbt_send_at_command length:18
+brlinkd - brtbt_send_at_command length:11
+at_command - g_bt_op
+[14:44:24.670]收←◆ened= [0], [AT]   AT+[PROFILE=50346]
+at_command - g_bt_opened = 0 curr command : BTEN
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - PROFILE=50346
+at_command - profile_value = 50346
+
+bse_mgr - bt_manager_set_curr_profile, value = 50346(0xc4aa) sdkprofile = 50346(0xc4aa) profile_f = 0
+
+bse_mgr - bt_manager_set_curr_profile end, binded_profiles = 3(0x0003)
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - PROFILE=50346
+at_command - cmd = PROFILE=50346 len = 14
+
+at_command - g_bt_opened= [0], [AT]   AT+[BTEN=1]
+at_command - g_bt_opened = 0 curr command : BTEN
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - BTEN=1
+at_command - BTEN start value = 1
+
+[BT_UART] bt_enable_bluetooth: state=0
+bse_state - [BT_UART] bt_enable_bluetooth: state=0
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+[BT_UART] bt_enable_bluetooth: request enabling
+bse_state - [BT_UART] bt_enable_bluetooth: request enabling
+[BT_UART] state change request: BT_STATE_NONE -> BT_STATE_ENABLING
+bse_state - on_bluetooth_state_changed(BT_STATE_NONE -> BT_STATE_ENABLING).
+bse_state - changed 1.
+[BT_UART] state change check: changed=1
+[BT_UART] state action: BT_STATE_ENABLING
+[BT_UART] bt_action_on_bluetooth_enabling: app_tl_init
+bse_state - [BT_UART] bt_action_on_bluetooth_enabling: app_tl_init
+[BT_UART] app_tl_init: enter tl=0
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+[BT_UART] app_tl_init: transport_new tl=21891040
+[BT_UART] app_tl_init: call transport init
+h5if -  open_port: open_port - enter...
+hw_get_bt_module: 3
+hw_get_uartport: 1
+[BT_UART] open_port: enter module=3 uartport=1 sem_init=0
+[BT_UART] open_port: GT baud=921600
+hw_get_uartport: 1
+hw_get_bt_module: 3
+[BT_UART] open start: port=1 baud=921600 flags=0x0 module=3
+[BT_UART] open success: port=1 handle=2186c340
+fractional divisor:10
+[BT_UART] init done: port=1 baud=921600 flags=0x0
+[BT_UART] open_port: result handle=2186c340
+hw_get_bt_module: 3
+hw_get_bt_module: 3
+[BT_UART] app_tl_init: init done handle=202eb8ec
+brlink_e - get_debug_level of brlink_e:0x0006003F.
+bse_stack - 
+---->[OBEX][Init]
+
+bse_stack - ScheduleLoop start
+
+portings - porting_create_thread_double_stack(id:0x00000001)
+hlp_manager - GetLocalProp failed
+hlp_manager - hlp_manager_set_status, 1
+porting_read_configure:BT_FLASH_OFFSET + offset:16773120, len:3614
+hlp_manager - 3614 data got
+bse_stack - GAP Internal callback, Event index 0055!
+
+bse_stack - GAP ERROR: Event from an unknown transport layer (AMP_ID 0)!
+
+bse_stack - RegisterTL callback. action = 0
+
+bse_gap - hlp_gap_set
+[14:44:24.861]收←◆_status type = 1
+bse_hfp - hlp_hf_set_status, you set 1
+bse_a2dp - hlp_a2dp_set_status(1)
+
+bse_a2dp - hlp_a2dp_set_status even_status = (1)
+
+bse_avrcp - hlp_avrcp_set_status 1
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 31, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(4141)512.
+at_event - event_len:[14]event_buffer:+BIPSTAT=0
+
+bse_mgr - hlp_mgr_avrcp_cbk, event = 31, pointer of param = 0x00000000 Exit
+
+bse_pbap - *********hlp_pbap_set_status 1.
+
+bse_pbap - 
+ pb_stat2 = 1 PBAP_STATE = 0
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000001
+
+at_event - bt_event_indicate(1292)512.
+at_event - event_len:[13]event_buffer:+PBSTAT=1
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000001 Exit
+
+bse_hid - hlp_hid_get_status ST_APP_HID_UNINIT
+
+bse_hid - hlp_hid_set_status = 1
+
+SPP - app_spp_init
+SPP - hlp_spp_set_status(0)
+auto_gatt - app_gatt_init
+hlp_manager - hlp_manager_set_status, 2
+bse_gap - hlp_gap_set_status type = 2
+hw_get_bt_module: 3
+transport_h5 - begin power off....
+upio_set_bluetooth_power 0
+hw_get_bt_en_pin: 94
+transport_h5 - begin power on....
+
+[14:44:24.974]收←◆upio_set_bluetooth_power 1
+hw_get_bt_en_pin: 94
+transport_h5 - begin fw config....
+hw_get_bt_module: 3
+h5if -  rx_data_thread_proc: Enter rx_data_thread_proc 
+
+h5if -  start_read_thread: start_read_thread - end...
+hci_h5 - (h5_start_hw_init_ready_timer)
+hci_h5 - (h5_start_sync_retrans_timer)
+transport_h5 - after fw config....
+bse_hfp hci_h5 - (h5_stop_sync_retrans_timer)
+hci_h5 - (h5_start_conf_retrans_timer)
+
+- hlp_hf_get_status, you get 1
+bse_stack - ---->[RFCOMM][RegServer][ServerChannel:1][Credit:Auto:1,Init:7,MFS:256,CBK:0x203156d4][ServerList:1]
+
+bse_hfp - hlp_hf_get_status, you get 1
+bse_hfp - hlp_hf_get_status, you get 1
+bse_hfp - hlp_hf_event_cbk state=1, event=60
+bse_hfp - Server start success.
+
+bse_hfp - hfp_serverhdl got.
+
+bse_hfp - hlp_hf_get_status, you get 1
+bse_hfp - hlp_hf_event_cbk state=1, event=60 Exit
+
+bse_hfp - hlp_hf_set_st
+[14:44:25.002]收←◆atus, you set 2
+bse_a2dp - hlp_a2dp_cbk event = 0
+
+bse_a2dp - hlp_a2dp_set_status(2)
+
+bse_a2dp - hlp_a2dp_set_status even_status = (1)
+
+bse_a2dp - hlp_a2dp_cbk event = 0 Exit
+
+
+[14:44:25.038]收←◆bse_a2dp - hlp_a2dp_set_status(2)
+
+bse_a2dp - hlp_a2dp_set_status even_status = (1)
+
+bse_avrcp - AVRCP_ServerStart CT features=0x03cf ret=1
+
+bse_avrcp - AVRCP_ServerStart TG feature
+[14:44:25.402]收←◆s=0x0002 ret=1
+
+bse_avrcp - hlp_avrcp_set_status 2
+
+bse_pbap - PBAP_STATE is 1
+bse_pbap - *********hlp_pbap_set_status 2.
+
+bse_pbap - 
+ pb_stat2 = 2 PBAP_STATE = 1
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000001
+
+at_event - bt_event_indicate(1292)512.
+at_event - event_len:[13]event_buffer:+PBSTAT=1
+
+bse_mgr - hlp_mgr_pbap_cbk, event = 12, pointer of param = 0x00000001 Exit
+
+bse_hid - hlp_hid_get_status = 1
+
+bse_hid - hlp_hid_set_status = 2
+
+SPP - spp_profile_start IAP2
+SPP - #hlp_proc_rfc_server_start_ex,add!
+SPP - srv_info->rfc_srv_uuid128 = ffca 0 0 
+SPP - to reg rfc server channel:2
+SPP - reg rfc server channel
+SPP - hlp_spp_set_status(1)
+bse_stack - ---->[RFCOMM][RegServer][ServerChannel:2][Credit:Auto:1,Init:4,MFS:1594,CBK:0x202b02e4][ServerList:2]
+
+SPP - hlp_rf_callback_dispatch_server 5
+SPP - ev_rfc_register_dlci_cfm,chanle(0x2)
+SPP - input(2),server node's rfc_srv_channel(2)
+SPP - 1 register spp server ex-ret=1
+SPP - 2 register spp server ex-ret=1
+SPP - svc handle =0x10006
+bse_mgr - hlp_mgr_spp_cbk, event=10, param=0x218a7d08
+
+at_event - bt_event_indicate(2048)512.
+SPP - spp_profile_start AA
+SPP - #hlp_proc_rfc_server_start_ex,add!
+SPP - srv_info->rfc_srv_uuid128 = 669a4de1 
+SPP - to reg rfc server channel:3
+SPP - reg rfc server channel
+SPP - hlp_spp_set_status(1)
+bse_stack - ---->[RFCOMM][RegServer][ServerChannel:3][Credit:Auto:1,Init:4,MFS:1594,CBK:0x202b02e4][ServerList:3]
+
+SPP - hlp_rf_hci_h5 - h5_conf_retrans_timeout_handler
+hci_h5 - Wait H5 Conf Resp timeout, 0 times
+hci_h5 - (h5_start_conf_retrans_timer)
+
+callback_dispatch_server 5
+SPP - ev_rfc_register_dlci_cfm,chanle(0x3)
+SPP - input(3),server node's rfc_srv_channel(2)
+SPP - input(3),server node's rfc_srv_channel(3)
+SPP - 1 register spp server ex-ret=1
+SPP - svc handle =0x10008
+bse_mgr - hlp_mgr_spp_cbk, event=10, param=0x218ab688
+
+at_event - bt_event_indicate(2048)512.
+hci_tl - [TL] hlp_tl_start_completed_cbk, 0
+bse_stack - [warning]GetTimePast over 500 ms, [Delta: 1071 ms]
+hci_tl - [TL] hlp_tl_start_completed_cbk, reset timerhandle
+bse_gap - app_gap_reset_hardware
+bse_gap - hlp_gap_reset_hardware
+bse_gap - 
+ on_init_state_changed state = 1 s_gap_user_data->init_state = 0
+
+bse_gap - do_reset_hardware
+bse_gap - hlp_gap_set_status type = 2
+bse_stack - GAP_ResetHardwareA
+
+bse_stack - GAP_ResetHardwareA2
+
+bse_stack - GAPH_ResetHardware
+
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 03 0C 00                                       ....            
+bse_stack - GAP_ResetHardwareA3
+
+bse_stack - GAP_ResetHardwareA end
+
+SPP - spp_profile_start SPP
+SPP - #hlp_proc_rfc_server_start_ex,add!
+SPP - srv_info->rfc_srv_uuid128 = fb34 0 0 
+SPP - to reg rfc server channel:4
+SPP - reg rfc server channel
+SPP - hlp_spp_set_status(1)
+bse_stack - ---->[RFCOMM][RegServer][ServerChannel:4][Credit:Auto:1,Init:4,MFS:1594,CBK:0x202b02e4][ServerList:4]
+
+SPP - hlp_rf_callback_dispatch_server 5
+SPP - ev_rfc_register_dlci_cfm,chanle(0x4)
+SPP - input(4),server node's rfc_srv_channel(2)
+SPP - input(4),server node's rfc_srv_channel(3)
+SPP - input(4),server node's rfc_srv_channel(4)
+SPP - 1 register spp server ex-ret=1
+SPP - svc handle =0x10009
+bse_mgr - hlp_mgr_spp_cbk, event=10, param=0x218aec08
+
+at_event - bt_event_indicate(2048)512.
+[BT_UART] bt_action_on_bluet
+[14:44:25.437]收←◆ooth_enabling: bt_init done
+bse_state - [BT_UART] bt_action_on_bluetooth_enabling: bt_init done
+lkz debug  - BTEN=1
+at_command - cmd = BTEN=1 len = 7
+
+
+[14:44:26.352]收←◆bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 03 0C 00                              .......         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 02 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 71
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 01 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 15
+bse_stack - 0000: 04 0E 0C 01 01 10 00 0D 05 08 0D FF FF 01 44      ..............D 
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 09 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 04 0E 0A 01 09 10 00 7C 42 74 7A CC 2C            ........Btz.,   
+bse_stack - [HCI][*Send]: 10
+bse_stack - 0000: 01 05 20 06 7C 42 74 7A CC EC                     .. ..Btz..      
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 05 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 03 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 15
+bse_stack - 0000: 04 0E 0C 01 03 10 00 FF EE 0D FA DB FF 7B 87      ............... 
+bse_stack - GAP Internal callback, Event index 0055!
+
+bse_stack - RegisterTL callback. action = 5
+
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 04 10 01 01                                    .....           
+bse_stack - [HCI][*Recv]: 17
+bse_stack - 0000: 04 0E 0E 01 04 10 00 01 01 00 00 00 00 00 00 00   ................
+bse_stack - 0010: 00                                                .               
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 03 20 00                                       .. .            
+bse_stack - [HCI][*Recv]: 15
+bse_stack - 0000: 04 0E 0C 01 03 20 00 FF F9 00 03 FE 00 00 00      ..... ......... 
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 12
+bse_stack - 0000: 01 01 0C 08 FF 9F FB FF 07 F8 BF 3D               ...........=    
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 01 0C 00                              .......         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 12
+bse_stack - 0000: 01 63 0C 08 00 00 00 00 00 00 00 00               .c..........    
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 63 0C 00                              ....c..         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 12
+bse_stack - 0000: 01 01 20 08 1F 00 00 00 00 00 00 00               .. .........    
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 01 20 00                              ..... .         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 02 20 00                                       .. .            
+bse_stack - [HCI][*Recv]: 10
+bse_stack - 0000: 04 0E 07 01 02 20 00 FF 00 08                     ..... ....      
+bse_stack - GAP Internal callback, Event index 0055!
+
+bse_stack - RegisterTL callback. action = 2
+
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 05 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 04 0E 0B 01 05 10 00 FD 03 C8 03 00 02 00         ..............  
+bse_stack - GAP Internal callback, Event index 0055!
+
+bse_stack - RegisterTL callback. action = 2
+
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 56 0C 01 01                                    .V...           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 56 0C 00                              ....V..         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 5
+[14:44:26.755]收←◆
+bse_stack - 0000: 01 1A 0C 01 03                                    .....           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 6
+bse_stack - 0000: 01 16 0C 02 40 B5                                 ....@.          
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 16 0C 00                              .......         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 17 0C 00                                       ....            
+bse_stack - [HCI][*Recv]: 9
+bse_stack - 0000: 04 0E 06 01 17 0C 00 00 20                        ........        
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 49 0C 01 01                                    .I...           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 49 0C 00                              ....I..         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 45 0C 01 02                                    .E...           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 45 0C 00                              ....E..         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 6
+bse_stack - 0000: 01 0F 08 02 02 00                                 ......          
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0F 08 00                              .......         
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 0F 20 00                                       .. .            
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 0E 05 01 0F 20 00 10                           ..... ..        
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 1C 20 00                                       .. .            
+bse_stack - [HCI][*Recv]: 15
+bse_stack - 0000: 04 0E 0C 01 1C 20 00 FF FF FF FF FF 03 00 00      ..... ......... 
+bse_stack - HCI_CommandL2_SendQueueToL1
+bse_stack - [HCI][*Send]: 6
+bse_stack - 0000: 01 6D 0C 02 01 00                                 .m....          
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 6D 0C 00                              ....m..         
+bse_stack - ResetHardware callback
+
+bse_gap - hlp_gap_reset_hardware_cbk, ok
+
+bse_mgr - hlp_mgr_gap_cbk, event = 3, pointer of param = 0x00000000
+
+porting_read_configure:BT_FLASH_OFFSET + offset:16773120, len:3614
+hlp_manager - 3614 data got
+bse_gap - 
+ on_init_state_changed state = 2 s_gap_user_data->init_state = 1
+
+bse_mgr - hlp_mgr_gap_cbk, event = 10, pointer of param = 0x2189a898
+
+bse_gap - hlp_gap_reset_hardware_cbk, end
+
+bse_stack - [HCI][*Send]: 7
+bse_stack - 0000: 01 24 0C 03 20 04 24                              .$.. .$         
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 24 0C 00                              ....$..         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - 
+ on_init_state_changed state = 3 s_gap_user_data->init_state = 2
+
+bse_mgr - hlp_mgr_gap_cbk, event = 9, pointer of param = 0x2189a888
+
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 252
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 13 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - 
+ on_init_state_changed state = 4 s_gap_user_data->init_state = 3
+
+hlp_manager - MANAGER_USER_DATA->local_info->name = AP630_CARLINK_427C
+hlp_manager - MANAGER_USER_DATA->local_info->name2 = AP630_CARLINK_427C
+at_event - bt_event_indicate(9)512.
+at_event - event_len:[28]event_buffer:+NAME=AP630_CARLINK_427C
+
+brlinkd - brtbt_send_at_command length:11
+at_eve
+[14:44:27.112]收←◆nt - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 245
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 52 0C 00                              ....R..         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 09 10 00                                       ....            
+bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 04 0E 0A 01 09 10 00 7C 42 74 7A CC 2C            ........Btz.,   
+bse_stack - [HCI][*Send]: 10
+bse_stack - 0000: 01 05 20 06 7C 42 74 7A CC EC                     .. ..Btz..      
+bse_stack - Command complete callback, Event index 0062!
+
+bse_mgr - hlp_mgr_gap_cbk, event = 5, pointer of param = 0x218ae881
+
+hlp_manager - manager_user_data is true
+at_event - bt_event_indicate(4)512.
+at_event - event_len:[22]event_buffer:+ADDR=2CCC7A74427C
+
+ADDR:2CCC7A74427C
+
+brlinkd - brtbt_send_at_command length:28
+brlinkd - brtbt_send_at_command length:30
+0xdd, 0x30, 0x00, 0xa0, 0x40, 0x00, 0x00, 0x02, 0x00, 0x22, 0x02, 0x09, 0x61, 0x72, 0x6b, 0x6d, 0x69, 0x63, 0x72, 0x6f, 0x00, 0x03, 0x06, 0x4c, 0x69, 0x6e, 0x75, 0x78, 0x00, 0x04, 0x03, 0x01, 0x02, 0x03, 0x06, 0x06, 0x2c, 0xcc, 0x7a, 0x74, 0x42, 0x7c, 0x07, 0x06, 0x66, 0xfa, 0xdd, 0xe2, 0x50, 0xc0, 
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_gap - 
+ on_init_state_changed state = 5 s_gap_user_data->init_state = 4
+
+bse_gap - hlp_gap_set_device_other_attribute 1
+
+ssp_mode_x = 1
+sw_get_ble_connection_type: 2
+sw_get_ble_connection_type: 2
+sw_get_ble_connection_type: 2
+bse_gap - 
+ on_init_state_changed state = 6 s_gap_user_data->init_state = 5
+
+bse_gap - hlp_gap_set_status type = 5
+bse_mgr - hlp_mgr_gap_cbk, event = 0, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(14)512.
+bse_state - on_profile_state_changed(1, 1).
+[BT_UART] state change request: BT_STATE_ENABLING -> BT_STATE_ENABLED
+bse_state - on_bluetooth_state_changed(BT_STATE_ENABLING -> BT_STATE_ENABLED).
+bse_state - changed 1.
+[BT_UART] state change check: changed=1
+[BT_UART] state action: BT_STATE_ENABLED
+[BT_UART] bt_action_on_bluetooth_enabled: report power/version/profile
+bse_state - bt_disable_delete_timer_if_exist(expected_state BT_STATE_NONE current BT_STATE_ENABLED).
+at_event - bt_event_indicate(4107)512.
+at_event - event_len:[14]event_buffer:+PWRSTAT=1
+
+at_event - bt_event_indicate(15)512.
+at_event - event_len:[42]event_buffer:+VER=BRT_BSE_AUD3_RTOS_20260428_r33287
+
+brlinkd - brtbt_send_at_command length:9
+at_event - bt_event_indicate(4112)512.
+at_event - event_len:[18]event_buffer:+PROFILE=65535
+
+at_event - bt_event_indicate(0)512.
+at_event - event_len:[14]event_buffer:+DEVSTAT=1
+
+at_event - bt_event_indicate(0)512.
+at_event - event_len:[14]event_buffer:+DEVSTAT=3
+
+GATTC_FSM - hlp_gatt_fsm_proc, evnet:16
+[bse_gatt_fsm_server] - server_register_app: server_if=1, status=0
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_registered
+bse_mgr - hlp_mgr_gatt_cbk, event=29
+
+at_event - bt_event_indicate(2817)512.
+bse_mgr - hlp_mgr_gatt_cbk status:0, server_if:1,uuid:00 00 34 fb 
+
+[bse_gatt_fsm_server] - service uuid[ff:a0]
+[bse_gatt_fsm_server] - element->permissions: 0
+[bse_gatt_fsm_server] - element->permissions: 0
+[bse_gatt_fsm_server] - ---start service uuid[ff:a0]
+[bse_gatt_fsm_server] - add characteristic----------
+[bse_gatt_fsm_server] - add CCC to characteristic----------
+[bse_gatt_fsm_server] - supportBLEAuthenticationfg2 = 0
+
+GATTC_FSM - hlp_gatt_fsm_proc, evnet:16
+[bse_gatt_fsm_server] - server_register_app: server_if=2, status=0
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_registered
+bse_mgr - hlp_mgr_gatt_cbk, event=29
+
+at_event - bt_event_indicate(2817)512.
+bse_mgr - hlp_mgr_gatt_cbk status:0, server_if:2,uuid:00 00 ef 9f 
+
+[bse_gatt_fsm_server] - service uuid[ff:e0]
+[bse_gatt_fsm_server] - element->permissions: 0
+[bse_gatt_fsm_server] - e
+[14:44:27.460]收←◆lement->permissions: 0
+[bse_gatt_fsm_server] - element->permissions: 0
+[bse_gatt_fsm_server] - element->permissions: 10
+[bse_gatt_fsm_server] - ---start service uuid[ff:e0]
+[bse_gatt_fsm_server] - add characteristic----------
+[bse_gatt_fsm_server] - add characteristic----------
+[bse_gatt_fsm_server] - add characteristic----------
+[bse_gatt_fsm_server] - gatts_common_service_cbk, ev ; 1
+hlp_gatt_services - c->hdl =2 c->value_hdl= 3
+[bse_gatt_fsm_server] - hlp_gatt_dbg_services
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0xEB00, uuid=0x01, 0x00
+bse_ey - table handle = 0xEB00, uuid=0x01, 0x00
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0001, uuid=0xFF, 0xA0
+bse_ey - table handle = 0x0001, uuid=0xFF, 0xA0
+[bse_gatt_fsm_server] - ------handle(2)
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0002, uuid=0xFF, 0xA1
+bse_ey - table handle = 0x0002, uuid=0xFF, 0xA1
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0004, uuid=0x29, 0x02
+bse_ey - table handle = 0x0004, uuid=0x29, 0x02
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0xEB00, uuid=0x01, 0x00
+bse_ey - table handle = 0xEB00, uuid=0x01, 0x00
+[bse_gatt_fsm_server] - element_num : 3, elements_size: 858
+[bse_gatt_fsm_server] - gatts_common_service_cbk, ev ; 1
+hlp_gatt_services - c->hdl =6 c->value_hdl= 7
+hlp_gatt_services - c->hdl =8 c->value_hdl= 9
+hlp_gatt_services - c->hdl =10 c->value_hdl= 11
+[bse_gatt_fsm_server] - hlp_gatt_dbg_services
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0xEB00, uuid=0x01, 0x00
+bse_ey - table handle = 0xEB00, uuid=0x01, 0x00
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0005, uuid=0xFF, 0xE0
+bse_ey - table handle = 0x0005, uuid=0xFF, 0xE0
+[bse_gatt_fsm_server] - ------handle(6)
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0006, uuid=0xFF, 0xE1
+bse_ey - table handle = 0x0006, uuid=0xFF, 0xE1
+[bse_gatt_fsm_server] - ------handle(8)
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x0008, uuid=0xFF, 0xE2
+bse_ey - table handle = 0x0008, uuid=0xFF, 0xE2
+[bse_gatt_fsm_server] - ------handle(10)
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x000A, uuid=0xFF, 0xE3
+bse_ey - table handle = 0x000A, uuid=0xFF, 0xE3
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0x000C, uuid=0x29, 0x02
+bse_ey - table handle = 0x000C, uuid=0x29, 0x02
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->service_added
+bse_mgr - hlp_mgr_gatt_cbk, event=31
+
+bse_ey - ey_event_cbk_t, event=31
+
+bse_ey - handle = 0xEB00, uuid=0x01, 0x00
+bse_ey - table handle = 0xEB00, uuid=0x01, 0x00
+[bse_gatt_fsm_server] - element_num : 5, elements_size: 1430
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 05 20 00               
+[14:44:27.693]收←◆               ..... .         
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 56 0C 01 01                                    .V...           
+hci_h5 - Out-of-order packet arrived, got(3)expected(4)
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 56 0C 00                              ....V..         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 20 0C 01 00                                    . ...           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 20 0C 00                              .... ..         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_stack - [HCI][*Send]: 245
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 52 0C 00                              ....R..         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 1A 0C 01 03                                    .....           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+bse_stack - [HCI][*Send]: 4
+bse_stack - 0000: 01 23 0C 00                                       .#..            
+bse_stack - [HCI][*Recv]: 10
+bse_stack - 0000: 04 0E 07 01 23 0C 00 20 04 24                     ....#.. .$      
+bse_stack - [HCI][*Send]: 7
+bse_stack - 0000: 01 24 0C 03 20 04 24                              .$.. .$         
+at_command - g_bt_opened= [1], [AT]   AT+[LEADDR]
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 24 0C 00                              ....$..         
+bse_stack - [HCI][*Send]: 8
+bse_stack - 0000: 01 3A 0C 04 01 33 8B 9E                           .:...3..        
+lkz debug  - LEADDR
+at_event - bt_event_indicate(5)512.
+bse_stack - [HCI][*Recv]: 7
+at_event - event_len:[24]event_buffer:+LEADDR=2CCC7A74427C
+
+bse_stackbrlinkd - b - 0000: 04 rtbt_send_a0E 04 01 3A 0C 00       t_command l                       ength:19
+brl....:..    inkd - brtbt     
+_send_at_command length:10
+brlinkd - brtbt_send_at_command length:13
+brlinkd - brtbt_send_at_command length:11
+at_event - bt_event_indi
+[14:44:27.769]收←◆cate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - LEADDR
+at_command - g_bt_opened= [1], [AT]   AT+[NAME=AP630_CARLINK_427C]
+lkz debug  - NAME=AP630_CARLINK_427C
+at_command - NAME start
+
+at_command - sgflag == 1
+
+at_command - cmd_buff = AP630_CARLINK_427C
+
+len > 0
+p_name = AP630_CARLINK_427C
+porting_write_configure:BT_FLASH_OFFSET + offset:16773120, len:3614
+
+[14:44:27.817]收←◆atbm current mode is not p2p
+start_p2p:dev_name:DIRECT-AP630_CARL
+[14:44:28.158]收←◆INK_p2p_427C, (char *)ssid:AP630_CARLINK_427C, passwd:88888888
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 252
+bse_gap - hlp_gap_add_eir_uuid, remove old eir node
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 13 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - 
+ on_init_state_changed state = 4 s_gap_user_data->init_state = 6
+
+hlp_manager - MANAGER_USER_DATA->local_info->name = AP630_CARLINK_427C
+hlp_manager - MANAGER_USER_DATA->local_info->name2 = AP630_CARLINK_427C
+at_event - bt_event_indicate(9)512.
+at_event - event_len:[28]event_buffer:+NAME=AP630_CARLINK_427C
+
+brlinkd - brtbt_send_at_command length:11
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 245
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 52 0C 00                              ....R..         
+bse_stack - Command complete callback, Event index 0062!
+
+lkz debug  - NAME=AP630_CARLINK_427C
+at_command - g_bt_opened= [1], [AT]   AT+[LENAME=AP630_CARLINK_427C]
+lkz debug  - LENAME=AP630_CARLINK_427C
+sw_get_ble_connection_type: 2
+
+lename_p:AP630_CARLINK_427C
+
+local_name:AP630_CARLINK_427C, name_len:18
+ATGap - CLCAST adv_le_addr=ec:cc:7a:74:42:7c mfr=ec:cc:7a:74:42:7c
+
+bse_le_adv - hlp_gatt_server_set_adv_data
+bse_le_adv - EIR STR len(7),type(ff)
+bse_le_adv - EIR STR len(19),type(9)
+bse_le_adv - *******eir name:AP630_CARLINK_427C,name_len(18)
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 01 08 20 20 1C 07 FF EC CC 7A 74 42 7C 13 09 41   ..  .....ztB...A
+bse_stack - 0010: 50 36 33 30 5F 43 41 52 4C 49 4E 4B 5F 34 32 37   P630_CARLINK_427
+bse_stack - 0020: 43 00 00 00                                       C...            
+bse_le_adv - hlp_gatt_server_set_scan_response_data
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 08 20 00                              ..... .         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_le_adv - EIR STR len(17),type(7)
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 01 09 20 20 15 02 01 02 11 07 9F EF FD DE EF C9   ..  ............
+bse_stack - 0010: 00 80 00 10 00 00 E0 FF 00 00 00 00 00 00 00 00   ................
+bse_stack - 0020: 00 00 00 00                                       ....            
+lkz debug  - LENAME=AP630_CARLINK_427C
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 09 20 00                              ..... .         
+bse_stack - Command complete callback, Event index 0062!
+
+at_command - cmd = LENAME=AP630_CARLINK_427C len =
+[14:44:28.195]收←◆ 26
+
+at_command - g_bt_opened= [1], [AT]   AT+[ADDR]
+lkz debug  - ADDR
+hlp_manager - manager_user_data is true
+at_event - bt_event_indicate(4)512.
+at_event - event_len:[22]event_buffe
+[14:44:28.458]收←◆r:+ADDR=2CCC7A74427C
+
+ADDR:2CCC7A74427C
+
+brlinkd - brtbt_send_at_command length:28
+brlinkd - brtbt_send_at_command length:30
+0xdd, 0x30, 0x00, 0xa0, 0x40, 0x00, 0x00, 0x02, 0x00, 0x22, 0x02, 0x09, 0x61, 0x72, 0x6b, 0x6d, 0x69, 0x63, 0x72, 0x6f, 0x00, 0x03, 0x06, 0x4c, 0x69, 0x6e, 0x75, 0x78, 0x00, 0x04, 0x03, 0x01, 0x02, 0x03, 0x06, 0x06, 0x2c, 0xcc, 0x7a, 0x74, 0x42, 0x7c, 0x07, 0x06, 0x66, 0xfa, 0xdd, 0xe2, 0x50, 0xc0, 
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - ADDR
+at_command - g_bt_opened= [1], [AT]   AT+[ADVDATA=,蘻tB|]
+at_command - g_bt_opened= [1], [AT]   AT+[SSP=1]
+lkz debug  - SSP=1
+ssp_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=0
+
+iocap_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=2
+
+user_accq = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=1
+
+lkz debug  - SSP=1
+at_command - cmd = SSP=1 len = 6
+
+at_command - g_bt_opened= [1], [AT]   AT+[PIN=0000]
+lkz debug  - PIN=0000
+at_command - cmd_buff = 0000
+
+lkz debug  - PIN=0000
+at_command - cmd = PIN=0000 len = 9
+
+at_command - g_bt_opened= [1], [AT]   AT+[PAIR=3]
+lkz debug  - PAIR=3
+pair_scan_mode = 3
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 1A 0C 01 03                                    .....           
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - FSM:Write scan enable OK: 3
+
+at_event - bt_event_indicate(4115)512.
+
+[14:44:28.707]收←◆at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 01 06 20 0F 20 00 20 00 00 01 00 00 00 00 00 00   .. . . .........
+bse_stack - 0010: 00 07 00                                          ...             
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 06 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 0A 20 01 01                                    .. ..           
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_set_started
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0A 20 00                              ..... .         
+bse_mgr - hlp_mgr_gatt_cbk, event=46
+
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_enabled
+bse_mgr - hlp_mgr_gatt_cbk, event=48
+
+lkz debug  - PAIR=3
+at_command - cmd = PAIR=3 len = 7
+
+at_command - g_bt_opened= [1], [AT]   AT+[LEADDR]
+lkz debug  - LEADDR
+at_event - bt_event_indicate(5)512.
+at_event - event_len:[24]event_buffer:+LEADDR=ECCC7A74427C
+
+clcast: event BT_IDENTITY_READY
+clcast: BLE QR ready (ble=EC:CC:7A:74:42:7C channel=TYW001)
+brlinkd - brtbt_send_at_command length:19
+brlinkd - brtbt_send_at_command length:10
+brlinkd - brtbt_send_at_command length:13
+brlinkd - brtbt_send_at_command length:11
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - LEADDR
+at_command - g_bt_opened= [1], [AT]   AT+[NAME=AP630_CARLINK_427C]
+lkz debug  - NAME=AP630_CARLINK_427C
+at_command - NAME start
+
+at_command - sgflag == 1
+
+at_command - cmd_buff = AP630_CARLINK_427C
+
+len > 0
+p_name = AP630_CARLINK_427C
+porting_write_configure:BT_FLASH_OFFSET + offset:16773120, len:3614
+
+[14:44:28.755]收←◆[atbm_log]:p2p use if_id=1
+F:freertos_createThread ++p2p_main =4 
+[atbm_log]
+[14:44:29.094]收←◆:Thread p2p_main 0 start
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 252
+bse_gap - hlp_gap_add_eir_uuid, remove old eir node
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 13 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - 
+ on_init_state_changed state = 4 s_gap_user_data->init_state = 6
+
+hlp_manager - MANAGER_USER_DATA->local_info->name = AP630_CARLINK_427C
+hlp_manager - MANAGER_USER_DATA->local_info->name2 = AP630_CARLINK_427C
+at_event - bt_event_indicate(9)512.
+at_event - event_len:[28]event_buffer:+NAME=AP630_CARLINK_427C
+
+brlinkd - brtbt_send_at_command length:11
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 245
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 52 0C 00                              ....R..         
+bse_stack - Command complete callback, Event index 0062!
+
+lkz debug  - NAME=AP630_CARLINK_427C
+at_command - g_bt_opened= [1], [AT]   AT+[LENAME=AP630_CARLINK_427C]
+lkz debug  - LENAME=AP630_CARLINK_427C
+sw_get_ble_connection_type: 2
+
+lename_p:AP630_CARLINK_427C
+
+local_name:AP630_CARLINK_427C, name_len:18
+ATGap - CLCAST adv_le_addr=ec:cc:7a:74:42:7c mfr=ec:cc:7a:74:42:7c
+
+bse_le_adv - hlp_gatt_server_set_adv_data
+bse_le_adv - EIR STR len(7),type(ff)
+bse_le_adv - EIR STR len(19),type(9)
+bse_le_adv - *******eir name:AP630_CARLINK_427C,name_len(18)
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 01 08 20 20 1C 07 FF EC CC 7A 74 42 7C 13 09 41   ..  .....ztB...A
+bse_stack - 0010: 50 36 33 30 5F 43 41 52 4C 49 4E 4B 5F 34 32 37   P630_CARLINK_427
+bse_stack - 0020: 43 00 00 00                                       C...            
+bse_le_adv - hlp_gatt_server_set_scan_response_data
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 08 20 00                              ..... .         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_le_adv - EIR STR len(17),type(7)
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 01 09 20 20 15 02 01 02 11 07 9F EF FD DE EF C9   ..  ............
+bse_stack - 0010: 00 80 00 10 00 00 E0 FF 00 00 00 00 00 00 00 00   ................
+bse_stack - 0020: 00 00 00 00                                       ....            
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 09 20 00                              ..... .         
+bse_stack - Command complete callback, Event index 0062!
+
+
+[14:44:29.293]收←◆lkz debug  - LENAME=AP630_CARLINK_427C
+at_command - cmd = LENAME=AP630_CARLINK_427C len = 26
+
+at_command - g_bt_opened= [1], [AT]   AT+[ADVDATA=焯ztB|]
+at_command - g_bt_opened= [1], [AT]   AT+[SSP=1]
+lkz debug  - SSP=1
+ssp_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=0
+
+iocap_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=2
+
+user_accq = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=1
+
+lkz debug  - SSP=1
+at_command - cmd = SSP=1 len = 6
+
+at_command - g_bt_opened= [1], [AT]   AT+[PIN=0000]
+lkz debug  - PIN=0000
+at_command - cmd_buff = 0000
+
+lkz debug  - PIN=0000
+at_command - cmd = PIN=0000 len = 9
+
+at_command - g_bt_opened= [1], [AT]   AT+[PAIR=3]
+lkz debug  - PAIR=3
+pair_scan_mode = 3
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 1A 0C 01 03                                    .....           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - FSM:Write scan enable OK: 3
+
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+at_event - bt_event_indicate(4115)512.
+at_
+[14:44:29.400]收←◆event - event_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 0A 20 01 00                                    .. ..           
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_set_started
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0A 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 01 06 20 0F 20 00 20 00 00 01 00 00 00 00 00 00   .. . . .........
+bse_stack - 0010: 00 07 00                                          ...             
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 06 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 0A 20 01 01                                    .. ..           
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0A 20 00                              ..... .         
+bse_mgr - hlp_mgr_gatt_cbk, event=4
+[14:44:29.699]收←◆6
+
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_enabled
+bse_mgr - hlp_mgr_gatt_cbk, event=48
+
+lkz debug  - PAIR=3
+at_command - cmd = PAIR=3 len = 7
+
+at_command - g_bt_opened= [1], [AT]   AT+[LEADDR]
+lkz debug  - LEADDR
+at_event - bt_event_indicate(5)512.
+at_event - event_len:[24]event_buffer:+LEADDR=ECCC7A74427C
+
+clcast: event BT_IDENTITY_READY
+clcast: BLE QR ready (ble=EC:CC:7A:74:42:7C channel=TYW001)
+brlinkd - brtbt_send_at_command length:19
+brlinkd - brtbt_send_at_command length:10
+brlinkd - brtbt_send_at_command length:13
+brlinkd - brtbt_send_at_command length:11
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+lkz debug  - LEADDR
+at_command - g_bt_opened= [1], [AT]   AT+[ADVDATA=焯ztB|]
+at_command - g_bt_opened= [1], [AT]   AT+[SSP=1]
+lkz debug  - SSP=1
+ssp_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=0
+
+iocap_mode_x = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=2
+
+user_accq = 1 start_ok
+at_event - bt_event_indicate(4128)512.
+at_event - event_len:[10]event_buffer:+SSP=1
+
+lkz debug  - SSP=1
+at_command - cmd = SSP=1 len = 6
+
+at_command - g_bt_opened= [1], [AT]   AT+[PIN=0000]
+lkz debug  - PIN=0000
+at_command - cmd_buff = 0000
+
+lkz debug  - PIN=0000
+at_command - cmd = PIN=0000 len = 9
+
+at_command - g_bt_opened= [1], [AT]   AT+[PAIR=3]
+lkz debug  - PAIR=3
+pair_scan_mode = 3
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 1A 0C 01 03                                    .....           
+bse_mgr - hlp_mgr_gap_cbk, event = 31, pointer of param = 0x00000000
+
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 1A 0C 00                              .......         
+bse_stack - Command complete callback, Event index 0062!
+
+bse_gap - FSM:Write scan enable OK: 3
+
+at_event - bt_event_indicate(4115)512.
+at_event - even
+[14:44:29.834]收←◆t_len:[6]event_buffer:OK
+
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 0A 20 01 00                                    .. ..           
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_set_started
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0A 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 01 06 20 0F 20 00 20 00 00 01 00 00 00 00 00 00   .. . . .........
+bse_stack - 0010: 00 07 00                                          ...             
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 06 20 00                              ..... .         
+bse_stack - [HCI][*Send]: 5
+bse_stack - 0000: 01 0A 20 01 01                                    .. ..           
+bse_mgr - hlp_mgr_gatt_cbk, event=46
+
+bse_stack - [HCI][*Recv]: 7
+bse_stack - 0000: 04 0E 04 01 0A 20 00                              ..... .         
+bse_le_adv - HAL (s_le_advertiser_user_data->cbks)->advertising_enabled
+bse_mgr - hlp_mgr_gatt_cbk, event=48
+
+lkz debug  - PAIR=3
+at_command - cmd = PAIR=3 len = 7
+
+bse_stack - [warning]GetTimePast over 500 ms, [Delta: 3554 ms]
+cryptoexp:1 =1054ms
+
+[14:44:30.873]收←◆cryptoexp:2 =2094ms
+wps_ctx->dev.device_name device_name:DIRECT-AP630_CARLINK_p2p_427C
+Memory free: 25823104 bytes.
+
+[14:44:32.885]收←◆wpas_deinit_wps 
+atbm_wifi_event_callback:AP_s
+[14:44:32.921]收←◆ta_mode:4, eventid:9
+[atbm_log]:tx drop ret=-2 
+[atbm_log]:atbmwifi_del_key  err (0 1)
+[atbm_log]:atbmwifi_del_key  err (0 0)
+[atbm_log]:atbmwifi_del_key  err (0 2)
+
+[14:44:32.982]收←◆[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4110
+[atbm_log]:wpa_supplicant_event_disassoc 526
+[atbm_log]:wpa_s->wpa_state =0
+[atbm_log]:wpa_deauthen
+atbm_wifi_event_callback:AP_sta_mode:4, eventid:5
+
+ The meter is disconnected from ap 
+[atbm_log]:atbm_reorder_func_reset.
+
+[14:44:33.087]收←◆wps ap ssid:AP630_CARLINK_427C,pwd:88888888, channel:36
+
+[atbm_log]:atbmwifi_start_ap++
+[atbm_log]:hostapd key_mgmt(2) wpa(2)
+
+[14:44:33.511]收←◆[atbm_log]:wpa_comm_init_extra_ie len (22),proto(ATBM_WPA_PROTO_RSN)
+[atbm_log]:hostapd_start 2560 ,8 maxstacnt = 8
+[atbm_log]:hostapd(AP630_CARLINK_427C)(2 16)(0) start to beacon
+
+[14:44:33.533]收←◆[atbm_log]:[AP] ch: 36(1), bcn: 100(3), brt: 0x540, ssid: AP630_CARLINK_427C 1
+[atbm_log]:
+[14:44:33.610]收←◆init_udhcpd
+[atbm_log]:atbm_lwip_enable ucIPAddress: 192.168.13.1
+
+ mark ip 1
+
+ ip_table.ip_range[0] = 0x1
+
+ mark ip 1
+
+ ip_table.ip_range[0] = 0x1
+[atbm_log]:event_OsCallback atbmwifi_event_OsCallback 81
+atbm_wifi_event_callback:AP_sta_mode:5, eventid:8
+[atbm_log]:wsm_generic_confirm status 2 
+[atbm_log]:<WARNING> wsm_write_mib fail !!! mibId=4110
+[atbm_log]:atbm_hostapd_init_wps
+[atbm_log]:wps init end
+
+[14:44:33.802]收←◆bt wlan init ok
+bt wlan init is ok
+clcast: bt_wifi_init ret
+[14:44:33.976]收←◆=0
+clcasbrlinkd - bt: ble_init rtbt_send_aret=0
+clcast: BLE QR rt_command length:20
+brleady (ble=Einkd - brtbtC:CC:7A:74:_send_at_com42:7C channmand length:el=TYW001)
+20
+brlinkd -clcast: -------- init brtbt_send_at_command l begin ----ength:20
+------
+clcast: net_init
+clcast: sink_start port=9000
+clcast:at_command - g_bt_opened= [1], [AT]   AT+[GATTHANDLE=FFE1]
+ATGatt - cmd = HANDLE=FFE1 len = 11
+
+at_event - bt_event_indicate(4117)512.
+at_event - event_len:[25]event_buffer:+GATTHANDLE=FFE1,0007
+
+at_command - g_bt_opened= [1], [AT]   AT+[GATTHANDLE=FFE2]
+ATGatt - cmd = HANDLE=FFE2 len = 11
+
+at_event - bt_event_indicate(4117)512.
+at_event - event_len:[25]event_buffer:+GATTHANDLE=FFE2,0009
+
+at_command - g_bt_opened= [1], [AT]   AT+[GATTHANDLE=FFE3]
+ATGatt - cmd = HANDLE=FFE3 len = 11
+
+at_event - bt_event_indicate(4117)512.
+at_event - event_len:[25]event_buffer:+GATTHANDLE=FFE3,000B
+
+clcast: brlinkd - br -------- inserver runltbt_send_at_it end ----------
+oopcommand length:17
+ start on port 9000
+
+[14:44:34.027]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTREADSET=]
+ATGatt - cmd = READSET= len = 8
+
+at_event - bt_event_indicate(4115)512.
+at_event - event_len:[6]event_buffer:OK
+
+
+[14:44:35.815]收←◆hci_h5 - hc_cur_acl_total_num(3)
+bse_stack - [HCI][*Recv]: 22
+bse_stack - 0000: 04 3E 13 01 00 01 08 01 01 C0 AE F7 2C EB 76 18   .>..........,.v.
+bse_stack - 0010: 00 00 00 F4 01 05                                 ......          
+bse_stack - GAP Internal callback, Event index 0056!
+
+bse_le_scan:    - ----->le_scan_device_info_updated
+bse_le_scan:    - scan_complete, cap:LE.
+GATTS_DEV: - gatt_device_add.
+GATTS_DEV: - gatt_device_add,add.
+bse_le_scan:    - HAL (s_user_data->cbks)->scan_result
+bse_mgr - hlp_mgr_gatt_cbk, event=2
+
+bse_stack - GAP Internal callback, Event index 0053!
+
+bse_stack - GAP Internal callback, Event index 0053!
+
+auto_gatt - gatt_connection_cbk
+auto_gatt - addr = [76:EB:2C:F7:AE:C0], connected(1-yes, 0-no) ? 1
+GATTS_DEV: - gatt_device_find.
+auto_gatt - app_if = 255
+auto_gatt - [Warning], app_if is INVALID, it means local is CLIENT ?
+auto_gatt - device_is_server(1-yes, 0-no) ? : 0
+bse_gatt_fsm_client - hlp_gatt_fsm_client_on_device_connected acl_hdl:0x801.
+GATTS_DEV: - gatt_device_find.
+GATT_CONN -  conn_info_on_connected: client_if:255, acl:2049
+GATT_CONN -  conn_info_on_connected: addr:76eb2cf7aec0
+GATT_CONN -  conn_info_on_connected: conn_info:20f420d4, service head:0, service tail:0
+bse_gatt_fsm_client - HAL (s_gatt_client_user_data->cbks)->connected
+bse_mgr - hlp_mgr_gatt_cbk, event=3
+
+at_event - bt_event_indicate(2847)512.
+at_event - event_len:[31]event_buffer:+GATTSTAT=3,FF,76EB2CF7AEC0
+
+TRACE[carlink_bt_callback][642]:EC_EVENT_BT_CONNECT
+GATTS_DEV: - gatt_device_find.
+GATTS_DEV: - gatt_device_on_connected
+GATTS_DEV: - addr:C0:AE:F7:2C:EB:76.conn_id:0801
+bse_gap - hlp_gap_conn_event_cbk:1,1,00
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 00 00                           ........        
+hci_h5 - Out-of-order packet arrived, got(7)expected(0)
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 10 01 00 FF FF 00 28   ..(............(
+bse_stack - [HCI][*Send]: 17
+bse_stack - 0000: 02 01 08 0C 00 08 00 04 00 11 06 01 00 04 00 A0   ................
+bse_stack - 0010: FF                                                .               
+
+[14:44:35.864]收←◆bse_stack - [HC
+[14:44:35.913]收←◆I][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 10 05 00 FF FF 00 28   ..(............(
+bse_stack - [HCI][*Send]: 31
+bse_stack - 0000: 02 01 08 1A 00 16 00 04 00 11 14 05 00 0D 00 9F   ................
+bse_stack - 0010: EF FD DE EF C9 00 80 00 10 00 00 E0 FF 00 00      ............... 
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:35.994]收←◆bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 10 0E 00 FF FF 00 28   ..(............(
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 08 09 00 05 00 04 00 01 10 0E 00 0A         ..............  
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:36.054]收←◆bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 01 00 04 00 02 28   ..(............(
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 08 09 00 05 00 04 00 01 08 01 00 0A         ..............  
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:36.175]收←◆bse_stack - [HCI][*Recv]: 13
+bse_stack - 0000: 04 3E 0A 03 00 01 08 06 00 00 00 F4 01            .>...........   
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 01 00 04 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 18
+bse_stack - 0000: 02 01 08 0D 00 09 00 04 00 09 07 02 00 1C 03 00   ................
+bse_stack - 0010: A1 FF                                             ..              
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 03 00 04 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 08 09 00 05 00 04 00 01 08 03 00 0A         ..............  
+
+[14:44:36.260]收←◆bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 02 01 28 09 00 05 00 04 00 04 04 00 04 00         ..(...........  
+bse_stack - [HCI][*Send]: 15
+bse_stack - 0000: 02 01 08 0A 00 06 00 04 00 05 01 04 00 02 29      ..............) 
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 05 00 0D 00 02 28   ..(............(
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 08 09 00 05 00 04 00 01 08 05 00 0A         ..............  
+
+[14:44:36.315]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 05 00 0D 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 32
+bse_stack - 0000: 02 01 08 1B 00 17 00 04 00 09 15 06 00 02 07 00   ................
+bse_stack - 0010: 9F EF FD DE EF C9 00 80 00 10 00 00 E1 FF 00 00   ................
+
+[14:44:36.372]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 07 00 0D 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 32
+bse_stack - 0000: 02 01 08 1B 00 17 00 04 00 09 15 08 00 0C 09 00   ................
+bse_stack - 0010: 9F EF FD DE EF C9 00 80 00 10 00 00 E2 FF 00 00   ................
+
+[14:44:36.429]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 09 00 0D 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 32
+bse_stack - 0000: 02 01 08 1B 00 17 00 04 00 09 15 0A 00 10 0B 00   ................
+bse_stack - 0010: 9F EF FD DE EF C9 00 80 00 10 00 00 E3 FF 00 00   ................
+
+[14:44:36.629]收←◆bse_stack - [HCI][*Recv]: 16
+bse_stack - 0000: 02 01 28 0B 00 07 00 04 00 08 0B 00 0D 00 03 28   ..(............(
+bse_stack - [HCI][*Send]: 14
+bse_stack - 0000: 02 01 08 09 00 05 00 04 00 01 08 0B 00 0A         ..............  
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 02 01 28 09 00 05 00 04 00 04 0C 00 0D 00         ..(...........  
+bse_stack - [HCI][*Send]: 29
+bse_stack - 0000: 02 01 08 18 00 14 00 04 00 05 02 0C 00 9F EF FD   ................
+bse_stack - 0010: DE EF C9 00 80 00 10 00 00 02 29 00 00            ..........)..   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 14
+bse_stack - 0000: 02 01 28 09 00 05 00 04 00 04 0D 00 0D 00         ..(...........  
+bse_stack - [HCI][*Send]: 15
+bse_stack - 0000: 02 01 08 0A 00 06 00 04 00 05 01 0D 00 02 29      ..............) 
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+bse_stack - [HCI][*Recv]: 12
+bse_stack - 0000: 02 01 28 07 00 03 00 04 00 02 F7 00               ..(.........    
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xb)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 11
+GATTS_DEV: - gatt_device_find.
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_mtu_changed
+bse_mgr - hlp_mgr_gatt_cbk, event=42
+
+at_event - bt_event_indicate(2827)512.
+[bse_gatt_fsm_server] - gatts_notification_cfm_cbk, GATT_EV_MTU
+bse_stack - [HCI][*Send]: 12
+bse_stack - 0000: 02 01 08 07 00 03 00 04 00 03 F7 00               ............    
+bse_sta
+[14:44:36.679]收←◆ck - [HCI][*Recv]: 13
+bse_stack - 0000: 04 3E 0A 03 00 01 08 18 00 00 00 F4 01            .>...........   
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 00 00                           ........        
+
+[14:44:36.723]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:36.883]收←◆bse_stack - [HCI][*
+[14:44:36.995]收←◆Recv]: 14
+bse_stack - 0000: 02 01 28 09 00 05 00 04 00 12 0C 00 01 00         ..(...........  
+[bse_gatt_fsm_server] - gatts_common_service_cbk, ev ; 9
+GATTS_DEV: - gatt_device_find.
+[bse_gatt_fsm_server] - ***********1, app_handle:0x0008, pend_ind->it.hdl:000C
+[bse_gatt_fsm_server] - ***********5
+[bse_gatt_fsm_server] - clcast cccd normal path, hdl:000C
+[bse_gatt_fsm_server] - clcast sync std cccd ret=0 std=0x000d value=0001
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_write_descriptor
+bse_mgr - hlp_mgr_gatt_cbk, event=38
+
+EV_GATT_SERVER_WRITE_DESCRIPTOR,handle(12)0x1 0x0 bse_mgr - CLCAST CCCD handle=0x000c conn_id=0x0801 value=0x0001 notify_enable=1 desc_status=1
+
+at_event - bt_event_indicate(2856)512.
+at_event - event_len:[17]event_buffer:+CLCASTCCCD=1
+
+GATTC_FSM - hlp_gatt_fsm_proc, evnet:21
+[bse_gatt_fsm_server] - hlp_gatt_fsm_gatt_server_send_response, handle[12]
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->response_send_completed
+bse_mgr - hlp_mgr_gatt_cbk, event=34
+
+bse_stack - [HCI][*Send]: 10
+bse_stack - 0000: 02 01 08 05 00 01 00 04 00 13                     ..........      
+[atbm_log]:atbm mac add
+[14:44:37.018]收←◆r[2E:CC:7A:74:42:7B]
+clcast: P2P GO MAC=2e:cc:7a:74:42:7b
+brlinkd - brtbt_send_at_command length:69
+
+[14:44:37.169]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE14B064343A64373A32353A35373A32373A383395B9]
+ATGatt - cmd = DATASEND=000B,FFFE14B064343A64373A32353A35373A32373A383395B9 len = 60
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=23 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=23 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 35
+bse_stack - 0000: 02 01 08 1E 00 1A 00 04 00 1B 0B 00 FF FE 14 B0   ................
+bse_stack - 0010: 64 34 3A 64 37 3A 32 35 3A 35 37 3A 32 37 3A 38   d4:d7:25:57:27:8
+bse_stack - 0020: 33 95 B9                                          3..             
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_
+[14:44:37.205]收←◆id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:71
+
+[14:44:37.234]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:37.354]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE15B141503633305F4341524C494E4B5F34323743A65C]
+ATGatt - cmd = DATASEND=000B,FFFE15B141503633305F4341524C494E4B5F34323743A65C len = 62
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=24 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=24 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 02 01 08 1F 00 1B 00 04 00 1B 0B 00 FF FE 15 B1   ................
+bse_stack - 0010: 41 50 36 33 30 5F 43 41 52 4C 49 4E 4B 5F 34 32   AP630_CARLINK_42
+bse_stack - 0020: 37 43 A6 5C                                       7C.\            
+[bse_gatt_fsm_server] - notify_sp ret
+[14:44:37.390]收←◆=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:37
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000
+[14:44:37.560]收←◆B,FFFE04B231F549]
+ATGatt - cmd = DATASEND=000B,FFFE04B231F549 len = 28
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=7 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=7 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 02 01 08 0E 00 0A 00 04 00 1B 0B 00 FF FE 04 B2   ................
+bse_stack - 0010: 31 F5 49                                          1.I             
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:49
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:37.743]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE0AB336343078333630896C]
+ATGatt - cmd = DATASEND=000B,FFFE0AB336343078333630896C len = 40
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=13 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=13 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 25
+bse_stack - 0000: 02 01 08 14 00 10 00 04 00 1B 0B 00 FF FE 0A B3   ................
+bse_stack - 0010: 36 34 30 78 33 36 30 89 6C                        640x360.l       
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:39
+
+[14:44:37.773]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:37.877]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE05B4333069CE]
+ATGatt - cmd = DATASEND=000B,FFFE05B4333069CE len = 30
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=8 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=8 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 20
+bse_stack - 0000: 02 01 08 0F 00 0B 00 04 00 1B 0B 00 FF FE 05 B4   ................
+bse_stack - 0010: 33 30 69 CE                                       30i.            
+[bse_gatt_fs
+[14:44:37.927]收←◆m_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+brlinkd - brtbt_send_at_command length:37
+
+[14:44:38.097]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE04B53036B9]
+ATGatt - cmd = DATASEND=000B,FFFE04B53036B9 len = 28
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=7 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=7 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 02 01 08 0E 00 0A 00 04 00 1B 0B 00 FF FE 04 B5   ................
+bse_stack - 0010: 30 36 B9                                          06.             
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:69
+
+[14:44:38.135]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+at_command - g_bt_o
+[14:44:38.270]收←◆pened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE14B632653A63633A37613A37343A34323A3762327E]
+ATGatt - cmd = DATASEND=000B,FFFE14B632653A63633A37613A37343A34323A3762327E len = 60
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=23 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=23 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 35
+bse_stack - 0000: 02 01 08 1E 00 1A 00 04 00 1B 0B 00 FF FE 14 B6   ................
+bse_stack - 0010: 32 65 3A 63 63 3A 37 61 3A 37 34 3A 34 32 3A 37   2e:cc:7a:74:42:7
+bse_stack - 0020: 62 32 7E                                          b2.             
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGat
+[14:44:38.314]收←◆t - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command lengbse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+th:71
+
+[14:44:38.453]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE15B741503633305F4341524C494E4B5F343237432ED4]
+ATGatt - cmd = DATASEND=000B,FFFE15B741503633305F4341524C494E4B5F343237432ED4 len = 62
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=24 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=24 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 36
+bse_stack - 0000: 02 01 08 1F 00 1B 00 04 00 1B 0B 00 FF FE 15 B7   ................
+bse_stack - 0010: 41 50 36 33 30 5F 43 41 52 4C 49 4E 4B 5F 34 32   AP630_CARLINK_42
+bse_stack - 0020: 37 43 2E D4                                       7C..            
+[bse_gatt_fsm_server] - noti
+[14:44:38.500]收←◆fy_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+brlinkd - brtbt_send_at_command length:51
+
+[14:44:38.647]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE0BB83838383838383838A7AD]
+ATGatt - cmd = DATASEND=000B,FFFE0BB83838383838383838A7AD len = 42
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=14 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=14 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 26
+bse_stack - 0000: 02 01 08 15 00 11 00 04 00 1B 0B 00 FF FE 0B B8   ................
+bse_stack - 0010: 38 38 38 38 38 38 38 38 A7 AD                     88888888..      
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x0
+[14:44:38.682]收←◆00b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:59
+
+[14:44:38.704]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:38.863]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE0FB93139322E3136382E31332E312F9E]
+ATGatt - cmd = DATASEND=000B,FFFE0FB93139322E3136382E31332E312F9E len = 50
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=18 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=18 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 30
+bse_stack - 0000: 02 01 08 19 00 15 00 04 00 1B 0B 00 FF FE 0F B9   ................
+bse_stack - 0010: 31 39 32 2E 31 36 38 2E 31 33 2E 31 2F 9E         192.168.13.1/.  
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:43
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:39.046]收←◆at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE07BA39303030D02B]
+ATGatt - cmd = DATASEND=000B,FFFE07BA39303030D02B len = 34
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=10 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=10 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 22
+bse_stack - 0000: 02 01 08 11 00 0D 00 04 00 1B 0B 00 FF FE 07 BA   ................
+bse_stack - 0010: 39 30 30 30 D0 2B                                 9000.+          
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+brlinkd - brtbt_send_at_command length:37
+clcast ble: parameter set sent
+
+[14:44:39.229]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+at_command - g_bt_opened= [1], [AT]   AT+[GATTDATASEND=000B,FFFE04BB3032D9]
+ATGatt - cmd = DATASEND=000B,FFFE04BB3032D9 len = 28
+
+ATGatt - GATTDATASEND handle=0x000b ffe3=0x000b match_ffe3=1 len=7 conn_id=0x0801 clcast_notify=1 desc_status=1
+
+[bse_gatt_fsm_server] - notify_sp call handle=0x000b len=7 ffe3=0x000b std_cccd=0x000d match_ffe3=1 conn_id=0x0801 clcast_notify=1 desc_status=1
+bse_gatt_fsm_client - hlp_gatt_notifi_callback(0xa)
+[bse_gatt_fsm_server] - ---------gatts_notification_cfm_cbk- ------- ev = 10
+bse_stack - [HCI][*Send]: 19
+bse_stack - 0000: 02 01 08 0E 00 0A 00 04 00 1B 0B 00 FF FE 04 BB   ................
+bse_stack - 0010: 30 32 D9                                          02.             
+[bse_gatt_fsm_server] - notify_sp ret=0 handle=0x000b conn_id=0x0801
+bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 00 00                           ........        
+ATGatt - GATTDATASEND notify_ret=0 handle=0x000b conn_id=0x0801 clcast_notify=1 desc_status=1
+
+
+[14:44:39.274]收←◆bse_stack - [HCI][*Recv]: 8
+bse_stack - 0000: 04 13 05 01 01 08 01 00                           ........        
+
+[14:44:39.563]收←◆[atbm_log]:[AP] STA added, link_id: 1
+[atbm_log]:ap:rx_auth:alg(0),tran(1),status(0),fc(b0)
+[atbm_log]:send_auth alg(0),transaction(2),ielen(0)
+[atbm_log]:atbm: atbmwifi_rx_ap_auth(), ms=19618
+[atbm_log]:event_OsCallback atbmwifi_event_OsCallback 64
+atbm_wifi_event_callback:AP_sta_mode:5, eventid:2
+[atbm_log]:ATBM_IEEE80211_STYPE_ASSOC_REQ 1
+[atbm_log]:ATBM_IEEE80211_STYPE_ASSOC_REQ  2
+[atbm_log]:uapsd_support_queues=0,max_sp=0
+[atbm_log]:atbm_is_40m [1],sta_supp_40m [1],sta_chtype[3]
+[atbm_log]: hmac_rate_update,3704:HT LDPC
+[atbm_log]:dcm peer rx:1 sta tx depends
+[atbm_log]:atbm_sta_supp_rate:flags[1f],supp_rate[f][ff],ht_flags[ff],vht_flags[3ff],he_flags[7ff]
+[atbm_log]:[ap]:assoc OK 1
+[atbm_log]:event_OsCallback atbmwifi_event_OsCallback 71
+atbm_wifi_event_callback:AP_sta_mode:5, eventid:4
+ASSOCRSP_TXOK_EVENT staMacAddr:[02:9c:c0:48:08:65]
+atbm_wifi_event_callback:348
+
+ The meter in AP is connected by sta 02:9c:c0:48:08:65 
+[atbm_log]:hostapd_4way_start
+[atbm_log]:hostapd handshake 218c1f6c
+[atbm_log]:hostap_tx_eap
+[atbm_log]:hostapd_send_4_of_1_msg res = 0
+[atbm_log]:2/4 ok
+[atbm_log]:atbm_wpa_receive 218c1e00,218c1f6c 
+[atbm_log]:STA_HANDSHAKE 2187ab94 ssta 218c1f20
+[atbm_log]:hostapd handshake 218c1f6c
+[atbm_log]:hostap_tx_eap
+[atbm_log]:hostapd_send_4_of_3_msg res = 0 
+[atbm_log]:atbm_wpa_receive: MIC OK
+[atbm_log]:4/4 ok
+[atbm_log]:atbm_wpa_receive 218c1e00,218c1f6c 
+[atbm_log]:STA_HANDSHAKE 2187ab94 ssta 218c1f20
+[atbm_log]:hostapd handshake 218c1f6c
+[atbm_log]:handshake_over
+[atbm_log]:hostapd_handshake_over 
+[atbm_log]:hostapd err Timeout 2 wpa_ptk_state 7 group_state 3
+
+[14:44:39.652]收←◆[atbm_log]:rx ADDBA_REQ:ssn(0),tid(0),link_id(1),win_size(64)
+
+[14:44:39.770]收←◆
+get message DHCP_MESSAGE_TYPE_DISCOVER
+dhcps_receive_udp_packet_handler DHCP_SERVER_STATE_OFFER
+
+check_client_request_ip: ip 0.0.0.0, hwaddr 02:9c:c0:48:08:65
+
+ temp_ip = 20
+[19945]DHCP assign ip = 192.168.13.20
+[atbm_log]:rx ADDBA_REQ:ssn(2),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:39.917]收←◆
+[20072]get message DHCP_MESSAGE_TYPE_REQUEST
+
+dhcp_server_state_machine=1
+dhcps_allocated_client_address=192.168.13.20
+client_request_ip=192.168.13.20
+dhcps_receive_udp_packet_handler DHCP_SERVER_STATE_ACK
+
+ mark ip 20
+
+ ip_table.ip_range[0] = 0x80001
+
+save_client_addr: ip 192.168.13.20, hwaddr 02:9c:c0:48:08:65
+
+[14:44:39.980]收←◆[atbm_log]:rx ADDBA_REQ:ssn(4),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:40.091]收←◆accept new client connected, session:2176d080
+clcast: session create
+
+[14:44:40.379]收←◆clcast: session connected, device=AP630_CARLINK_427C, 
+[14:44:40.409]收←◆mac=2e:cc:7a:74:42:7b
+[atbm_log]:atbm mac addr[2E:CC:7A:74:42:7B]
+clcast: P2P GO MAC=2e:cc:7a:74:42:7b
+bs
+[14:44:40.607]收←◆e_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 28 0E 00 0A 00 04 00 52 09 00 FF FE 04 10   ..(......R......
+bse_stack - 0010: 31 8C 29                                          1.)             
+[bse_gatt_fsm_server] - gatts_common_service_cbk, ev ; 9
+GATTS_DEV: - gatt_device_find.
+[bse_gatt_fsm_server] - ***********1, app_handle:0x0006, pend_ind->it.hdl:0009
+[bse_gatt_fsm_server] - ***********4
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_write_characteristic
+bse_mgr - hlp_mgr_gatt_cbk, event=37
+
+bse_mgr - CLCAST write FFE2 handle=0x0009 conn_id=0x0801 data_len=7
+
+at_event - bt_event_indicate(2855)512.
+at_event - event_len:[28]event_buffer:+CLCASTDATA=FFFE0410318C29
+GATTC_FSM - hlp_gatt_fsm_proc, evnet:21
+[bse_gatt_fsm_server] - hlp_gatt_fsm_gatt_server_send_response, handle[9]
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->response_send_completed
+bse_mgr - hlp_mgr_gatt_cbk, event=34
+
+bse_stack - [HCI][*Recv]: 19
+bse_stack - 0000: 02 01 28 0E 00 0A 00 04 00 52 09 00 FF FE 04 10   ..(......R......
+bse_stack - 0010: 31 8C 29                                          1.)             
+[bse_gatt_fsm_server] - gatts_common_service_cbk, ev ; 9
+GATTS_DEV: - gatt_device_find.
+[bse_gatt_fsm_server] - ***********1, app_handle:0x0006, pend_ind->it.hdl:0009
+[bse_gatt_fsm_server] - ***********4
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->server_write_characteristic
+bse_mgr - hlp_mgr_gatt_cbk, event=37
+
+bse_mgr - CLCAST write FFE2 handle=0x0009 conn_id=0x0801 data_len=7
+
+at_event - bt_event_indicate(2855)512.
+at_event - event_len:[28]event_buffer:+CLCASTDATA=FFFE0410318C29
+GATTC_FSM - hlp_gatt_fsm_proc, evnet:21
+[bse_gatt_fsm_server] - hlp_gatt_fsm_gatt_server_send_response, handle[9]
+[bse_gatt_fsm_server] - HAL (s_gatt_server_user_data->cbks)->response_send_completed
+bse_mgr - hlp_mgr_gatt_cbk, event=34
+
+clcast_sink_process_stream_setup setup stream type:3 streamFormat:0x4
+
+[14:44:40.798]收←◆clcast: video_start type=3, format=0x4
+[CLCAST-PERF] start video=640x360 interval_frames=30
+clcast: H.264 video stream ready
+
+[14:44:40.883]收←◆mfc_decode err.
+
+clcast: H.264 frame rejected len=232
+Memory free: 25785216 bytes.
+
+[14:44:41.117]收←◆[atbm_log]:rx ADDBA_REQ:ssn(2a),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:41.235]收←◆[atbm_log]:rx ADDBA_REQ:ssn(2d),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:41.340]收←◆[atbm_log]:rx ADDBA_REQ:ssn(30),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:41.914]收←◆[CLCAST-PERF] frames=30 fps_x10=298 kbps=317 max_gap_ms=331 max_proc_ms=20 avg_proc_ms=20 pts_span=725 drop=0
+
+[14:44:42.425]收←◆[atbm_log]:rx ADDBA_REQ:ssn(7a),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:42.563]收←◆[atbm_log]:rx ADDBA_REQ:ssn(7a),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:42.669]收←◆[atbm_log]:rx ADDBA_REQ:ssn(7c),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:42.893]收←◆[CLCAST-PERF] frames=60 fps_x10=305 kbps=644 max_gap_ms=258 max_proc_ms=23 avg_proc_ms=10 pts_span=579 drop=0
+
+[14:44:43.770]收←◆[atbm_log]:rx ADDBA_REQ:ssn(10d),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:43.876]收←◆[atbm_log]:rx ADDBA_REQ:ssn(110),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:43.983]收←◆[CLCAST-PERF] frames=90 fps_x10=305 kbps=823 max_gap_ms=277 max_proc_ms=25 avg_proc_ms=17 pts_span=625 drop=0
+[atbm_log]:rx ADDBA_REQ:ssn(113),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:45.093]收←◆[atbm_log]:rx ADDBA_REQ:ssn(154),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:45.203]收←◆[atbm_log]:rx ADDBA_REQ:ssn(155),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:45.400]收←◆[atbm_log]:rx ADDBA_REQ:ssn(155),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:45.561]收←◆[CLCAST-PERF] frames=120 fps_x10=188 kbps=378 max_gap_ms=381 max_proc_ms=23 avg_proc_ms=12 pts_span=634 drop=0
+
+[14:44:46.284]收←◆[CLCAST-PERF] frames=
+[14:44:46.311]收←◆150 fps_x10=442 kbps=963 max_gap_ms=119 max_proc_ms=21 avg_proc_ms=19 pts_span=649 drop=0
+
+[14:44:46.527]收←◆[atbm_log]:rx ADDBA_REQ:ssn(1e6),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:46.633]收←◆[atbm_log]:rx ADDBA_REQ:ssn(1e9),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:46.738]收←◆[atbm_log]:rx ADDBA_REQ:ssn(1ed),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:47.248]收←◆[CLCAST-PERF] frames=180 fps_x10=319 kbps=728 max_gap_ms=256 max_proc_ms=22 avg_proc_ms=14 pts_span=632 drop=0
+
+[14:44:47.857]收←◆[atbm_log]:rx ADDBA_REQ:ssn(22a),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:47.966]收←◆[atbm_log]:rx ADDBA_REQ:ssn(22d),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:48.073]收←◆[atbm_log]:rx ADDBA_REQ:ssn(232),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:48.856]收←◆[CLCAST-PERF] frames=210 fps_x10=188 kbps=257 max_gap_ms=910 max_proc_ms=30 avg_proc_ms=11 pts_span=648 drop=0
+
+[14:44:49.189]收←◆[atbm_log]:rx ADDBA_REQ:ssn(288),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:49.311]收←◆[atbm_log]:rx ADDBA_REQ:ssn(288),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:49.415]收←◆[atbm_log]:rx ADDBA_REQ:ssn(28b),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:50.038]收←◆[CLCAST-PERF] frames=240 fps_x10=257 kbp
+[14:44:50.059]收←◆s=673 max_gap_ms=416 max_proc_ms=30 avg_proc_ms=17 pts_span=677 drop=0
+
+[14:44:50.506]收←◆[atbm_log]:rx ADDBA_REQ:ssn(2f1),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:50.634]收←◆[atbm_log]:rx ADDBA_REQ:ssn(2f3),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:50.757]收←◆[atbm_log]:rx ADDBA_REQ:ssn(2f5),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:50.916]收←◆Memory free: 24511744 bytes.
+
+[14:44:51.028]收←◆[CLCAST-PERF] frames=2
+[14:44:51.059]收←◆70 fps_x10=305 kbps=521 max_gap_ms=279 max_proc_ms=20 avg_proc_ms=10 pts_span=682 drop=0
+
+[14:44:51.744]收←◆[CLCAST-PERF] frames=300 fps_x10=453 kbps=801 max_gap_ms=124 max_proc_ms=32 avg_proc_ms=17 pts_span=654 drop=0
+
+[14:44:51.839]收←◆[atbm_log]:rx ADDBA_REQ:ssn(36a),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:51.967]收←◆[atbm_log]:rx ADDBA_REQ:ssn(36d),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:52.071]收←◆[atbm_log]:rx ADDBA_REQ:ssn(371),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:52.581]收←◆[CLCAST-PERF] frames=330 fps_x10=357 kbps=732 max_gap_ms=224 max_proc_ms=32 avg_proc_ms=16 pts_span=677 drop=0
+
+[14:44:53.188]收←◆[atbm_log]:rx ADDBA_REQ:ssn(3db),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:53.292]收←◆[atbm_log]:rx ADDBA_REQ:ssn(3df),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+[CLCAST-PERF] frames=3
+[14:44:53.333]收←◆60 fps_x10=419 kbps=454 max_gap_ms=111 max_proc_ms=20 avg_proc_ms=8 pts_span=677 drop=0
+
+[14:44:53.395]收←◆[atbm_log]:rx ADDBA_REQ:ssn(3e2),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:54.066]收←◆[CLCAST-PERF] frames=390 fps_x10=407 kbps=388 max_gap_ms=182 max_proc_ms=33 avg_proc_ms=20 pts_span=692 drop=0
+
+[14:44:54.517]收←◆[atbm_log]:rx ADDBA_REQ:ssn(430),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:54.623]收←◆[atbm_log]:rx ADDBA_REQ:ssn(431),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:54.797]收←◆[CLCAST-PERF] frames=420 fps_x10=430 kbps=407 max_gap_ms=139 max_proc_ms=27 avg_proc_ms=15 pts_span=710 drop=0
+
+[14:44:54.836]收←◆[atbm_log]:rx ADDBA_REQ:ssn(433),tid(0),link_id(1),win_size(64)
+[atbm_log]:tid_params->tid_en
+
+[14:44:55.505]收←◆[CLCAST-PERF] frames=4
+[14:44:55.531]收←◆50 fps_x10=418 kbps=392 max_gap_ms=165 max_proc_ms=21 avg_proc_ms=19 pts_span=703 drop=0
+
+[14:44:56.138]收←◆[CLCAST-PERF] frames=480 fps_x10=487 kbps=435 max_gap_ms=76 max_proc_ms=29 avg_proc_ms=20 pts_span=725 drop=0
+
+[14:44:56.831]收←◆[CLCAST-PERF] frames=510 fps_x10=457 kbps=382 max_gap_ms=102 max_proc_ms=21 avg_proc_ms=20 pts_span=713 drop=0
+
+[14:44:58.333]收←◆[CLCAST-PERF] frames=5
+[14:44:58.360]收←◆40 fps_x10=198 kbps=417 max_gap_ms=316 max_proc_ms=20 avg_proc_ms=16 pts_span=712 drop=0
+
+[14:44:59.395]收←◆[CLCAST-PERF] frames=570 fps_x10=382 kbps=943 max_gap_ms=273 max_proc_ms=22 avg_proc_ms=20 pts_span=705 drop=0
+
+[14:45:00.450]收←◆[CLCAST-PERF] frames=600 fps_x10=283 kbps=278 max_gap_ms=461 max_proc_ms=22 avg_proc_ms=11 pts_span=638 drop=0
+
+[14:45:00.929]收←◆Memory free: 24511744 bytes.
+
+[14:45:01.533]收←◆[CLCAST-PERF] frames=630 fps_x10=286 kbps=507 max_gap_ms=220 max_proc_ms=23 avg_proc_ms=20 pts_span=672 drop=0
+
+[14:45:02.489]收←◆[CLCAST-PERF] frames=660 fps_x10=319 kbps=455 max_gap_ms=360 max_proc_ms=22 avg_proc_ms=18 pts_span=670 drop=0
+
+[14:45:03.511]收←◆[CLCAST-PERF] frames=690 fps_x10=298 kbps=1239 
+[14:45:03.531]收←◆max_gap_ms=144 max_proc_ms=28 avg_proc_ms=19 pts_span=706 drop=0
+
+[14:45:04.585]收←◆[CLCAST-PERF] frames=7
+[14:45:04.608]收←◆20 fps_x10=282 kbps=313 max_gap_ms=303 max_proc_ms=22 avg_proc_ms=18 pts_span=676 drop=0
