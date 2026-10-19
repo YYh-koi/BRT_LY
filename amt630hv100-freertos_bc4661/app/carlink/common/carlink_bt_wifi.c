@@ -56,7 +56,7 @@
 void set_qr_text_buf(const char *str);
 #endif
 
-#define DEV_NAME_PREFIX   "AP630_LUYUAN_NEW888"
+#define DEV_NAME_PREFIX   "AP630_LUYUAN"
 #if CARLINK_EY
 #define EY_FIXED_MAC      CARLINK_EY_QR_DIRECT_DEVICE_MAC
 #endif

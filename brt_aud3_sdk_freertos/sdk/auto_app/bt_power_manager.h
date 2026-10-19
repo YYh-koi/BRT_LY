@@ -31,7 +31,6 @@ void bt_enable_bluetooth();
 void bt_enable_bluetooth_ex();
 void bt_disable_bluetooth();
 void on_profile_state_changed(int profile, int state);
-void bt_disconnect_avrcp_if_hf_hid_lost(void);
 UINT8 bt_bluetooth_is_enabled();
 UINT8 bt_bluetooth_is_disabling();
 BOOL get_g_bt_opened_status();

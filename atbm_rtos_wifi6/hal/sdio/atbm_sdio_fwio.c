@@ -10,18 +10,12 @@
 #include "atbm_sdio.h"
 #include "atbm_sdio_hwio.h"
 #include "atbm_sdio_fwio.h"
-#include "board.h"
-#if BT_H5_MODE
-#if BT_USE_NEW_H5_FW
-#include "coeus_ble_fw.h"
-#else
-#include "firmware_bt_h5.h"
-#endif
-#else
+#if ATBM_LOAD_BT_FIRMWARE
 #include "firmware_bt.h"
 #endif
 
-#define ALTOBEAM_WIFI_HDR_FLAG  		        (0x34353677)
+#define ALTOBEAM_WIFI_HDR_FLAG  		(0x34353677)
+#if ATBM_LOAD_BT_FIRMWARE
 #define BT_DOWNLOAD_ITCM_ADDR				0x02010000
 #define BT_DOWNLOAD_ITCM_LEN				0x80000
 #define BT_DOWNLOAD_DTCM_ADDR				0x02800000
@@ -66,6 +60,7 @@ static int atbm_reg_write_bit(struct atbmwifi_common *hw, atbm_uint32 addr, atbm
 rw_end:
     return ret;
 }
+#endif
 
 atbm_void atbm_release_firmware(atbm_void)    
 {
@@ -499,6 +494,7 @@ error:
 	return ret;
 }
 
+#if ATBM_LOAD_BT_FIRMWARE
 static int atbm_load_bt_firmware(struct atbmwifi_common *hw)
 {
     static struct firmware_altobeam atbm_fw;
@@ -530,6 +526,7 @@ static int atbm_load_bt_firmware(struct atbmwifi_common *hw)
    
     return 0;
 }
+#endif
 
 //atbm_initial_irq
 int atbm_after_load_firmware(struct atbmwifi_common *hw_priv)
@@ -724,14 +721,14 @@ atbm_void atbm_firmware_init_check(struct atbmwifi_common *hw_priv)
 int atbm_load_firmware(struct atbmwifi_common *hw_priv)
 {
 	int ret;
-	wifi_printk(WIFI_ALWAYS,"delay 2000ms before loading bt firmware\r\n");
-	atbm_SleepMs(2000);
+#if ATBM_LOAD_BT_FIRMWARE
 	wifi_printk(WIFI_ALWAYS,"atbm_load_bt_firmware++\r\n");
     ret = atbm_load_bt_firmware(hw_priv);
 	if(ret <0)
 	{
 		wifi_printk(WIFI_ALWAYS,"atbm_load_bt_firmware fail\r\n");
 	}
+#endif
 
 	wifi_printk(WIFI_ALWAYS,"atbm_before_load_firmware++\n");
 	ret = atbm_before_load_firmware(hw_priv);

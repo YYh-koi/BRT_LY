@@ -1,16 +1,25 @@
 #include <stdlib.h>
 #include "atbm_hal.h"
+#include "atbm_os_skbuf.h"
+#include "atbm_os_api.h"
+
+#ifndef ATBM_FREERTOS_TCP_TX_DETAIL_TRACE
+#define ATBM_FREERTOS_TCP_TX_DETAIL_TRACE 1
+#endif
+
+#if ATBM_FREERTOS_TCP_TX_DETAIL_TRACE
+#define ATBM_TX_DETAIL_LOG(...) iot_printf("[ATBM_TX_DETAIL] " __VA_ARGS__)
+#else
+#define ATBM_TX_DETAIL_LOG(...) do { } while (0)
+#endif
+
+#if ATBM_TCPIP_STACK == ATBM_TCPIP_STACK_LWIP
 #include "lwip/tcpip.h"
 #include "lwip/netif.h"
 #include "netif/etharp.h"
 #include "inet.h"
-#include "atbm_os_skbuf.h"
-#include "atbm_os_api.h"
-
 #include "lwip/pbuf.h"
-
 #include "lwip/inet.h"
-
 #include "init.h"
 #include "tcpip.h"
 #include "lwip/opt.h"
@@ -21,15 +30,18 @@
 #include "lwip/dhcp.h"
 #include "lwip/ip_addr.h"
 
-static const uint8_t        ucIPAddress[4] = {192, 168, 13, 1};
-static const uint8_t        ucNetMask[4] = {255, 255, 255, 0};
-static const uint8_t        ucGatewayAddress[4] = {0, 0, 0, 0};
-static const uint8_t        ucDNSServerAddress[4] = {8, 8, 8, 8};
-static const uint8_t        ucMACAddress[6] = {0x30, 0x4a, 0x26, 0x78, 0xfd, 0x12};
+static const uint8_t ucIPAddress[4] = {192, 168, 13, 1};
+static const uint8_t ucNetMask[4] = {255, 255, 255, 0};
+static const uint8_t ucGatewayAddress[4] = {0, 0, 0, 0};
 #define lwip_ipv4_addr(addr) ((addr[0]) | (addr[1] << 8) | (addr[2] << 16) | (addr[3] << 24))
 
-
 err_t atbm_wifi_tx_pkt_netvif(struct netif *netif, struct pbuf *p);
+#endif
+
+extern struct atbmwifi_common g_hw_prv;
+
+static atbm_tcpip_rx_callback_t g_tcpip_rx_callback;
+static void *g_tcpip_rx_callback_arg;
 
 atbm_void * netdev_drv_priv(struct atbm_net_device *ndev)
 {
@@ -42,6 +54,7 @@ atbm_void atbm_skbbuffer_init()
 {
 }
 
+#if ATBM_TCPIP_STACK == ATBM_TCPIP_STACK_LWIP
 static err_t atbm_wifi_if_init(struct netif *netif)
 {
 	netif->output = etharp_output;
@@ -51,7 +64,7 @@ static err_t atbm_wifi_if_init(struct netif *netif)
 	netif->mtu = 1500;
 	/* device capabilities */
 	/* don't set NETIF_FLAG_ETHARP if this device is not an ethernet one */
-	netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_ETHARP | NETIF_FLAG_LINK_UP | NETIF_FLAG_IGMP;
+	netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_ETHARP | NETIF_FLAG_LINK_UP | NETIF_FLAG_IGMP;  //lkz debug NETIF_FLAG_IGMP FOR EC
 	//iot_printf("[%s] %d\r\n",__FUNCTION__,__LINE__);
 	return 0;
 }
@@ -72,8 +85,6 @@ int atbm_wifi_netif_init(struct atbm_net_device *dev)
 	ip_addr.addr = lwip_ipv4_addr(ucIPAddress);
 	netmask.addr = lwip_ipv4_addr(ucNetMask);
 	gw.addr 	 = lwip_ipv4_addr(ucGatewayAddress);
-	wifi_printk(WIFI_ALWAYS, "atbm_wifi_netif_init ucIPAddress: %d.%d.%d.%d\r\n",
-		ucIPAddress[0], ucIPAddress[1], ucIPAddress[2], ucIPAddress[3]);
 
 	sprintf(p_netif->name, "w%d", priv->if_id);
 
@@ -100,6 +111,18 @@ void atbm_wifi_netif_deinit(struct atbm_net_device *dev)
         netif_remove(netif);
 	}
 }
+#else
+int atbm_wifi_netif_init(struct atbm_net_device *dev)
+{
+	(void)dev;
+	return 0;
+}
+
+void atbm_wifi_netif_deinit(struct atbm_net_device *dev)
+{
+	(void)dev;
+}
+#endif
 
 
 struct atbm_net_device * atbm_alloc_netdev(atbm_int32 size)
@@ -110,10 +133,14 @@ struct atbm_net_device * atbm_alloc_netdev(atbm_int32 size)
 	if(netdev)
 		atbm_memset(netdev,0,(size + sizeof(struct atbm_net_device)));
 
+#if ATBM_TCPIP_STACK == ATBM_TCPIP_STACK_LWIP
 	netdev->nif = atbm_kmalloc(sizeof(struct netif),GFP_KERNEL);
 	ATBM_ASSERT(netdev->nif != ATBM_NULL);
 	if(netdev->nif)
 		atbm_memset(netdev->nif,0,sizeof(struct netif));
+#else
+	netdev->nif = ATBM_NULL;
+#endif
 	atbm_os_init_waitevent(&netdev->tx_enable);
 	atbm_os_init_waitevent(&netdev->rx_enable);
 
@@ -131,6 +158,7 @@ atbm_void atbm_free_netdev(struct atbm_net_device * netdev)
 	}
 }
 
+#if ATBM_TCPIP_STACK == ATBM_TCPIP_STACK_LWIP
 atbm_void atbm_lwip_init(struct atbm_net_device *dev)
 {
 }
@@ -148,18 +176,21 @@ atbm_void atbm_lwip_enable(struct atbm_net_device *dev)
 		dev->lwip_queue_enable = 1;
 		atbm_os_wakeup_event(&dev->tx_enable);
 
+		netif_set_default(netif);
 		netif_set_link_up(netif);
 		netif_set_up(netif);
 
 		if (atbmwifi_is_sta_mode(priv->iftype))
 		{
-			netif_set_default(netif);
+			iot_printf("dhcp start\r\n");
 			dhcp_start(netif);
 		}
 		else
 		{
 			strcpy(dev->nif->name, "p0");
+			iot_printf("dhcpd start\r\n");
 			//dhcps_start(netif);
+			printf("ap  dhcps_init 11\n");
 			extern void netif_set_up(struct netif *netif);
 			extern void netif_set_ipaddr(struct netif *netif, const ip4_addr_t *ipaddr);
 			extern void netif_set_netmask(struct netif *netif, const ip4_addr_t *netmask);
@@ -172,8 +203,6 @@ atbm_void atbm_lwip_enable(struct atbm_net_device *dev)
 			wifi_printk(WIFI_ALWAYS,"init_udhcpd\n");	
 			netif_set_up(dev->nif);
 			ip_addr.addr = lwip_ipv4_addr(ucIPAddress);//inet_addr("192.168.13.1");
-			wifi_printk(WIFI_ALWAYS, "atbm_lwip_enable ucIPAddress: %d.%d.%d.%d\r\n",
-				ucIPAddress[0], ucIPAddress[1], ucIPAddress[2], ucIPAddress[3]);
 			netif_set_ipaddr(dev->nif, &ip_addr);
 			netmask.addr = lwip_ipv4_addr(ucNetMask);//inet_addr("255.255.255.0");
 			netif_set_netmask(dev->nif, &netmask);
@@ -335,6 +364,7 @@ static atbm_void __atbm_wifi_rx_pkt(struct atbm_net_device *dev, struct atbm_buf
 	atbm_dev_kfree_skb(atbm_skb);
 	return;
 AllocErr:
+	wifi_printk(WIFI_ALWAYS,"<ERROR> rx_pkt alloc pbuf \n");
 	if(p){
 //		wifi_printk(WIFI_ALWAYS,"Rx Why Here !!!\n");
 		pbuf_free(p);
@@ -393,3 +423,190 @@ struct tcpip_opt lwip_tcp_opt ={
 	.net_stop_queue =	atbm_lwip_stop_queue,
 	.net_task_event =	atbm_lwip_task_event,//
 };
+#else
+static atbm_void atbm_freertos_tcp_init(struct atbm_net_device *dev)
+{
+	(void)dev;
+}
+
+static atbm_void atbm_freertos_tcp_enable(struct atbm_net_device *dev)
+{
+	if (!dev->lwip_enable) {
+		dev->lwip_enable = 1;
+		dev->lwip_queue_enable = 1;
+		atbm_os_wakeup_event(&dev->tx_enable);
+	}
+}
+
+static atbm_void atbm_freertos_tcp_disable(struct atbm_net_device *dev)
+{
+	dev->lwip_enable = 0;
+	dev->lwip_queue_enable = 0;
+}
+
+static atbm_void atbm_freertos_tcp_txdone(struct atbm_net_device *dev)
+{
+	(void)dev;
+}
+
+static atbm_void atbm_freertos_tcp_wake_queue(struct atbm_net_device *dev,
+		int num)
+{
+	(void)num;
+	if (!dev->lwip_queue_enable && dev->lwip_enable) {
+		dev->lwip_queue_enable = 1;
+		atbm_os_wakeup_event(&dev->tx_enable);
+	}
+}
+
+static atbm_void atbm_freertos_tcp_stop_queue(struct atbm_net_device *dev,
+		int num)
+{
+	(void)num;
+	if (dev->lwip_queue_enable && dev->lwip_enable) {
+		dev->lwip_queue_enable = 0;
+	}
+}
+
+static atbm_void atbm_freertos_tcp_task_event(struct atbm_net_device *dev)
+{
+	(void)dev;
+}
+
+static atbm_uint32 atbm_freertos_tcp_rx(struct atbm_net_device *dev,
+		struct atbm_buff *skb)
+{
+	atbm_tcpip_rx_callback_t callback = g_tcpip_rx_callback;
+	atbm_uint8 *data = ATBM_OS_SKB_DATA(skb);
+	atbm_uint16 length = ATBM_OS_SKB_LEN(skb);
+	int ret = -1;
+
+	(void)dev;
+	if (callback != ATBM_NULL && data != ATBM_NULL && length != 0) {
+		ret = callback(data, (unsigned int)length, g_tcpip_rx_callback_arg);
+	}
+	if (ret != 0) {
+		wifi_printk(WIFI_DBG_ERROR,
+				"[ATBM_FREERTOS_TCP] drop RX frame, len=%u ret=%d\n",
+				(unsigned int)length, ret);
+	}
+	atbm_dev_kfree_skb(skb);
+	return 0;
+}
+
+struct tcpip_opt freertos_tcp_opt = {
+	.net_init = atbm_freertos_tcp_init,
+	.net_enable = atbm_freertos_tcp_enable,
+	.net_disable = atbm_freertos_tcp_disable,
+	.net_rx = atbm_freertos_tcp_rx,
+	.net_tx_done = atbm_freertos_tcp_txdone,
+	.net_start_queue = atbm_freertos_tcp_wake_queue,
+	.net_stop_queue = atbm_freertos_tcp_stop_queue,
+	.net_task_event = atbm_freertos_tcp_task_event,
+};
+#endif
+
+int atbm_wifi_register_tcpip_rx_callback(atbm_tcpip_rx_callback_t callback,
+		void *arg)
+{
+	if (callback == ATBM_NULL) {
+		g_tcpip_rx_callback = ATBM_NULL;
+		g_tcpip_rx_callback_arg = ATBM_NULL;
+		return 0;
+	}
+
+	g_tcpip_rx_callback_arg = arg;
+	g_tcpip_rx_callback = callback;
+	return 0;
+}
+
+int atbm_wifi_is_sta_connected(void)
+{
+	struct atbmwifi_vif *priv;
+
+	priv = _atbmwifi_hwpriv_to_vifpriv(&g_hw_prv, 0);
+	if (priv == ATBM_NULL || !atbmwifi_is_sta_mode(priv->iftype)) {
+		return 0;
+	}
+	return priv->connect_ok ? 1 : 0;
+}
+
+int atbm_wifi_send_ethernet_frame(const unsigned char *data,
+		unsigned int length)
+{
+	struct atbmwifi_vif *priv;
+	struct atbm_buff *skb;
+	atbm_uint8 *copy_target;
+	int xmit_ret;
+#if ATBM_FREERTOS_TCP_TX_DETAIL_TRACE
+	static unsigned int tx_detail_sequence;
+	unsigned int call_id = ++tx_detail_sequence;
+#endif
+
+	ATBM_TX_DETAIL_LOG("call=%u stage=enter data=%p len=%u\r\n",
+			call_id, data, length);
+
+	if (data == ATBM_NULL || length == 0 || length > 0xffffU) {
+		ATBM_TX_DETAIL_LOG(
+				"call=%u stage=validate_fail data=%p len=%u ret=-1\r\n",
+				call_id, data, length);
+		return -1;
+	}
+
+	priv = _atbmwifi_hwpriv_to_vifpriv(&g_hw_prv, 0);
+	ATBM_TX_DETAIL_LOG("call=%u stage=priv_lookup priv=%p\r\n",
+			call_id, priv);
+	if (priv == ATBM_NULL || priv->ndev == ATBM_NULL ||
+		priv->ndev->netdev_ops == ATBM_NULL ||
+		priv->ndev->netdev_ops->ndo_start_xmit == ATBM_NULL ||
+		!priv->ndev->lwip_enable ||
+		!priv->ndev->lwip_queue_enable ||
+		!atbm_wifi_is_sta_connected()) {
+		ATBM_TX_DETAIL_LOG("call=%u stage=state_fail ret=-1\r\n",
+				call_id);
+		return -1;
+	}
+	ATBM_TX_DETAIL_LOG(
+			"call=%u stage=state_ok priv=%p ndev=%p ops=%p\r\n",
+			call_id, priv, priv->ndev, priv->ndev->netdev_ops);
+
+	ATBM_TX_DETAIL_LOG("call=%u stage=alloc_enter len=%u\r\n",
+			call_id, length);
+	skb = atbm_dev_alloc_skb((atbm_uint16)length);
+	ATBM_TX_DETAIL_LOG("call=%u stage=alloc_exit skb=%p\r\n",
+			call_id, skb);
+	if (skb == ATBM_NULL) {
+		ATBM_TX_DETAIL_LOG("call=%u stage=alloc_fail ret=-1\r\n",
+				call_id);
+		return -1;
+	}
+
+	ATBM_TX_DETAIL_LOG(
+			"call=%u stage=put_enter skb=%p len=%u\r\n",
+			call_id, skb, length);
+	copy_target = atbm_skb_put(skb, (atbm_uint16)length);
+	ATBM_TX_DETAIL_LOG("call=%u stage=put_exit dst=%p\r\n",
+			call_id, copy_target);
+
+	ATBM_TX_DETAIL_LOG(
+			"call=%u stage=copy_enter dst=%p src=%p len=%u\r\n",
+			call_id, copy_target, data, length);
+	atbm_memcpy(copy_target, data, length);
+	ATBM_TX_DETAIL_LOG("call=%u stage=copy_exit skb=%p\r\n",
+			call_id, skb);
+
+	ATBM_TX_DETAIL_LOG(
+			"call=%u stage=xmit_enter priv=%p skb=%p\r\n",
+			call_id, priv, skb);
+	xmit_ret = priv->ndev->netdev_ops->ndo_start_xmit(priv, skb);
+	ATBM_TX_DETAIL_LOG("call=%u stage=xmit_exit ret=%d\r\n",
+			call_id, xmit_ret);
+	if (xmit_ret != 0) {
+		atbm_dev_kfree_skb(skb);
+		ATBM_TX_DETAIL_LOG("call=%u stage=return ret=-1\r\n",
+				call_id);
+		return -1;
+	}
+	ATBM_TX_DETAIL_LOG("call=%u stage=return ret=0\r\n", call_id);
+	return 0;
+}

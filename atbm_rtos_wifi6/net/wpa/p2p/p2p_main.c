@@ -29,6 +29,7 @@ struct p2p_bss{
 struct dl_list p2p_bss_list;
 struct p2p_data *p2p_global;
 
+#define P2P_INIT_TIMEOUT_MS	(10 * ATBM_HZ)
 
 static void wpas_p2p_join_scan_req(struct atbmwifi_vif *priv, int freq,
 				   const atbm_uint8 *ssid, atbm_size_t ssid_len);
@@ -80,9 +81,18 @@ void p2p_scan_result(void)
 {
 	struct p2p_bss *bss;
 	struct p2p_bss *bss_next;
-	struct p2p_data	*p2pdata = p2p_global;
-	struct atbmwifi_vif *priv = (struct atbmwifi_vif *)p2p_global->ctx;
+	struct p2p_data	*p2pdata;
+	struct atbmwifi_vif *priv;
 	struct p2p_task_msg msg;
+
+	if(p2p_global == NULL){
+		return;
+	}
+	p2pdata = p2p_global;
+	priv = (struct atbmwifi_vif *)p2p_global->ctx;
+	if(priv == NULL){
+		return;
+	}
 
 	if(priv->p2p_scan == 0){
 		return;
@@ -130,7 +140,7 @@ end:
 
 	return;
 
-	//É¨Ãè½áÊø£¬Ó¦¸Ã½øÈë¼àÌýÄ£Ê½
+	//æ‰«æç»“æŸï¼Œåº”è¯¥è¿›å…¥ç›‘å¬æ¨¡å¼
 }
 
 extern atbm_void sta_scan_start_timer_func(atbm_void *data1,atbm_void *data2);
@@ -203,7 +213,7 @@ static void wpas_p2p_join_scan_req(struct atbmwifi_vif *priv, int freq,
 		atbm_memcpy(priv->ssid, P2P_WILDCARD_SSID, P2P_WILDCARD_SSID_LEN);
 		priv->ssid[P2P_WILDCARD_SSID_LEN] = '\0';
 	}
-	//////////WPS_IE(ÔÚwpsÀïÃæÐÞ¸Ä)
+	//////////WPS_IE(åœ¨wpsé‡Œé¢ä¿®æ”¹)
 
 	priv->p2p_scan = 1;
 	priv->p2p_join = 1;
@@ -294,7 +304,7 @@ static void wpas_go_neg_completed(void *ctx, struct p2p_go_neg_results *res)
 	
 	priv->p2p_go_neg_process = 0;		
 
-	if(res->status){		//P2P×´Ì¬´íÎó Ð­ÉÌÊ§°Ü
+	if(res->status){		//P2PçŠ¶æ€é”™è¯¯ åå•†å¤±è´¥
 		p2p_printf(MSG_ERROR,"P2P GO COMPLET ERR:%d", res->status);
 		p2p_set_state(p2pdata, P2P_IDLE);
 		return;
@@ -316,7 +326,7 @@ static void wpas_go_neg_completed(void *ctx, struct p2p_go_neg_results *res)
 	atbm_os_MsgQ_Send(&priv->p2p_task_msg, &msg, sizeof(struct p2p_task_msg), ATBM_TX_WAIT_FOREVER);
 }
 
-//¶Ô·½Ö÷¶¯ÇëÇóÁ¬½Ó£¬×îÖÕ»á½øÈë´Ë»Øµô£¬¿ÉÒÔÍ¨¹ý´Ë»ØµôÈ¥Ö÷¶¯Á¬½Ó¶Ô·½
+//å¯¹æ–¹ä¸»åŠ¨è¯·æ±‚è¿žæŽ¥ï¼Œæœ€ç»ˆä¼šè¿›å…¥æ­¤å›žæŽ‰ï¼Œå¯ä»¥é€šè¿‡æ­¤å›žæŽ‰åŽ»ä¸»åŠ¨è¿žæŽ¥å¯¹æ–¹
 static void wpas_go_neg_req_rx(void *ctx, const atbm_uint8 *src, atbm_uint16 dev_passwd_id,
 			       atbm_uint8 go_intent)
 {
@@ -327,7 +337,7 @@ static void wpas_go_neg_req_rx(void *ctx, const atbm_uint8 *src, atbm_uint16 dev
 		return;
 	}
 
-	if(priv->p2p_ap){		//ÒÑ¾­ÊÇGOµÄÊ±ºò²»´¦ÀíGOÇëÇó
+	if(priv->p2p_ap){		//å·²ç»æ˜¯GOçš„æ—¶å€™ä¸å¤„ç†GOè¯·æ±‚
 		p2p_printf(MSG_INFO,"P2P GO is active, ignore go req\n");
 		return;				
 	}	
@@ -347,7 +357,7 @@ static int wpas_peer_waiting_cb(void *ctx, const atbm_uint8 *src)
 		return -1;
 	}
 
-	if(priv->p2p_ap){		//ÒÑ¾­ÊÇGOµÄÊ±ºò²»´¦ÀíGOÇëÇó
+	if(priv->p2p_ap){		//å·²ç»æ˜¯GOçš„æ—¶å€™ä¸å¤„ç†GOè¯·æ±‚
 		p2p_printf(MSG_INFO,"P2P GO is active, ignore go req\n");
 		return -1;				
 	}	
@@ -460,7 +470,7 @@ static int wpas_start_listen(void *ctx, unsigned int freq,
 			     unsigned int duration,
 			     const struct wpabuf *probe_resp_ie)
 {
-	//ÉèÖÃÐÅµÀ£¬Æô¶¯¼àÌý£¬»Ø¸´PB REQ(P2P IE)
+	//è®¾ç½®ä¿¡é“ï¼Œå¯åŠ¨ç›‘å¬ï¼Œå›žå¤PB REQ(P2P IE)
 	struct atbmwifi_vif *priv = (struct atbmwifi_vif *)ctx;
 	atbm_uint8 channel;
 	int ret;
@@ -481,7 +491,7 @@ static int wpas_start_listen(void *ctx, unsigned int freq,
 
 static void wpas_stop_listen(void *ctx)
 {
-	//Í£Ö¹¼àÌý¹¦ÄÜ
+	//åœæ­¢ç›‘å¬åŠŸèƒ½
 	struct atbmwifi_vif *priv = (struct atbmwifi_vif *)ctx;
 	struct p2p_data *p2pdata = (struct p2p_data *)priv->p2pdata;
 
@@ -497,7 +507,7 @@ static void wpas_stop_listen(void *ctx)
 static int wpas_send_probe_resp(void *ctx, const struct wpabuf *buf,
 				unsigned int freq)
 {
-	//GO Ä£Ê½ ¼àÌý»Ø¸´PB REQ
+	//GO æ¨¡å¼ ç›‘å¬å›žå¤PB REQ
 	struct atbmwifi_vif *priv = (struct atbmwifi_vif *)ctx;
 	struct atbmwifi_common * hw_priv = priv->hw_priv;
 	struct atbm_buff *skb;
@@ -524,12 +534,12 @@ static int wpas_send_probe_resp(void *ctx, const struct wpabuf *buf,
 void wpas_sd_request(void *ctx, int freq, const atbm_uint8 *sa, atbm_uint8 dialog_token,
 		     atbm_uint16 update_indic, const atbm_uint8 *tlvs, atbm_size_t tlvs_len)
 {
-	//¹ã¸æ·þÎñ£¬²»Ö§³Ö
+	//å¹¿å‘ŠæœåŠ¡ï¼Œä¸æ”¯æŒ
 }
 void wpas_sd_response(void *ctx, const atbm_uint8 *sa, atbm_uint16 update_indic,
 		      const atbm_uint8 *tlvs, atbm_size_t tlvs_len)
 {
-	//¹ã¸æ·þÎñ£¬²»Ö§³Ö
+	//å¹¿å‘ŠæœåŠ¡ï¼Œä¸æ”¯æŒ
 }
 static void wpas_prov_disc_req(void *ctx, const atbm_uint8 *peer, atbm_uint16 config_methods,
 			       const atbm_uint8 *dev_addr, const atbm_uint8 *pri_dev_type,
@@ -537,19 +547,19 @@ static void wpas_prov_disc_req(void *ctx, const atbm_uint8 *peer, atbm_uint16 co
 			       atbm_uint8 dev_capab, atbm_uint8 group_capab, const atbm_uint8 *group_id,
 			       atbm_size_t group_id_len)
 {
-	//»Øµô
+	//å›žæŽ‰
 }
 
 static void wpas_prov_disc_resp(void *ctx, const atbm_uint8 *peer, atbm_uint16 config_methods)
 {
-	//»Øµô ´¦Àíp2p×é»Ø¸´Æô¶¯WPS¼ÓÍø
+	//å›žæŽ‰ å¤„ç†p2pç»„å›žå¤å¯åŠ¨WPSåŠ ç½‘
 }
 static void wpas_prov_disc_fail(void *ctx, const atbm_uint8 *peer,
 				enum p2p_prov_disc_status status,
 				atbm_uint32 adv_id, const atbm_uint8 *adv_mac,
 				const char *deferred_session_resp)
 {
-	//»Øµô
+	//å›žæŽ‰
 }
 static atbm_uint8 wpas_invitation_process(void *ctx, const atbm_uint8 *sa, const atbm_uint8 *bssid,
 				  const atbm_uint8 *go_dev_addr, const atbm_uint8 *ssid,
@@ -558,7 +568,7 @@ static atbm_uint8 wpas_invitation_process(void *ctx, const atbm_uint8 *sa, const
 				  const struct p2p_channels *channels,
 				  int dev_pw_id)
 {
-	//ÑûÇë·þÎñ£¬ÔÝ²»Ö§³Ö
+	//é‚€è¯·æœåŠ¡ï¼Œæš‚ä¸æ”¯æŒ
 	return 0;
 }
 static void wpas_invitation_received(void *ctx, const atbm_uint8 *sa, const atbm_uint8 *bssid,
@@ -566,7 +576,7 @@ static void wpas_invitation_received(void *ctx, const atbm_uint8 *sa, const atbm
 				     const atbm_uint8 *go_dev_addr, atbm_uint8 status,
 				     int op_freq)
 {
-	//ÑûÇë·þÎñ£¬ÔÝ²»Ö§³Ö
+	//é‚€è¯·æœåŠ¡ï¼Œæš‚ä¸æ”¯æŒ
 }
 
 static void wpas_invitation_result(void *ctx, int status, const atbm_uint8 *bssid,
@@ -574,7 +584,7 @@ static void wpas_invitation_result(void *ctx, int status, const atbm_uint8 *bssi
 				   const atbm_uint8 *peer, int neg_freq,
 				   int peer_oper_freq)
 {
-	//ÑûÇë·þÎñ£¬ÔÝ²»Ö§³Ö
+	//é‚€è¯·æœåŠ¡ï¼Œæš‚ä¸æ”¯æŒ
 }
 
 static int wpas_get_noa(void *ctx, const atbm_uint8 *interface_addr, atbm_uint8 *buf,
@@ -585,7 +595,7 @@ static int wpas_get_noa(void *ctx, const atbm_uint8 *interface_addr, atbm_uint8 
 
 static int wpas_go_connected(void *ctx, const atbm_uint8 *dev_addr)
 {
-	//go Á¬½Ó×´Ì¬
+	//go è¿žæŽ¥çŠ¶æ€
 	return 0;
 }
 static void wpas_presence_resp(void *ctx, const atbm_uint8 *src, atbm_uint8 status,
@@ -595,12 +605,12 @@ static void wpas_presence_resp(void *ctx, const atbm_uint8 *src, atbm_uint8 stat
 }
 static int wpas_is_concurrent_session_active(void *ctx)
 {
-	//Á´½Ó×´Ì¬
+	//é“¾æŽ¥çŠ¶æ€
 	return 0;
 }
 static int wpas_p2p_in_progress(void *ctx)
 {
-	return 0;//ÕýÔÚ´¦Àí×´Ì¬
+	return 0;//æ­£åœ¨å¤„ç†çŠ¶æ€
 }
 static int wpas_get_persistent_group(void *ctx, const atbm_uint8 *addr, const atbm_uint8 *ssid,
 				     atbm_size_t ssid_len, atbm_uint8 *go_dev_addr,
@@ -613,7 +623,7 @@ static int wpas_get_go_info(void *ctx, atbm_uint8 *intended_addr,
 			    atbm_uint8 *ssid, atbm_size_t *ssid_len, int *group_iface,
 			    unsigned int *freq)
 {
-	//»ñÈ¡GOÐÅÏ¢
+	//èŽ·å–GOä¿¡æ¯
 	return 0;
 }
 static int wpas_remove_stale_groups(void *ctx, const atbm_uint8 *peer, const atbm_uint8 *go,
@@ -816,7 +826,7 @@ struct p2p_group *wpas_p2p_group_init(struct atbmwifi_vif *priv, struct p2p_go_n
 	cfg->cb_ctx = priv;
 	cfg->ie_update = wpas_p2p_ie_update;
 	cfg->idle_update = wpas_p2p_idle_update;
-	cfg->ip_addr_alloc = 0;  //²»Ö§³Ö4´ÎÎÕÊÖ»ñÈ¡IPµØÖ·
+	cfg->ip_addr_alloc = 0;  //ä¸æ”¯æŒ4æ¬¡æ¡æ‰‹èŽ·å–IPåœ°å€
 	group = p2p_group_init(p2pdata, cfg);
 	if (group == NULL){
 		atbm_kfree(cfg);
@@ -1026,10 +1036,17 @@ static int p2p_main_thread(void *arg, int wakeup_state)
 	struct atbmwifi_vif *priv = (struct atbmwifi_vif *)arg;
 	struct p2p_task_msg msg;
 	int size = sizeof(struct p2p_task_msg);
+	int task_exit = 0;
 
-	atbm_p2p_init(priv);
+	ret = atbm_p2p_init(priv);
+	priv->p2p_init_result = ret;
+	atbm_os_wakeup_event(&priv->p2p_init_done);
+	if(ret){
+		wifi_printk(WIFI_ALWAYS, "p2p_main init failed:%d\n", ret);
+		return ret;
+	}
 
-	while(1){
+	while(!task_exit){
 		memset(&msg, 0, sizeof(struct p2p_task_msg));
 		ret = atbm_os_MsgQ_Recv(&priv->p2p_task_msg, &msg, sizeof(struct p2p_task_msg), ATBM_TX_WAIT_FOREVER);
 		if(ret){
@@ -1055,6 +1072,9 @@ static int p2p_main_thread(void *arg, int wakeup_state)
 			case P2P_ACTION_ACK:
 				p2p_action_ack_process(priv, msg.param);
 				break;
+			case P2P_TASK_EXIT:
+				task_exit = 1;
+				break;
 			default:
 				break;
 		}
@@ -1075,17 +1095,35 @@ void p2p_main_set_task_priority(unsigned long p2p_task_priority)
 
 static int p2p_main_task_creat(struct atbmwifi_vif *priv)
 {
-	atbm_thread_internal_t *p2p_thread;
+	atbm_thread_internal_t *p2p_thread = NULL;
+
+	priv->p2p_init_result = -1;
+	atbm_os_init_waitevent(&priv->p2p_init_done);
 
 	priv->p2p_task_msg_stack = (atbm_void *)atbm_kmalloc(P2P_QUEUE_NUM * sizeof(struct p2p_task_msg), GFP_KERNEL);
 	if(!priv->p2p_task_msg_stack){
+		atbm_os_delete_waitevent(&priv->p2p_init_done);
 		return -1;
 	}
-	atbm_os_MsgQ_Create(&priv->p2p_task_msg, priv->p2p_task_msg_stack, sizeof(struct p2p_task_msg), P2P_QUEUE_NUM);
+	if(atbm_os_MsgQ_Create(&priv->p2p_task_msg, priv->p2p_task_msg_stack, sizeof(struct p2p_task_msg), P2P_QUEUE_NUM)){
+		wifi_printk(WIFI_ALWAYS, "p2p_main msg queue create failed\n");
+		atbm_kfree(priv->p2p_task_msg_stack);
+		priv->p2p_task_msg_stack = ATBM_NULL;
+		atbm_os_delete_waitevent(&priv->p2p_init_done);
+		return -1;
+	}
 	if(p2p_task_priority_ex > 0 && p2p_task_priority_ex < 32) {
 		p2p_thread = atbm_createThreadInternal("p2p_main",p2p_main_thread, (atbm_void*)priv, p2p_task_priority_ex/*P2P_TASK_PRIORITY*/, 0);
 	} else {
 		p2p_thread = atbm_createThreadInternal("p2p_main",p2p_main_thread, (atbm_void*)priv, P2P_TASK_PRIORITY, 0);
+	}
+	if(!p2p_thread){
+		wifi_printk(WIFI_ALWAYS, "p2p_main thread create failed\n");
+		atbm_os_MsgQ_Delete(&priv->p2p_task_msg);
+		atbm_kfree(priv->p2p_task_msg_stack);
+		priv->p2p_task_msg_stack = ATBM_NULL;
+		atbm_os_delete_waitevent(&priv->p2p_init_done);
+		return -1;
 	}
 	priv->p2p_task = p2p_thread;
 
@@ -1094,8 +1132,17 @@ static int p2p_main_task_creat(struct atbmwifi_vif *priv)
 
 static int p2p_main_task_release(struct atbmwifi_vif *priv)
 {
+	struct p2p_task_msg msg;
+	int ret;
+
 	if(priv->p2p_task){
-		atbm_stopThread(priv->p2p_task);
+		memset(&msg, 0, sizeof(msg));
+		msg.event = P2P_TASK_EXIT;
+		ret = atbm_os_MsgQ_Send(&priv->p2p_task_msg, &msg, sizeof(msg), ATBM_TX_NO_WAIT);
+		if(ret){
+			wifi_printk(WIFI_ALWAYS, "p2p_main exit msg send failed:%d\n", ret);
+		}
+		atbm_stopThreadInternal(priv->p2p_task);
 		priv->p2p_task = NULL;
 	}
 
@@ -1105,6 +1152,7 @@ static int p2p_main_task_release(struct atbmwifi_vif *priv)
 		atbm_kfree(priv->p2p_task_msg_stack);
 		priv->p2p_task_msg_stack = ATBM_NULL;
 	}
+	atbm_os_delete_waitevent(&priv->p2p_init_done);
 
 	return 0;
 }
@@ -1199,7 +1247,7 @@ int atbm_p2p_prash_ie(struct atbmwifi_vif *priv, atbm_uint8 *bssid,
 	}
 	wifi_printk(WIFI_ALWAYS,"\n");
 #endif
-#if 0	//²¿·ÖP2PÉè±¸µÄSSID·Ç "DIRECT-"
+#if 0	//éƒ¨åˆ†P2Pè®¾å¤‡çš„SSIDéž "DIRECT-"
 	if((elems.ssid_len != priv->ssid_length) 
 		|| atbm_memcmp(elems.ssid, priv->ssid, priv->ssid_length)){
 		return -1;
@@ -1464,7 +1512,7 @@ int atbm_p2p_init(struct atbmwifi_vif *priv)
 	}
 
 	p2p_scan_ie(p2pdata, ies, NULL, BAND_2_4_GHZ);
-	priv->p2p_scan_ie = ies;		//PB×é°üÐèÒªÌí¼ÓP2P_IER
+	priv->p2p_scan_ie = ies;		//PBç»„åŒ…éœ€è¦æ·»åŠ P2P_IER
 
 //	MIB_Flags |= MIB_F_P2P_STARTED;
 #ifdef CONFIG_WIFI_DISPLAY
@@ -1738,11 +1786,35 @@ int atbm_p2p_listen_wait_connect(struct atbmwifi_vif *priv, int go_intent, int c
 
 int atbm_p2p_start(struct atbmwifi_vif *priv)
 {
+	int ret;
+	int wait_ret;
+
 	if(priv->p2pdata != NULL){
 		iot_printf("p2p is started\n");
 		return -1;
 	}
-	p2p_main_task_creat(priv);
+
+	ret = p2p_main_task_creat(priv);
+	if(ret){
+		return ret;
+	}
+
+	wifi_printk(WIFI_ALWAYS, "p2p: wait init done\n");
+	wait_ret = atbm_os_wait_event_timeout(&priv->p2p_init_done, P2P_INIT_TIMEOUT_MS);
+	if(wait_ret != 1){
+		wifi_printk(WIFI_ALWAYS, "p2p: init timeout\n");
+		atbm_p2p_deinit(priv);
+		return -1;
+	}
+
+	ret = priv->p2p_init_result;
+	if(ret){
+		wifi_printk(WIFI_ALWAYS, "p2p: init failed:%d\n", ret);
+		atbm_p2p_deinit(priv);
+		return ret;
+	}
+
+	wifi_printk(WIFI_ALWAYS, "p2p: init done\n");
 	return 0;
 }
 
@@ -1772,16 +1844,34 @@ int atbm_p2p_get_peers(struct atbmwifi_vif *priv)
 int atbm_p2p_deinit(struct atbmwifi_vif *priv)
 {
 	if(priv->p2pdata == NULL){
+		if(priv->p2p_task || priv->p2p_task_msg_stack){
+			atbm_disable_listening(priv);
+			atbmwps_cancel(priv);
+			if(priv->iftype != ATBM_NUM_NL80211_IFTYPES){
+				atbmwifi_stop_iftype(priv, priv->iftype);
+			}
+			atbmwifi_stop();
+			p2p_main_task_release(priv);
+			p2p_global = NULL;
+			if(priv->p2p_wps_privkey){
+				atbm_wpabuf_free(priv->p2p_wps_privkey);
+				priv->p2p_wps_privkey = NULL;
+			}
+			if(priv->p2p_wps_pubkey){
+				atbm_wpabuf_free(priv->p2p_wps_pubkey);
+				priv->p2p_wps_pubkey = NULL;
+			}
+			return 0;
+		}
 		iot_printf("p2p is stopped\n");
 		return -1;
 	}
 
+	atbm_disable_listening(priv);
+	atbmwps_cancel(priv);
 	if(priv->iftype != ATBM_NUM_NL80211_IFTYPES){
 		atbmwifi_stop_iftype(priv, priv->iftype);
 	}
-
-	atbm_disable_listening(priv);
-	atbmwps_cancel(priv);
 	atbmwifi_stop();
 
 	if(priv->p2p_ap){
@@ -1797,6 +1887,7 @@ int atbm_p2p_deinit(struct atbmwifi_vif *priv)
 
 	p2p_main_task_release(priv);
 
+	p2p_global = NULL;
 	p2p_deinit(priv->p2pdata);
 	priv->p2pdata = NULL;
 
@@ -1852,5 +1943,3 @@ int atbm_p2p_restart(struct atbmwifi_vif *priv){
 	return 0;
 }
 #endif
-
-

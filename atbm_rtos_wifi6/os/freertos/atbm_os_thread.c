@@ -61,8 +61,8 @@ atbm_void freertos_stopThread(pAtbm_thread_t thread_id)
 
 atbm_void freertos_ThreadStopEvent(pAtbm_thread_t thread_id)
 {
-	thread_id = 0;
-	THREAD_RETURN(0);
+	(void)thread_id;
+	vTaskSuspend(NULL);
 }
 
 atbm_uint32 atbm_getCurThreadId(void)

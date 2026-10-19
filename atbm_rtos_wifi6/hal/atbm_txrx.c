@@ -915,7 +915,7 @@ static atbm_void atbmwifi_ieee80211_rx_h_sta_process(struct atbmwifi_vif *priv,s
 			    //atbm_clear_bit(sta_priv->link_id,(atbm_uint32 *)priv->tim_vbitmap);
 				atbm_ps_notify(priv,sta_priv->link_id,0);
 				atbm_spin_unlock_irqrestore(&priv->ps_state_lock, flags);
-				atbm_bh_wakeup(priv->hw_priv); //add lkz debug
+				atbm_bh_wakeup(priv->hw_priv);  //add lkz debug 2026-06-10
 			}
 		} else {
 			if (atbmwifi_ieee80211_has_pm(hdr->frame_control)){
@@ -931,7 +931,7 @@ static atbm_void atbmwifi_ieee80211_rx_h_sta_process(struct atbmwifi_vif *priv,s
 					}
 				}
 				atbm_spin_unlock_irqrestore(&priv->ps_state_lock, flags);
-				//atbm_bh_wakeup(priv->hw_priv);  //lkz debug
+				//atbm_bh_wakeup(priv->hw_priv);  lkz debug 2026-06-10
 			}
 		}
 	}

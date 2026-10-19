@@ -24,6 +24,8 @@ enum atbmwifi_event{
 	ATBM_WIFI_DISENABLE_NET_EVENT=9,
 	ATBM_WIFI_SMARTCONFIG_SUCCESS = 10,
 	ATBM_WIFI_WPS_SUCCESS = 11,
+	/* A completed STA connection scan found no matching AP; retry continues. */
+	ATBM_WIFI_SCAN_AP_NOT_FOUND_EVENT = 12,
 
 };
 

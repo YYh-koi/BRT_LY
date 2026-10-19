@@ -3,6 +3,7 @@
 #define __DHCPS_H__
 
 #include "lwip/arch.h"
+#include "lwip/ip_addr.h"
 #include "lwip/netif.h"
 #include "lwip/udp.h"
 #include "lwip/stats.h"
@@ -12,8 +13,8 @@
 
 #define CONFIG_DHCPS_KEPT_CLIENT_INFO
 
-#define DHCP_POOL_START			20
-#define DHCP_POOL_END			30
+#define DHCP_POOL_START			100
+#define DHCP_POOL_END			200
 
 #define DHCPS_MAX_CLIENT_NUM 	(DHCP_POOL_END-DHCP_POOL_START+1)
 #define IS_USE_FIXED_IP	0
@@ -132,7 +133,10 @@ struct address_pool{
 #define MARK_RANGE8_IP_BIT(table, ip)	((table.ip_range[7]) | (1 << ((ip) - 1)))
 
 /* expose API */
+typedef void (*dhcps_status_callback_fn)(struct netif *netif, int status, const ip_addr_t *addr);
+
 void dhcps_set_addr_pool(int addr_pool_set, ip4_addr_t * addr_pool_start, ip4_addr_t *addr_pool_end);
+void atbm_dhcps_register_status_callback(dhcps_status_callback_fn func);
 void dhcps_init(struct netif * pnetif);
 void dhcps_deinit(void);
 

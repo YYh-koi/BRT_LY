@@ -6,6 +6,7 @@
 #include "etharp.h"
 
 #define _DHCPS_C_
+#define DHCPS_STATUS_CB_VERSION "DHCPS_CB_20260624_02"
 
 //static struct dhcp_server_state dhcp_server_state_machine;
 static uint8_t dhcp_server_state_machine = DHCP_SERVER_STATE_IDLE;
@@ -45,6 +46,14 @@ static uint8_t client_addr[6];
 static SemaphoreHandle_t dhcps_ip_table_semaphore = 0;
 
 static struct netif * dhcps_netif = NULL;
+static dhcps_status_callback_fn g_dhcps_status_cb = NULL;
+
+void atbm_dhcps_register_status_callback(dhcps_status_callback_fn func)
+{
+	g_dhcps_status_cb = func;
+	printf("[atbm_log]:DHCPS_CB version=%s register %s\n",
+		DHCPS_STATUS_CB_VERSION, func ? "set" : "clear");
+}
 /**
   * @brief  latch the specific ip in the ip table. 
   * @param  d the specific index
@@ -569,6 +578,7 @@ struct pbuf *udp_packet_buffer, const struct ip4_addr *sender_addr, uint16_t sen
 	struct pbuf *merged_packet_buffer = NULL;
 struct pbuf *packet_buffer = NULL;
 uint8_t type;
+ip_addr_t notify_addr;
 static int reentry = 0;
 if(reentry){
 		printf("dhcps_receive_udp_packet_handler() is reentry\n");
@@ -632,6 +642,19 @@ dhcps_send_offer(packet_buffer);
 			#endif
 //			dhcps_send_ack(udp_packet_buffer);
 dhcps_send_ack(packet_buffer);
+			if (g_dhcps_status_cb) {
+				ip_addr_copy_from_ip4(notify_addr, dhcps_allocated_client_address);
+				printf("[atbm_log]:DHCPS_CB version=%s notify status=1 ip=%d.%d.%d.%d\n",
+					DHCPS_STATUS_CB_VERSION,
+					ip4_addr1(&dhcps_allocated_client_address),
+					ip4_addr2(&dhcps_allocated_client_address),
+					ip4_addr3(&dhcps_allocated_client_address),
+					ip4_addr4(&dhcps_allocated_client_address));
+				g_dhcps_status_cb(dhcps_netif, 1, &notify_addr);
+			} else {
+				printf("[atbm_log]:DHCPS_CB version=%s notify skip no cb\n",
+					DHCPS_STATUS_CB_VERSION);
+			}
 #if (!IS_USE_FIXED_IP)
 			mark_ip_in_table((uint8_t)ip4_addr4(&dhcps_allocated_client_address)); 			
 	#ifdef CONFIG_DHCPS_KEPT_CLIENT_INFO

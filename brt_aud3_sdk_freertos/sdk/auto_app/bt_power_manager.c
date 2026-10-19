@@ -625,36 +625,6 @@ static void request_bt_done()
 	POWER_MGR_DBG("request_bt_done ft=0x%04x", ft); 
 }
 
-/* The peer (phone) may drop HFP and HID while keeping the AVRCP link alive,
- * e.g. when the user disconnects the device from the phone's Bluetooth menu
- * without turning Bluetooth off. AVRCP then stays connected and the phone keeps
- * reporting track info. Once both HFP and HID are gone, disconnect AVRCP too.
- * Skip while a device-initiated disable sequence is running, since that
- * sequence already tears AVRCP down. */
-void bt_disconnect_avrcp_if_hf_hid_lost(void)
-{
-	if (s_bt_state_management.state != BT_STATE_ENABLED) {
-		return;
-	}
-
-	if (hlp_hf_get_status() >= ST_HF_CONNECTING) {
-		return;
-	}
-
-#ifdef CONFIG_HID
-	if (hlp_hid_get_status() >= ST_APP_HID_CONNECTING) {
-		return;
-	}
-#endif
-
-#ifdef CONFIG_AVRCP
-	if (hlp_avrcp_get_status() >= ST_APP_AVRCP_CONNECTED) {
-		POWER_MGR_DBG("%s: HFP and HID lost, disconnect AVRCP.", __FUNCTION__);
-		app_avrcp_disconnect();
-	}
-#endif
-}
-
 // hfp -> a2dp -> avrcp -> pbap -> gatt -> map -> dun -> pan -> ftp
 void on_profile_state_changed(int profile, int state)
 {
@@ -673,7 +643,6 @@ void on_profile_state_changed(int profile, int state)
 #endif
 		switch (profile) {
 		case PROFILE_ID_HFP:
-			bt_disconnect_avrcp_if_hf_hid_lost();
 			on_bluetooth_state_changed(BT_STATE_DISABLING_A2DP);
 			break;
 		case PROFILE_ID_A2DP:

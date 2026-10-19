@@ -172,8 +172,8 @@ static xPinGroup_t pin_groups[] = {
 	//{.groupid = PGRP_UART1, .pins_num = 4, .pins = {{40, 1}, {41, 1}, {100, 1}, {101, 1}}},
 #else
 													/* rx	   tx */
-	{.groupid = PGRP_UART1, .pins_num = 2, .pins = {{41, 1}, {40, 1}}},//辂元
-	//{.groupid = PGRP_UART1, .pins_num = 2, .pins = {{40, 1}, {41, 1}}},
+	//{.groupid = PGRP_UART1, .pins_num = 2, .pins = {{41, 1}, {40, 1}}},//辂元
+	{.groupid = PGRP_UART1, .pins_num = 2, .pins = {{40, 1}, {41, 1}}},
 #endif
 													/* rx      tx */
 	{.groupid = PGRP_UART2, .pins_num = 2, .pins = {{42, 1}, {43, 1}}},

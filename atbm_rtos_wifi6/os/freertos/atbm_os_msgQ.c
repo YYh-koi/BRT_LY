@@ -22,12 +22,32 @@ int freertos_os_MsgQ_Create(atbm_os_msgq *pmsgQ, atbm_uint32 *pstack, atbm_uint3
 int freertos_os_MsgQ_Delete(atbm_os_msgq *pmsgQ)
 {
     int result = 0;
+	UBaseType_t pending;
 
-	  if(uxQueueMessagesWaiting((const QueueHandle_t)pmsgQ))
-	  {
-	  	  result = -1;
-	  }
-    vQueueDelete(*pmsgQ);
+	if ((pmsgQ == NULL) || (*pmsgQ == NULL)) {
+		return 0;
+	}
+
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] msgq inspect slot=%p handle=%p\n",
+		    pmsgQ, *pmsgQ);
+	pending = uxQueueMessagesWaiting((const QueueHandle_t)*pmsgQ);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] msgq pending handle=%p count=%u\n",
+		    *pmsgQ, (unsigned int)pending);
+	if (pending)
+	{
+		result = -1;
+	}
+
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] msgq delete begin handle=%p\n",
+		    *pmsgQ);
+	vQueueDelete(*pmsgQ);
+	*pmsgQ = NULL;
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] msgq delete done slot=%p\n",
+		    pmsgQ);
     return result;
 }
 
@@ -70,4 +90,3 @@ int freertos_os_MsgQ_Send(atbm_os_msgq *pmsgQ, atbm_void *pbuf, atbm_uint32 val,
 }
 
 ////
-

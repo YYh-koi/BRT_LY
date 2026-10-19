@@ -2080,10 +2080,6 @@ static void hlp_mgr_hid_cbk(unsigned int event, void *param)
 		break;
 	}
 
-	if (api_event == BT_EV_BTC_DISCONNECTED) {
-		bt_disconnect_avrcp_if_hf_hid_lost();
-	}
-
 	s_bt_manager_data->event_cbk(api_event, param);
 }
 #endif

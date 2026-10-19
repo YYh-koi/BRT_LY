@@ -475,6 +475,14 @@ static atbm_void atbm_hmac_xmit_data_complete(ATBM_INF_DESC *atbm_desc)
 			break;
 	}
 
+	if(atbm_bh_is_term(hw_priv)){
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] TX completion dropped during shutdown\n");
+		ATBM_TX_DESC_PUT(self,self->drvobj,desc_cmp->desc_id);
+		desc_cmp->link = 0;
+		return;
+	}
+
 #if CONFIG_WIFI_BT_COMB
 	for(i = 0; i < desc_cmp->frame_cnt; i++){
 		if(atbm_unlikely(desc_cmp->data[i] == ATBM_NULL && hw_priv->wsm_cmd.cnf == 0)){
@@ -1085,19 +1093,19 @@ atbm_void atbm_unregister_bh(struct atbmwifi_common *hw_priv)
 {
 	//kill createThread
 	hw_priv->bh_term=1;
-	atbm_stopThreadInternal(hw_priv->bh_thread);
 
-	atbm_os_delete_waitevent(&hw_priv->wsm_cmd_wq);
-	atbm_os_DeleteMutex(&hw_priv->wsm_cmd_mux);
 #if ATBM_SDIO_BUS
 	atbm_sdio_queue_exit(hw_priv);
-#endif
-#if CONFIG_INF_AGGR_TX
-	atbm_free_tx_aggr_buf(hw_priv->sbus_priv->tx_desc);
 #endif
 #if ATBM_TX_CMPL_TASK
 	atbm_stopThreadInternal(hw_priv->cmpl_bh_thread);
 #endif
-}
+	atbm_stopThreadInternal(hw_priv->bh_thread);
 
+	atbm_os_delete_waitevent(&hw_priv->wsm_cmd_wq);
+	atbm_os_DeleteMutex(&hw_priv->wsm_cmd_mux);
+#if CONFIG_INF_AGGR_TX
+	atbm_free_tx_aggr_buf(hw_priv->sbus_priv->tx_desc);
+#endif
+}
 

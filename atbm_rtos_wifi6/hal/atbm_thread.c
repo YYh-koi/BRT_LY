@@ -12,6 +12,7 @@
 
 static void atbm_ThreadCallback(void *arg){
 	atbm_thread_internal_t *thread = (atbm_thread_internal_t *)arg;
+	pAtbm_thread_t self_thread;
 	int ret;
 
 	wifi_printk(WIFI_ALWAYS, "Thread %s %d start\n", thread->name, thread->wake_period);
@@ -33,8 +34,11 @@ static void atbm_ThreadCallback(void *arg){
 			thread->cb(thread->p_arg, 0);
 		}
 	}
-	atbm_os_wakeup_event(&thread->stopEv);
+	self_thread = thread->thread;
 	wifi_printk(WIFI_ALWAYS, "Thread %s stop\n", thread->name);
+	/* Signal completion, then park until the stopping task deletes us. */
+	atbm_os_wakeup_event(&thread->stopEv);
+	atbm_ThreadStopEvent(self_thread);
 }
 
 atbm_thread_internal_t *atbm_createThreadInternal(char *name,
@@ -68,22 +72,50 @@ atbm_thread_internal_t *atbm_createThreadInternal(char *name,
 }
 
 int atbm_stopThreadInternal(atbm_thread_internal_t *thread){
-	int ret;
+	int wait_ret;
 
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] stop request name=%s ctrl=%p task=%p wake=%d\n",
+		    thread->name, thread, thread->thread, thread->wake_period);
 	thread->stop = 1;
 	if(thread->wake_period){
 		atbm_os_wakeup_event(&thread->wq);
 	}
-	atbm_os_wait_event_timeout(&thread->stopEv, 10*ATBM_HZ);
+	wait_ret = atbm_os_wait_event_timeout(&thread->stopEv, 10*ATBM_HZ);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] stop event name=%s ret=%d task=%p\n",
+		    thread->name, wait_ret, thread->thread);
 
+	/* The worker is parked after signaling stopEv. */
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] task delete begin name=%s task=%p\n",
+		    thread->name, thread->thread);
 	atbm_stopThread(thread->thread);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] task delete done name=%s\n",
+		    thread->name);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] stopEv delete begin name=%s event=%p\n",
+		    thread->name, thread->stopEv);
 	atbm_os_delete_waitevent(&thread->stopEv);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] stopEv delete done name=%s\n",
+		    thread->name);
 	if(thread->wake_period){
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] wq delete begin name=%s event=%p\n",
+			    thread->name, thread->wq);
 		atbm_os_delete_waitevent(&thread->wq);
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] wq delete done name=%s\n",
+			    thread->name);
 	}
 
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] ctrl free name=%s ctrl=%p\n",
+		    thread->name, thread);
 	atbm_kfree(thread);
-	return ret;
+	return 0;
 };
 
 
@@ -96,6 +128,3 @@ void atbm_wakeupThreadInternal(atbm_thread_internal_t *thread){
 		atbm_os_wakeup_event(&thread->wq);
 	}
 };
-
-
-

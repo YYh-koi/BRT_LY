@@ -10,6 +10,23 @@
 #ifndef ATBM_WIFI_DRIVER_API_H
 #define ATBM_WIFI_DRIVER_API_H
 #include "atbm_type.h"
+
+#define ATBM_TCPIP_STACK_LWIP          1
+#define ATBM_TCPIP_STACK_FREERTOS_TCP  2
+
+#ifndef ATBM_STA_ONLY
+#define ATBM_STA_ONLY 0
+#endif
+
+#ifndef ATBM_TCPIP_STACK
+#define ATBM_TCPIP_STACK ATBM_TCPIP_STACK_LWIP
+#endif
+
+#if (ATBM_TCPIP_STACK != ATBM_TCPIP_STACK_LWIP) && \
+	(ATBM_TCPIP_STACK != ATBM_TCPIP_STACK_FREERTOS_TCP)
+#error "Unsupported ATBM_TCPIP_STACK value"
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -514,6 +531,7 @@ atbm_int32 atbm_wifi_get_connected_info_vif(atbm_uint8 if_id,ATBM_WLAN_CONNECTIO
 
 **************************************************************************************/
 
+#if !ATBM_STA_ONLY
 /****************************************************************************
 * Function:     atbm_wifi_ap_create
 *
@@ -555,6 +573,7 @@ typedef struct _WLAN_MACLIST
 ******************************************************************************/
 	
 atbm_int32 atbm_wifi_get_associated_client_list(atbm_uint8 *pchBuf, atbm_uint32 uiBufSize);
+#endif
 
 
 
@@ -666,6 +685,14 @@ atbm_int32 atbm_wifi_ioctl_fwcmd(int cmd_len,char *cmd);
 
 
 int atbm_wifi_isconnected(atbm_uint8 if_id);
+typedef int (*atbm_tcpip_rx_callback_t)(const unsigned char *data,
+		unsigned int length,
+		void *arg);
+int atbm_wifi_register_tcpip_rx_callback(atbm_tcpip_rx_callback_t callback,
+		void *arg);
+int atbm_wifi_send_ethernet_frame(const unsigned char *data,
+		unsigned int length);
+int atbm_wifi_is_sta_connected(void);
 int atbm_wifi_sta_disjoin_ap(void);
 int atbm_akwifi_setup_sdio(void);
 ATBM_NETIF *atbm_priv_get_netif(struct atbm_net_device *dev);
@@ -683,10 +710,10 @@ atbm_int32 atbm_wifi_get_fast_connect_info(atbm_uint8 *channel, atbm_uint8 *pmk)
 atbm_int32 atbm_wifi_fast_link_noscan(FAST_LINK_INFO * finfo);
 atbm_void atbm_wifi_get_linkinfo_noscan(FAST_LINK_INFO * finfo);
 
+#if !ATBM_STA_ONLY
 atbm_uint8 atbm_wpspbc_start(ATBM_WIFI_MODE AP_sta_mode);
 atbm_uint8 atbm_wpspin_start(ATBM_WIFI_MODE AP_sta_mode,const char *pin);
 atbm_uint8 atbm_wpsmode_cancel(ATBM_WIFI_MODE AP_sta_mode);
-
 int atbm_wifi_p2p_start(void);
 int atbm_wifi_p2p_find(int timeout);
 int atbm_wifi_p2p_find_accept(int go_intent);
@@ -697,6 +724,7 @@ int atbm_wifi_p2p_go_start(void);
 int atbm_wifi_p2p_connect(atbm_uint8 *mac, int go_intent);
 int atbm_wifi_p2p_stop(void);
 int atbm_wifi_p2p_user_config(char *device_name, char *ssid, char *pwd, int channel);
+#endif
 
 atbm_uint32 atbm_hw_priv_chip_id(void);
 int atbm_set_target_power(int mode,int rateIndex,int bw,int power);
@@ -707,10 +735,11 @@ int atbm_scan_set_flag_status(int val);
 int atbm_wifi_scan_open(void);
 int atbm_wifi_scan_close(void);
 int atbm_wifi_scan_start(char* scan_buf, atbm_uint32 buf_size);
-int atbm_ap_mode_get_sta_rssi(unsigned char *mac);
-
 int atbmwifi_get_cca_threshold(int *cca);
+#if !ATBM_STA_ONLY
+int atbm_ap_mode_get_sta_rssi(unsigned char *mac);
 int atbm_set_ap_channel(int if_id, int channel, int chantype);
+#endif
 
 int atbm_set_rate_power(struct atbmwifi_common *hw_priv,int *rate_txpower, ATBM_BOOL b2G4);
 int atbm_set_cfo_mode(struct atbmwifi_common *hw_priv, int mode);
@@ -724,4 +753,3 @@ void p2p_main_set_task_priority(unsigned long p2p_task_priority);
 #endif
 
 #endif	/* ATBM_WIFI_H */
-

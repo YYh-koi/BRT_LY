@@ -8,10 +8,6 @@ extern atbm_void atbmwifi_ap_join_timeout(atbm_void *data1,atbm_void *data2);
 
 int atbmwifi_rx_authen(struct atbmwifi_vif *priv,struct atbm_buff *skb);
 
-#ifndef ATBM_P2P_GO_DISABLE_BA
-#define ATBM_P2P_GO_DISABLE_BA 0
-#endif
-
 #if CONFIG_IEEE80211W
 static void sme_stop_sa_query(struct wpa_supplicant *wpa_s);
 
@@ -256,13 +252,6 @@ atbm_void atbmwifi_rx_actionFrame(struct atbmwifi_vif *priv,struct atbm_buff *sk
 	//					ba_params.win_size =  (capab & IEEE80211_ADDBA_PARAM_BUF_SIZE_MASK) >> 6;
 					ba_params.win_size = BUFF_STORED_LEN;
 					ba_params.ssn = atbm_le16_to_cpu(mgmt->u.action.u.addba_req.start_seq_num) >> 4;
-#if ATBM_P2P_GO_DISABLE_BA
-					if(priv->p2p_ap){
-						wifi_printk(WIFI_ALWAYS,"P2P GO ignore ADDBA_REQ:ssn(%x),tid(%d),link_id(%d)\n",
-							ba_params.ssn,ba_params.tid,ba_params.link_id);
-						break;
-					}
-#endif
 					wifi_printk(WIFI_ALWAYS,"rx ADDBA_REQ:ssn(%x),tid(%d),link_id(%d),win_size(%d)\n",ba_params.ssn,ba_params.tid,ba_params.link_id,ba_params.win_size);
 					atbm_updata_ba_tid_params(priv,&ba_params);
 					break;
@@ -2937,6 +2926,7 @@ fail:
 		//sta_priv->rate.he_cap.he_operation.he_oper_params = elems.he_operation->he_oper_params;
 	}
 #endif
+
 	wifi_printk(WIFI_WPA,"atbm_is_40m [%x],sta_supp_40m [%x],sta_chtype[%x]\n",atbm_is_40m,sta_supp_40m,sta_priv->rate.channel_type);
 	atbmwifi_ieee80211_get_sta_rateinfo(&sta_priv->rate,
 			priv->hw_priv->bands[priv->bss.sta_priv.band],
@@ -3862,3 +3852,4 @@ atbm_void atbmwifi_ieee80211_send_htc_qosnullfunc(struct atbmwifi_vif *priv, atb
 	return skb;
 }
 #endif
+

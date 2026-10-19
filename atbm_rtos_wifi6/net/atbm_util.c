@@ -4249,10 +4249,12 @@ struct atbmwifi_vif *atbmwifi_config_get_priv(struct atbmwifi_cfg *config)
 {
 	return atbm_container_of(config,struct atbmwifi_vif,config);
 }
+#if CONFIG_AP
 struct hostapd_data *atbmiwifi_get_hostapd(struct atbmwifi_vif *priv)
 {
 	return (struct hostapd_data *)(priv->appdata);
 }
+#endif
 
 #if CONFIG_WIFI_BT_COMB
 int atbm_ble_do_ble_xmit(struct atbmwifi_common *hw_priv,atbm_uint8* xmit,atbm_size_t len)

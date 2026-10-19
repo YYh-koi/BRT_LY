@@ -65,8 +65,13 @@ atbm_void net_device_ops_init(atbm_void)
 }
  atbm_void Iwip_Init(void)
 {
+#if ATBM_TCPIP_STACK == ATBM_TCPIP_STACK_FREERTOS_TCP
+	extern struct tcpip_opt freertos_tcp_opt;
+	tcp_opt = &freertos_tcp_opt;
+#else
 	extern struct tcpip_opt lwip_tcp_opt;
-	tcp_opt =  &lwip_tcp_opt;
+	tcp_opt = &lwip_tcp_opt;
+#endif
 }
  atbm_void  atbmwifi_netstack_init(struct atbmwifi_common *hw_priv)
 {

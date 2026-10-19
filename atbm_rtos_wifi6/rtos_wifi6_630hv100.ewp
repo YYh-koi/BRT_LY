@@ -222,6 +222,7 @@
                     <name>CCDefines</name>
                     <state>FREERTOS=1</state>
                     <state>__RTOS_FREERTOS__</state>
+                    <state>ATBM_TCPIP_STACK=ATBM_TCPIP_STACK_FREERTOS_TCP</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1286,6 +1287,7 @@
                 <option>
                     <name>CCDefines</name>
                     <state>NDEBUG</state>
+                    <state>ATBM_TCPIP_STACK=ATBM_TCPIP_STACK_LWIP</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -2409,6 +2411,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\atbm_rtos_wifi6\os\freertos\dhcps.c</name>
+            <excluded>
+                <configuration>Debug</configuration>
+            </excluded>
         </file>
     </group>
 </project>

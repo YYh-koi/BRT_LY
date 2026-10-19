@@ -10,6 +10,7 @@ enum p2p_event {
 	GO_DISC_RESP,
 	P2P_RX_ACTION,
 	P2P_ACTION_ACK,
+	P2P_TASK_EXIT,
 	NOTHING
 };
 
@@ -76,4 +77,3 @@ int atbm_p2p_go_start(struct atbmwifi_vif *priv);
 int atbm_p2p_restart(struct atbmwifi_vif *priv);
 
 #endif
-

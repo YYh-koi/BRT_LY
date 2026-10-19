@@ -1848,7 +1848,8 @@ out:
 	}
 
 	/* Search for unicast traffic */
-	tx_allowed_mask = ~priv->sta_asleep_mask;
+	//tx_allowed_mask = ~priv->sta_asleep_mask;  lkz debug
+	tx_allowed_mask = 0xffffffff;
 	tx_allowed_mask |= ATBM_BIT(priv->link_id_after_dtim);
 	if (priv->sta_asleep_mask) {
 		/*Allowed the link_id receive ps-poll to tx packet,otherwise the packet bufferd*/
@@ -2317,7 +2318,7 @@ int wsm_write_shmem_confirm(struct atbmwifi_common *hw_priv,
 	return wsm_write_mib(hw_priv, WSM_MIB_ID_OPERATIONAL_POWER_MODE, &val,
 			     sizeof(val), if_id);
 }
-/*AP ?¡ê¨º?¨º¡À¡Á??¡¥2¨¦?¡ä????sta ¨º?¡¤?¡ä|?¨²powersave ?¡ê¨º?*/
+/*AP ?ï¿½ê¨º?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½??ï¿½ï¿½2ï¿½ï¿½?ï¿½ï¿½????sta ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½|?ï¿½ï¿½powersave ?ï¿½ê¨º?*/
   int wsm_set_inactivity(struct atbmwifi_common *hw_priv,
 					const struct wsm_inactivity *arg,
 					int if_id)

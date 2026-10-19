@@ -83,26 +83,6 @@ extern int atbm_wifi_remove_interfaces(struct atbmwifi_vif *priv);
 extern atbm_int32 atbmwifi_enable_lmaclog(atbm_uint32 value );
 extern atbm_void atbm_free_netdev(struct atbm_net_device * netdev);
 extern 	int atbm_create_timerTask(struct atbmwifi_common *hw_priv);
-
-static void atbm_dump_fw_regs(struct atbmwifi_common *hw_priv, const char *tag)
-{
-#if ATBM_SDIO_BUS
-	atbm_uint32 val32 = 0;
-	int ret;
-
-	ret = atbm_reg_read_32(hw_priv, ATBM_HIFREG_CONFIG_REG_ID, &val32);
-	wifi_printk(WIFI_ALWAYS, "atbm %s: cfg ret=%d val=0x%x\n", tag, ret, val32);
-	ret = atbm_reg_read_32(hw_priv, 0x0014, &val32);
-	wifi_printk(WIFI_ALWAYS, "atbm %s: fn1_reset ret=%d val=0x%x\n", tag, ret, val32);
-	ret = atbm_ahb_read_32(hw_priv, 0x1610102c, &val32);
-	wifi_printk(WIFI_ALWAYS, "atbm %s: 0x1610102c ret=%d val=0x%x\n", tag, ret, val32);
-	ret = atbm_ahb_read_32(hw_priv, 0x161000c0, &val32);
-	wifi_printk(WIFI_ALWAYS, "atbm %s: 0x161000c0 ret=%d val=0x%x\n", tag, ret, val32);
-	ret = atbm_ahb_read_32(hw_priv, 0x161000ac, &val32);
-	wifi_printk(WIFI_ALWAYS, "atbm %s: 0x161000ac ret=%d val=0x%x\n", tag, ret, val32);
-#endif
-}
-
 struct atbmwifi_common *_atbmwifi_vifpriv_to_hwpriv(struct atbmwifi_vif *priv)
 {
 	return priv->hw_priv;
@@ -409,7 +389,8 @@ static struct atbmwifi_ieee80211_supported_band atbmwifi_band_5ghz = {
 				(1 << ATBM_IEEE80211_HT_CAP_RX_STBC_SHIFT)|
 				ATBM_IEEE80211_HT_CAP_LDPC_CODING,
 		.ht_supported = 1,
-		.ampdu_factor = ATBM_IEEE80211_HT_MAX_AMPDU_8K,
+		//.ampdu_factor = ATBM_IEEE80211_HT_MAX_AMPDU_8K,
+		.ampdu_factor = ATBM_IEEE80211_HT_MAX_AMPDU_32K, //lkz debug
 		.ampdu_density = ATBM_IEEE80211_HT_MPDU_DENSITY_NONE,
 		.mcs = {
 			.rx_mask[0] = 0xFF,
@@ -511,6 +492,8 @@ static struct atbmwifi_ieee80211_supported_band atbmwifi_band_5ghz = {
 				 */
 			},
 			.he_mcs_nss_supp = {
+				//.rx_mcs_80 = atbm_cpu_to_le16(0xfffe), //lkz debug 0xfffc -> 0xfffe 
+				//.tx_mcs_80 = atbm_cpu_to_le16(0xfffe), //lkz debug 0xfffc -> 0xfffe 
 				.rx_mcs_80 = atbm_cpu_to_le16(0xfffc),
 				.tx_mcs_80 = atbm_cpu_to_le16(0xfffc),
 				.rx_mcs_160 = atbm_cpu_to_le16(0xffff),
@@ -619,6 +602,7 @@ struct atbm_chip_priv chip_priv_coeus = {
 	.download_bs = DOWNLOAD_BLOCK_SIZE_V1,
 	.tx_channel_num = 64,
 	.rx_channel_num = 32,
+        
 };
 #endif
 
@@ -790,12 +774,10 @@ __wait_start_up:
 	}
 	else {
 		if(!hw_priv->wsm_caps.firmwareReady){
-			atbm_dump_fw_regs(hw_priv, "fw_not_ready");
 			wifi_printk(WIFI_ALWAYS,"atbm: Atbmwifi_halEntry(), FW is not ready(%dms).\n", atbm_GetOsTimeMs());
 			goto __wait_start_up;
 		}
 	}
-	atbm_dump_fw_regs(hw_priv, "fw_ready");
 	atbm_firmware_init_check(hw_priv);
 
 	/*Queue stats init*/
@@ -896,19 +878,45 @@ atbm_void atbm_core_release(struct atbmwifi_common *hw_priv)
 	atbmwifi_wpa_event_destory();
 	/*Free atbm timer*/
 	atbm_timer_free(hw_priv);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core timer free done\n");
 
 	/*Free TxQueue Timer*/
 	for (queue_id = 0; queue_id < 4; ++queue_id){
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] core tx queue deinit begin id=%d\n",
+			    queue_id);
 		atbmwifi_queue_deinit(&hw_priv->tx_queue[queue_id]);
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] core tx queue deinit done id=%d\n",
+			    queue_id);
 	}
 
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core link map free begin\n");
 	for (i = 0; i < ATBM_WIFI_MAX_VIFS; i++) {
 		if (hw_priv->tx_queue_stats.link_map_cache[i]) {
 			atbm_kfree(hw_priv->tx_queue_stats.link_map_cache[i]);
 			hw_priv->tx_queue_stats.link_map_cache[i] = ATBM_NULL;
 		}
 	}
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core link map free done\n");
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm buffer deinit begin\n");
 	wsm_buf_deinit(&hw_priv->wsm_cmd_buf);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm buffer deinit done\n");
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm_synchanl event delete begin\n");
 	atbm_os_delete_waitevent(&hw_priv->wsm_synchanl_done);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm_synchanl event delete done\n");
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm_startup event delete begin\n");
 	atbm_os_delete_waitevent(&hw_priv->wsm_startup_done);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core wsm_startup event delete done\n");
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] core release done\n");
 }

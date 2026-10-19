@@ -462,7 +462,7 @@ atbm_void atbm_wpa_supplicant_mark_disassoc(struct wpa_supplicant *wpa_s)
 	int bssid_changed;
 
 
-#ifdef CONFIG_AP
+#if CONFIG_AP
 	wpa_supplicant_ap_deinit(wpa_s);
 #endif /* CONFIG_AP */
 
@@ -2142,7 +2142,11 @@ static int wpa_gen_wpa_ie_rsn(atbm_uint8 *rsn_ie, atbm_size_t rsn_ie_len,
 
 #if CONFIG_IEEE80211W
 	if (mgmt_group_cipher == ATBM_WPA_CIPHER_AES_128_CMAC) {
+#if CONFIG_SAE
 		if (!sm->cur_pmksa) {
+#else
+		{
+#endif /* CONFIG_SAE */
 			/* PMKID Count */
 			ATBM_WPA_PUT_LE16(pos, 0);
 			pos += 2;

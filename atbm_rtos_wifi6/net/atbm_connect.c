@@ -171,8 +171,6 @@ int wifi_SetAPConfig(struct atbmwifi_vif *priv,atbm_uint8 * ssid,int ssidlen,atb
 		priv->bss.channel_type = g_hw_prv.channel_type;
 #endif
 	}
-
-
 	if(priv->config.channel_index >= 36){
 		priv->config.basicRateSet = ATBM_BIT(6)|ATBM_BIT(8)|ATBM_BIT(10);
 	}else{

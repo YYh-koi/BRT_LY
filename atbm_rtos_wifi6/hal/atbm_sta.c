@@ -445,6 +445,7 @@ atbm_void sta_scan_start_timer_func(atbm_void *data1,atbm_void *data2)
 atbm_void atbmwifi_scan_comlete(struct atbmwifi_vif *priv)
 {
 	struct atbmwifi_common *hw_priv=_atbmwifi_vifpriv_to_hwpriv(priv);
+	atbm_uint8 scan_ap_not_found = 0;
 #if CONFIG_WPS
 	struct wpa_supplicant *wpa_s = (struct wpa_supplicant *)priv->appdata;
 #endif
@@ -496,7 +497,21 @@ atbm_void atbmwifi_scan_comlete(struct atbmwifi_vif *priv)
 		wifi_printk(WIFI_SCAN,"scan fail again [%d]s, scan_no_connect=%d\n",priv->scan_expire, priv->scan_no_connect);
 		if(priv->scan_no_connect){
 			goto __end;
-		}	
+		}
+		/* Only a fully completed, normal STA connection scan can report no match.
+		 * A pending request means a later scan segment failed to start. */
+		if(priv->iftype == ATBM_NL80211_IFTYPE_STATION &&
+		   priv->ssid_length != 0 && priv->scan.status == 0 &&
+		   priv->scan.cur_scan_req == ATBM_NULL
+#if CONFIG_P2P
+		   && !priv->p2p_scan && !priv->p2p_join
+#endif
+#if CONFIG_WPS
+		   && (!wpa_s || wpa_s->wps_mode == WPS_MODE_UNKNOWN)
+#endif
+		   ){
+			scan_ap_not_found = 1;
+		}
 #if CONFIG_P2P
 		if(priv->p2p_scan || priv->p2p_join){
 			atbmwifi_eloop_register_timeout(0, 200, sta_scan_start_timer_func,(atbm_void *)priv,ATBM_NULL);
@@ -559,6 +574,10 @@ __end:
 #endif
 	wifi_printk(WIFI_DBG_MSG,"atbm: atbmwifi_scan_comlete() <===\n");
 
+	/* Notify after scan cleanup and retry scheduling, once per completed scan. */
+	if(scan_ap_not_found){
+		atbmwifi_event_uplayer(priv,ATBM_WIFI_SCAN_AP_NOT_FOUND_EVENT,0);
+	}
 	return;
 }
 

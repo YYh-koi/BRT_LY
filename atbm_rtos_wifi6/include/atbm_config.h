@@ -8,6 +8,15 @@
 *****************************************************************************************************************/
 #ifndef ATBM_CFG_H_
 #define ATBM_CFG_H_
+
+#ifndef ATBM_STA_ONLY
+#define ATBM_STA_ONLY 0
+#endif
+
+#ifndef ATBM_LOAD_BT_FIRMWARE
+#define ATBM_LOAD_BT_FIRMWARE 1
+#endif
+
 /*5G support*/
 #undef CONFIG_ATBMWIFI__5GHZ_SUPPORT
 #undef CONFIG_5G_SUPPORT
@@ -81,7 +90,7 @@
 
 #define INITIAL_SCAN_EXPIRE		10
 #define TEST_BEACON_INTV    	100
-#define TEST_DTIM_INTV    		3
+#define TEST_DTIM_INTV    		1
 #define DEFAULT_BEACON_LOSS_CNT      40
 #define KEEP_ALIVE_PERIOD	(4)
 #define ATBM_USB_BUS 0
@@ -92,10 +101,10 @@
 #define ATBM_RX_TASK_QUEUE 2
 #define QUEUE_LIST  0
 #define ATBM_RX_TASK 1
-#define NEW_SUPPORT_PS 1
+#define NEW_SUPPORT_PS 0  //lkz debug 1 -> 0 2026-06-17
 #define CONFIG_IEEE80211N 1
 #define ATBM_P2P_ADDR_USE_LOCAL_BIT 1
-#define ATBMWIFI__MAX_STA_IN_AP_MODE 8//16
+#define ATBMWIFI__MAX_STA_IN_AP_MODE 2//8//16  lkz debug
 #define ATBM_SKB_DEBUG 0
 #define ATBM_HIF_DEBUG 0
 
@@ -108,6 +117,8 @@
 /*WPS*/
 #define CONFIG_WPS 1
 #define CONFIG_WPS2 1
+/*AP*/
+#define CONFIG_AP 1
 /*p2p*/
 #define CONFIG_P2P 1
 #define CONFIG_WIFI_DISPLAY
@@ -150,6 +161,19 @@
 #define FAST_CONNECT_MODE 0
 #endif
 
+#if ATBM_STA_ONLY
+#undef CONFIG_AP
+#define CONFIG_AP 0
+#undef CONFIG_P2P
+#define CONFIG_P2P 0
+#undef CONFIG_WPS
+#define CONFIG_WPS 0
+#undef CONFIG_WPS2
+#define CONFIG_WPS2 0
+#undef CONFIG_SAE
+#undef CONFIG_WIFI_DISPLAY
+#endif
+
 #define ATBM_WSM_SDIO_TX_MULT 0
 #define ATBM_SUPPORT_BRIDGE 0
 
@@ -159,7 +183,7 @@
 #define ATBM_DIRECT_TX 0
 #define ATBM_IMMD_RX 0
 #define ATBM_SUPPORT_SG 0
-#define ATBM_TX_WRITE_TASK 1 //Available values 0,1,2
+#define ATBM_TX_WRITE_TASK 2 //Available values 0,1,2  lkz debug 1->2
 #else
 #define ATBM_DIRECT_TX 1
 #define ATBM_IMMD_RX 0
@@ -192,7 +216,7 @@
 #define ASR_THREADX 8
 #define UIS8310_THREADX 9
 #define ATBM_PLATFORM SUN6I_LINUX
-#define ATBM_DRIVER_PROCESS_BA	0
+#define ATBM_DRIVER_PROCESS_BA	1
 
 #define CONFIG_WPA2_REINSTALL_CERTIFICATION  0
 

@@ -874,6 +874,8 @@ struct atbmwifi_vif {
 	atbm_os_msgq p2p_task_msg;
 	atbm_void *p2p_task_msg_stack;
 	atbm_void *p2p_task;
+	atbm_os_wait_queue_head_t p2p_init_done;
+	int p2p_init_result;
 #endif
 #if ATBM_PKG_REORDER
 	struct atbm_reorder_queue_comm atbm_reorder_link_id[ATBMWIFI__MAX_STA_IN_AP_MODE];

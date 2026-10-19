@@ -14,7 +14,9 @@
 extern struct atbmwifi_common g_hw_prv;
 /*ATBM WIFI READY*/
 
+#if CONFIG_P2P
 struct user_p2p_config *g_user_p2p_config = NULL;
+#endif
 
 extern atbm_void* atbm_wifi_vif_get(int id);
 
@@ -59,7 +61,6 @@ atbm_int32  atbm_wifi_hw_init(atbm_void)
 	#endif
 	return 0;
 }
-
 
 /****************************************************************************
 * Function:   	atbm_wifi_hw_deinit
@@ -704,6 +705,7 @@ int atbm_wifi_get_work_channel(void)
 	return priv->bss.channel_num;
 
 }
+#if CONFIG_AP
 int atbm_ap_mode_get_sta_rssi(unsigned char *mac)
 {
 	int i = 0,ret = 100;
@@ -835,6 +837,7 @@ atbm_int32 atbm_wifi_get_associated_client_list(atbm_uint8 *pchBuf, atbm_uint32 
 {
 	return atbm_wifi_get_associated_client_list_vif(1,pchBuf, uiBufSize);
 }
+#endif
 
 
 atbm_int32 atbmwifi_enable_lmaclog(atbm_uint32 value ){
@@ -1469,18 +1472,7 @@ ATBM_WIFI_IFACE_STATE atbm_wifi_get_if_status(ATBM_WIFI_MODE mode)
 #if CONFIG_P2P
 /*  if all interface is occupied, then stop AP mode first */
 struct atbmwifi_vif * p2p_get_available_ifpriv(){
-	struct atbmwifi_vif *priv = _atbmwifi_hwpriv_to_vifpriv(&g_hw_prv, 1);
-
-	if (priv != ATBM_NULL) {
-		wifi_printk(WIFI_ALWAYS, "p2p use if_id=%d\n", priv->if_id);
-		return priv;
-	}
-
-	priv = _atbmwifi_hwpriv_to_vifpriv(&g_hw_prv, 0);
-	if (priv != ATBM_NULL) {
-		wifi_printk(WIFI_ALWAYS, "p2p fallback use if_id=%d\n", priv->if_id);
-	}
-	return priv;
+	return _atbmwifi_hwpriv_to_vifpriv(&g_hw_prv,0);
 }
 
 /****************************************************************************
@@ -1496,14 +1488,18 @@ int atbm_wifi_p2p_start()
 {
 	int ret = 0;
 	struct atbmwifi_vif *priv = p2p_get_available_ifpriv();
-	g_hw_prv.p2p_if_id = priv->if_id;
 
 	if(priv == ATBM_NULL){
 		wifi_printk(WIFI_ALWAYS, "p2p:error, priv is NULL\n");
 		ret = -1;
 		goto _error;
 	}
-	atbm_p2p_start(priv);
+
+	g_hw_prv.p2p_if_id = priv->if_id;
+	ret = atbm_p2p_start(priv);
+	if(ret){
+		wifi_printk(WIFI_ALWAYS, "p2p:error, start failed:%d\n", ret);
+	}
 _error:
 	return ret;
 }
@@ -1654,7 +1650,10 @@ int atbm_wifi_p2p_go_start()
 		goto _error;
 	}
 
-	atbm_p2p_go_start(priv);
+	ret = atbm_p2p_go_start(priv);
+	if(ret){
+		wifi_printk(WIFI_ALWAYS, "p2p:error, go start failed:%d\n", ret);
+	}
 _error:
 	return ret;
 }
@@ -1739,20 +1738,43 @@ _error:
 
 int atbm_wifi_p2p_user_config(char *device_name, char *ssid, char *pwd, int channel)
 {
-	g_user_p2p_config = (struct user_p2p_config *)atbm_kzalloc(sizeof(struct user_p2p_config), GFP_ATOMIC);
-	if(!g_user_p2p_config)
-	{
-		wifi_printk(WIFI_ERROR, "F:%s err\n", __func__);
+	atbm_size_t device_name_len;
+	atbm_size_t ssid_len;
+	atbm_size_t pwd_len;
+
+	if(device_name == ATBM_NULL || ssid == ATBM_NULL || pwd == ATBM_NULL){
+		wifi_printk(WIFI_ERROR, "F:%s invalid config\n", __func__);
 		return -1;
 	}
-	g_user_p2p_config->device_name_len = strlen(device_name);
-	atbm_memcpy(g_user_p2p_config->device_name, device_name, g_user_p2p_config->device_name_len);
 
-	g_user_p2p_config->ssid_len = strlen(ssid);
-	atbm_memcpy(g_user_p2p_config->ssid, ssid, g_user_p2p_config->ssid_len);
+	device_name_len = strlen(device_name);
+	ssid_len = strlen(ssid);
+	pwd_len = strlen(pwd);
+	if(device_name_len >= sizeof(((struct user_p2p_config *)0)->device_name) ||
+	   ssid_len >= sizeof(((struct user_p2p_config *)0)->ssid) ||
+	   pwd_len >= sizeof(((struct user_p2p_config *)0)->pwd)){
+		wifi_printk(WIFI_ERROR, "F:%s config too long:%d/%d/%d\n", __func__,
+			(int)device_name_len, (int)ssid_len, (int)pwd_len);
+		return -1;
+	}
 
-	g_user_p2p_config->pwd_len = strlen(pwd);
-	atbm_memcpy(g_user_p2p_config->pwd, pwd, g_user_p2p_config->pwd_len);
+	if(!g_user_p2p_config){
+		g_user_p2p_config = (struct user_p2p_config *)atbm_kzalloc(sizeof(struct user_p2p_config), GFP_ATOMIC);
+		if(!g_user_p2p_config){
+			wifi_printk(WIFI_ERROR, "F:%s alloc err\n", __func__);
+			return -1;
+		}
+	}
+
+	atbm_memset(g_user_p2p_config, 0, sizeof(struct user_p2p_config));
+	g_user_p2p_config->device_name_len = device_name_len;
+	atbm_memcpy(g_user_p2p_config->device_name, device_name, device_name_len);
+
+	g_user_p2p_config->ssid_len = ssid_len;
+	atbm_memcpy(g_user_p2p_config->ssid, ssid, ssid_len);
+
+	g_user_p2p_config->pwd_len = pwd_len;
+	atbm_memcpy(g_user_p2p_config->pwd, pwd, pwd_len);
 
 	g_user_p2p_config->channel = channel;
 
@@ -2881,6 +2903,7 @@ int atbm_hweight32(atbm_uint32 data_mask)
 	return agg_cnt;
 }
 
+#if CONFIG_AP
 int atbm_set_ap_channel(int if_id, int channel, int chantype)
 {
 	struct wsm_set_chantype wsm_chantype = {0};
@@ -2940,6 +2963,7 @@ int atbm_set_ap_channel(int if_id, int channel, int chantype)
 #endif
 	return 0;
 }
+#endif
 
 int atbm_set_hardware_cfg(int if_id)
 {

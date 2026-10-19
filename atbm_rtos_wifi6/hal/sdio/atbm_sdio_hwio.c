@@ -692,6 +692,12 @@ int atbm_data_write_sgs(struct atbmwifi_common *hw_priv, const atbm_void **buf,
 	hw_priv->sbus_ops->lock(hw_priv->sbus_priv);
 	buf_id_tx = hw_priv->buf_id_tx;
 	while (retry <= MAX_RETRY) {
+		if(atbm_bh_is_term(hw_priv)){
+			ret = -1;
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] ATBM_SDIO_STOP_RETRY SG write cancelled\n");
+			break;
+		}
 		ret = __atbm_data_write_sgs(hw_priv,
 				ATBM_HIFREG_IN_OUT_QUEUE_REG_ID, buf,
 				(atbm_uint32 *)buf_len, buf_id_tx, hw_priv->buf_id_tx_offset);
@@ -701,6 +707,11 @@ int atbm_data_write_sgs(struct atbmwifi_common *hw_priv, const atbm_void **buf,
 				hw_priv->buf_id_tx = buf_id_tx;
 				break;
 			} else {
+				if(atbm_bh_is_term(hw_priv)){
+					wifi_printk(WIFI_ALWAYS,
+						    "[ATBM_STOP_DBG] ATBM_SDIO_STOP_RETRY SG retry cancelled\n");
+					break;
+				}
 				retry++;
 				atbm_mdelay(1);
 			wifi_printk(WIFI_ALWAYS, "%s,%d,error :[%d]\n",
@@ -868,6 +879,12 @@ int atbm_data_write(struct atbmwifi_common *hw_priv, const atbm_void *buf, atbm_
 
 	buf_id_tx = hw_priv->buf_id_tx;
 	while (retry <= MAX_RETRY) {
+		if(atbm_bh_is_term(hw_priv)){
+			ret = -1;
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] ATBM_SDIO_STOP_RETRY write cancelled\n");
+			break;
+		}
 		ret = atbm_hw_ops[hw_priv->chip_ver].sdio_data_write(hw_priv,
 				ATBM_HIFREG_IN_OUT_QUEUE_REG_ID, buf,
 				buf_len, buf_id_tx);
@@ -877,6 +894,11 @@ int atbm_data_write(struct atbmwifi_common *hw_priv, const atbm_void *buf, atbm_
 			hw_priv->buf_id_tx = buf_id_tx;
 			break;
 		} else {
+			if(atbm_bh_is_term(hw_priv)){
+				wifi_printk(WIFI_ALWAYS,
+					    "[ATBM_STOP_DBG] ATBM_SDIO_STOP_RETRY retry cancelled\n");
+				break;
+			}
 			retry++;
 			atbm_mdelay(1);
 			wifi_printk(WIFI_ALWAYS, "%s,%d,error :[%d]\n",
@@ -946,4 +968,3 @@ int __atbm_irq_enable(struct atbmwifi_common *priv, int enable)
 	}
 	return 0;
 }
-

@@ -195,6 +195,8 @@ int atbmwifi_eloop_cancel_timeout(atbm_void (*handler)(atbm_void *eloop_ctx, atb
 atbm_void atbm_timer_free(struct atbmwifi_common *hw_priv)
 {
 	atbm_uint32 index;
+	int delete_ret;
+
 	ATBM_FREE_TIMER_FORM_LIST(&atbm_timeout_pennding_list);
 	ATBM_FREE_TIMER_FORM_LIST(&atbm_timeout_ready_list);
 	for(index = 0;index<ELOOP_TIMER_TABLE_SIZE;index++){
@@ -202,7 +204,15 @@ atbm_void atbm_timer_free(struct atbmwifi_common *hw_priv)
 	}
 	hw_priv->timer_term = 1;
 	atbm_os_MsgQ_Send(&atbm_timer_msgq, &index, sizeof(atbm_void *), ATBM_TX_WAIT_FOREVER);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] timer worker stop begin ctrl=%p msgq=%p\n",
+		    hw_priv->timer_thread, atbm_timer_msgq);
 	atbm_stopThreadInternal(hw_priv->timer_thread);
-	atbm_os_MsgQ_Delete(&atbm_timer_msgq);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] timer worker stop done msgq=%p\n",
+		    atbm_timer_msgq);
+	delete_ret = atbm_os_MsgQ_Delete(&atbm_timer_msgq);
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] timer msgq delete done ret=%d msgq=%p\n",
+		    delete_ret, atbm_timer_msgq);
 }
-

@@ -663,8 +663,19 @@ int atbm_wifi_etf_start_rx(int channel ,int bw, int chOff, int mode);
 int atbm_wifi_etf_stop_rx(get_result_rx_data *rx_data);
 atbm_int32 atbm_wifi_ioctl_fwcmd(int cmd_len,char *cmd);
 
+#ifndef ATBM_NETIF_TYPE_DEFINED
+#define ATBM_NETIF_TYPE_DEFINED
 typedef struct netif ATBM_NETIF;
+#endif
 int atbm_wifi_isconnected(atbm_uint8 if_id);
+typedef int (*atbm_tcpip_rx_callback_t)(const unsigned char *data,
+		unsigned int length,
+		void *arg);
+int atbm_wifi_register_tcpip_rx_callback(atbm_tcpip_rx_callback_t callback,
+		void *arg);
+int atbm_wifi_send_ethernet_frame(const unsigned char *data,
+		unsigned int length);
+int atbm_wifi_is_sta_connected(void);
 int atbm_wifi_sta_disjoin_ap(void);
 int atbm_akwifi_setup_sdio(void);
 ATBM_NETIF *atbm_priv_get_netif(struct atbm_net_device *dev);

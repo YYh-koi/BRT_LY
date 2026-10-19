@@ -376,7 +376,7 @@ static atbm_void wpa_supplicant_wps_event_success(struct wpa_supplicant *wpa_s)
 		//wpa_supplicant_wps_event_success(wpa_s);
 		break;
 	case WPS_EV_PWD_AUTH_FAIL:
-#ifdef CONFIG_AP
+#if CONFIG_AP
 		//if (wpa_s->ap_iface && data->pwd_auth_fail.enrollee)
 		//	wpa_supplicant_ap_pwd_auth_fail(wpa_s);
 #endif /* CONFIG_AP */

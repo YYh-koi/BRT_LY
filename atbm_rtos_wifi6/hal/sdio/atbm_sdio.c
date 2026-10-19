@@ -48,7 +48,7 @@ static int driver_build_info(atbm_void)
 	build.dpll=DPLL_CLOCK;
 	atbm_memcpy(build.driver_info,(atbm_void*)DRIVER_INFO,sizeof(DRIVER_INFO));
 	wifi_printk(WIFI_DBG_ANY,"SVN_VER=%d,DPLL_CLOCK=%d,BUILD_TIME=%s\n",build.ver,build.dpll,build.driver_info);
-	wifi_printk(WIFI_DBG_ANY,"BRT SVN_VER=%s\n", BRT_SVN_VERSION);
+	wifi_printk(WIFI_ALWAYS,"BRT SVN_VER=%s\n", BRT_SVN_VERSION);
 	return 0;
 }
 
@@ -634,8 +634,24 @@ int atbm_sdio_tx_queue_process(struct atbmwifi_common *hw_priv, atbm_uint32 time
 			return total_len;
 		}
 	}
+	if(pDesc == ATBM_NULL){
+		if(!hw_priv->bh_term){
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] unexpected null TX descriptor\n");
+		}
+		return total_len;
+	}
+	if(atbm_bh_is_term(hw_priv)){
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] ATBM_TX_SHUTDOWN_DROP queued descriptor\n");
+		pDesc = ATBM_NULL;
+		return total_len;
+	}
 	atbm_light_sleep_try_to_wakeup(hw_priv, ATBM_SDIO_WAKEUP_REASON_TX_PROGRESS);
 TxAction:
+	if(atbm_bh_is_term(hw_priv)){
+		goto TxShutdown;
+	}
 	tx_desc = (struct sbus_desc *)pDesc->context;
 	enough = atbm_sdio_have_enough_space(hw_priv,tx_desc->frame_cnt);
 	if(enough == ATBM_FALSE){
@@ -645,7 +661,7 @@ TxContinue:
 	total_len += 1;
 	status = atbm_sdio_process_tx(hw_priv, pDesc);
 	if(status){
-		goto TxErr;
+		goto TxFinished;
 	}
 	status = atbm_os_MsgQ_Recv(&atbm_sdio_tx_msgQ,&pDesc,sizeof(ATBM_INF_DESC *),timeout);
 	if(status != 0){
@@ -658,6 +674,9 @@ TxWait:
 		return total_len;
 	}
 	if((enough == ATBM_FALSE)&&(atbm_sdio_wait_enough_space(hw_priv,tx_desc->frame_cnt) == ATBM_FALSE)){
+		if(atbm_bh_is_term(hw_priv)){
+			goto TxShutdown;
+		}
 		wifi_printk(WIFI_DBG_ERROR, "%s: wait space timeout\n",__func__);
 		goto TxErr;
 	}
@@ -666,6 +685,10 @@ TxErr:
 	pDesc->status = -1;
 	/*Tx Urb complete*/
 	pDesc->complete(pDesc);
+	goto TxFinished;
+TxShutdown:
+	wifi_printk(WIFI_ALWAYS,
+		    "[ATBM_STOP_DBG] ATBM_TX_SHUTDOWN_DROP active descriptor\n");
 TxFinished:
 	pDesc = ATBM_NULL;
 	atbm_light_sleep_try_to_sleep(hw_priv, ATBM_SDIO_WAKEUP_REASON_TX_PROGRESS);	
@@ -846,10 +869,25 @@ void atbm_sdio_queue_init(struct atbmwifi_common *hw_priv)
 void atbm_sdio_queue_exit(struct atbmwifi_common *hw_priv)
 {
 	atbm_uint32 status;
+#if ATBM_TX_WRITE_TASK && (PROCESS_TXRX_IN_ONE_THREAD == 0)
+	ATBM_INF_DESC *tx_stop_desc = ATBM_NULL;
+#endif
 	
 	wifi_printk(WIFI_ALWAYS, "atbm_urb_queue_exit ==>\n");
 
 #if ATBM_TX_WRITE_TASK && (PROCESS_TXRX_IN_ONE_THREAD == 0)
+	status = atbm_os_MsgQ_Send(&atbm_sdio_tx_msgQ,
+					   &tx_stop_desc,
+					   sizeof(tx_stop_desc),
+					   ATBM_TX_WAIT_FOREVER);
+	if(status == 0){
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] ATBM_TX_STOP_WAKEUP tx stop wakeup sent\n");
+	}else{
+		wifi_printk(WIFI_ALWAYS,
+			    "[ATBM_STOP_DBG] ATBM_TX_STOP_WAKEUP send failed 0x%x\n",
+			    status);
+	}
 	//Delete TX Task
 	status = atbm_stopThreadInternal(hw_priv->atbm_sdio_tx_thread);
 	if(status != 0){
@@ -946,8 +984,18 @@ void atbm_sdio_disconnect(struct atbm_sdio_func *func)
 	if (self) {
 		//atbm_atomic_set(&g_wtd.wtd_probe, 0);
 		if (self->core) {
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] sdio core release begin core=%p\n",
+				    self->core);
 			atbm_core_release(self->core);
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] sdio core release done core=%p\n",
+				    self->core);
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] sdio irq unsubscribe begin\n");
 			self->core->sbus_ops->irq_unsubscribe(self->core->sbus_priv);
+			wifi_printk(WIFI_ALWAYS,
+				    "[ATBM_STOP_DBG] sdio irq unsubscribe done\n");
 			//self->core = ATBM_NULL;
 		}
 		atbm_sdio_claim_host(func);
@@ -1007,4 +1055,3 @@ atbm_void atbm_sdio_module_exit(atbm_void)
 	atbm_release_firmware();
 	return ;
 }
-

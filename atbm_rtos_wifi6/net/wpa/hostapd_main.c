@@ -2366,6 +2366,7 @@ wps_out:
 		    (const char*)config->ssid, config->ssid_len,
 		    4096, config->psk, ATBM_PMK_LEN);//pmk=psk;
 	config->psk_set = 1;
+	dump_mem(config->psk, ATBM_PMK_LEN);
 	return 0;
 }
  int hostapd_eapol_init(struct atbmwifi_vif *priv,struct atbmwifi_wpa_state_machine *sm)
